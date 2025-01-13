@@ -1704,7 +1704,7 @@ alphabet-nav {
 @media only screen and (max-width: 768px) {
   .image-item {
     width: 32%; /* Ajusta el ancho para 3 imágenes por fila */
-    margin-bottom: 10px;
+    margin-bottom: ;
   }
 
   .image-item img {
@@ -1752,7 +1752,7 @@ alphabet-nav {
         border-radius: 5.75px; /* Aumentado en un 15% */
         text-decoration: none;
         color: rgb(221, 150, 84);
-        font-size: 1em; /* Aumentado en un 15% */
+        font-size: 0.75em; /* Aumentado en un 15% */
         transition: background-color 0.3s, color 0.3s;
       }
       
@@ -3001,7 +3001,7 @@ alphabet-nav {
         color: #ffffff;
         text-align: center;
         padding: 10px;
-        font-size: 12px;
+        font-size: 8px;
         font-family: 'Arial', sans-serif;
         border-top: 1px solid #444444;
         width: 100%;
@@ -3012,9 +3012,9 @@ alphabet-nav {
       
       .fondo {
         position: fixed;
-          width: 800px;
-          height: 800px;
-        background-image: url('../index/Imagenesfondos/pato.png');
+          width: 400px;
+          height: 400px;
+        background-image: url('Imagenesfondos/pato.png');
         background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
