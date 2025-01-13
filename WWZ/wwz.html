@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la página</title>
+    <!-- Vinculación de los archivos CSS -->
+    <link rel="stylesheet" href="style_wwz.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+
+    <style>
+        /* Contenedor de la imagen */
+        .image-container {
+            position: relative; /* Opcional, solo si usas posicionamiento absoluto */
+            width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
+            height: 500px; /* Ajusta la altura del contenedor según sea necesario */
+            image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
+        }
+
+        /* Imagen con borde blanco */
+        .image-container img {
+            position: absolute; /* Permite mover la imagen libremente dentro del contenedor */
+            top: 10%; /* Distancia desde la parte superior del contenedor */
+            left: 5%; /* Distancia desde el lado izquierdo del contenedor */
+            width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+            height: auto; /* Mantiene la proporción original de la imagen */
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#seccion1">Peliculas</a></li>
+            <li><a href="#seccion2">Series</a></li>
+            <li><a href="#seccion3">Recomendaciones</a></li>
+            <li><a href="#seccion4">...</a></li>
+        </ul>
+    </nav>
+    <div class="image-container">
+        <img src="../WWZ/poster-wwz.jpeg" alt="Poster">
+        <div class="resum">
+            <p>
+                La vida del ex investigador de las Naciones Unidas Gerry Lane y su familia parece feliz. De repente, el mundo se ve afectado por una misteriosa infección que convierte a poblaciones humanas enteras en zombis arrasadores y sin sentido. Después de apenas escapar del caos, Lane es persuadido de emprender una misión para investigar esta enfermedad. Lo que sigue es un peligroso viaje alrededor del mundo en el que Lane debe afrontar peligros horribles y grandes obstáculos para encontrar respuestas antes de que caiga la civilización humana.                
+            </p>
+        </div>
+        <p class="actors">Brad Pitt    Mireille Enos     Daniela Kertesz     James Badge Dale</p>
+        <div class="imbd">
+            <p>PUNTUACIÓN EN IMDb</p>
+           
+            <div class="image-container2">
+             <center>  </center>
+            </div>
+        </div>
+
+    </div>
+    <br><br><br>
+     <center>
+        <div class="tabs">
+            <style>iframe {
+                width: 100%;
+                height: 360px;
+                border: none;
+            }</style>
+            <ul class="tab-list">
+                <li class="tab active" data-tab="video1">Video 1</li>
+                <li class="tab" data-tab="video2">Video 2</li>
+                <li class="tab" data-tab="video3">Video 3</li>
+            </ul>
+            <div class="tab-content">
+                <div id="video1" class="tab-panel active">
+                    <iframe src="https://filemoon.sx/e/grbztgp6w6kc/Guerra_Mundial_Z__2013__HD-1080p" frameborder="0"  allowfullscreen></iframe>
+
+                </div>
+                <div id="video2" class="tab-panel">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div id="video3" class="tab-panel">
+                    <iframe src="https://www.youtube.com/embed/8UFXXoyyHGU?si=fFLzLFD2FwuaHEpC" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+</center>
+    <br><br><br><br><br><br><br><br>
+    <center>
+        <div>
+    </div>
+
+
+    <div class="standalone-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/slfrrjPndV4?si=PWsiB-zTZvxB6nf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </div>
+    <!-- Vinculación del archivo JavaScript -->
+    <script src="srcipt_tron.js"></script>
+</body>
+</html>

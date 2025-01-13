@@ -1,0 +1,588 @@
+body {
+    font-family: 'Futura Condensed Extra Bold', sans-serif;
+
+}
+        /* Fondo de la página con imagen difuminada */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../WWZ/poster_fondo_wwz.jpeg') no-repeat center center;
+            background-size: cover;
+            filter: blur(5px); /* Aplica desenfoque solo a la imagen de fondo */
+            z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+            font-family: 'Futura Condensed Extra Bold', sans-serif;
+
+        }
+
+        /* Contenedor de la imagen */
+        .image-container {
+            position: relative;
+            width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
+            height: auto; /* Ajusta la altura del contenedor según sea necesario */
+            text-align: center; /* Centra la imagen horizontalmente */
+            overflow: hidden; /* Evita que el borde salga del contenedor */
+        }
+
+        /* Imagen con borde blanco */
+        .image-container img {
+            width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
+            height: auto; /* Mantiene la proporción original de la imagen */
+            border: 5px solid rgba(255, 7, 7, 0.582); /* Borde blanco de 5px de grosor */
+            border-radius: 10px; /* Bordes redondeados */
+            image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
+            box-shadow: 0 0 10px rgba(255, 7, 7, 0.582); /* Añade un brillo al borde */
+        }
+
+
+        
+
+        /* Estilo de texto tipo TRON */
+        h1, p {
+            font-family: 'Press Start 2P', cursive; /* Fuente estilo TRON */
+            letter-spacing: 1px; /* Espaciado entre letras */
+        }
+
+        h1 {
+            font-size: 2.5em; /* Tamaño de la fuente */
+            border: 3px solid #00bcd4; /* Borde turquesa */
+            padding: 10px;
+            box-shadow: 0 0 5px #00bcd4; /* Brillo en el borde turquesa */
+        }
+
+        p {
+            font-size: 0.8em; /* Tamaño de la fuente */
+           
+            position: relative;
+            top: 14%;
+            text-align: center;
+            width: 60%;
+            left: 24%;
+            color: whitesmoke;
+        }
+
+        /* Contenedor de contenido centrado */
+        .content {
+            position: relative;
+            z-index: 1; /* Asegura que el contenido esté por encima del fondo desenfocado */
+            text-align: center;
+        }
+
+        .resum{
+            position: relative;
+            top: 15%;
+
+            
+        }
+        .actors{
+            position: relative;
+            top: 16%;
+            text-align:center;
+            width: 60%;
+            color: whitesmoke;
+            font-size: 0.8em;
+            
+        }
+
+        .imbd{
+            font-family: Arial, Helvetica, Verdana, sans-serif;
+            position: relative;
+            top: 50%;
+            text-align: left;
+            right:22% ;
+
+
+        }
+        .video-container iframe {
+           width: 640px;
+            height: 360px;
+            border: 2px solid black; /* Borde del iframe */
+        }
+        .star{
+            position:relative;
+            top: 53%;
+            right: 22%; 
+
+        }
+       .star {
+    width: 1.5%;
+    height: 100.5%;
+    display: inline-block;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 47.94 47.94'><path style='fill:%23ecd018;' d='M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z'/></svg>");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.tabs {
+    border: 5px solid #333;
+    width: 660px;
+    background-color: white;
+    position: relative;
+}
+
+.tab-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #333;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background-color: #333;
+}
+
+.tab.active {
+    background-color: #666;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Estilo para el iframe independiente */
+.standalone-video {
+    width: 560px;
+    margin: 0 auto; /* Centrando el iframe independiente */
+}
+
+.standalone-video iframe {
+    width: 560px; /* Fijando el tamaño del iframe */
+    height: 315px;
+    border: 2px solid #333; /* Borde opcional */
+}
+
+
+.image-container2{
+    width: 100%;
+    height: auto; /* Mantener la proporción de la imagen */
+    display: block;
+    position: relative; 
+}
+
+
+/* Archivo: style.css */
+
+
+/* Estilos generales */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Playfair Display', serif;
+  
+  }
+  
+  /* Estilos para el encabezado */
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Estilos para el h1 */
+  header h1 {
+    
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  /* Estilos para la barra de navegación */
+  .titulo{
+    font-family: 'Playfair Display', serif;
+  
+  }
+  
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Color de fondo de la barra */
+    height: 120px; /* Altura de la barra */
+    padding: 0; /* Sin espaciado horizontal */
+    position: relative;
+    width: 100%;
+    top: 10%;
+    left: 0;
+    z-index: 9999;
+  }
+  
+  .navbar-item {
+    position: relative;
+    width: 33.33%; /* Cada imagen ocupa un tercio del ancho de la barra */
+    height: 100%;
+    overflow: hidden; /* Asegura que las imágenes no se desborden */
+  }
+  
+  .navbar-item img {
+    height: 100%; /* Asegura que las imágenes abarquen toda la altura de la barra */
+    width: 100%; /* Asegura que las imágenes abarquen todo el ancho de su contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    transition: all 0.3s ease; /* Transición suave para el efecto de hover */
+  }
+  
+  .navbar-item h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    font-size: 38px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease; /* Transición suave para el efecto de hover */
+  }
+  
+  /* Efecto de hover para la imagen y el texto */
+  .navbar-item:hover img {
+    filter: brightness(0.5); /* Oscurece la imagen al hacer hover */
+  }
+  
+  .navbar-item:hover h2 {
+    color: rgb(221, 150, 84); /* Cambia el color del texto al hacer hover */
+  }
+  
+  /* Estilos para los enlaces */
+  .navbar-item a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+  }
+  
+  
+  
+  .alphabet-nav {
+    background-color: #000000;
+    width: 100%;
+    margin-top: 10px; /* Agrega margen superior para separación */
+    padding: 10px 0;
+   
+  }
+  
+  .alphabet-bar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las letras se envuelvan en varias líneas si es necesario */
+   
+  
+  }
+  
+  .alphabet-bar li {
+    margin: 15px;
+  }
+  
+  .alphabet-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+    display: block;
+    width: 38px; /* Ancho del cuadrado */
+    height: 40px; /* Altura del cuadrado */
+    line-height: 40px; /* Alinea verticalmente el texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #555;
+  }
+  
+  /* Colores de hover diferentes para cada letra */
+  .alphabet-bar a:hover {
+    background-color: rgb(221, 150, 84);  color: #000000;
+  }
+  
+  
+  
+  button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    transform: translateY(-50%);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+  }
+  
+  .image-item {
+    width: 18%; /* Ajusta el ancho del contenedor de la imagen y el texto */
+    margin-bottom: 20px; /* Espacio debajo de cada imagen y texto */
+    position: relative; /* Necesario para posicionar la superposición */
+  }
+  
+  .image-item a {
+    display: block;
+    overflow: hidden;
+    border-radius: 15px; /* Bordes redondeados */
+    transition: transform 0.3s ease;
+  }
+  
+  .image-item img {
+    width: 100%;
+    height: 405px; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+    border-radius: 15px; /* Bordes redondeados */
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-item a:hover img {
+    transform: scale(1.05); /* Agranda la imagen ligeramente al pasar el cursor */
+  }
+  
+  .image-item p {
+    text-align: center; /* Centra el texto debajo de la imagen */
+    margin: 10px 0 0; /* Margen superior para separar el texto de la imagen */
+    color: #fff; /* Color del texto (puedes cambiarlo si es necesario) */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde el borde superior */
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+    width: 60px; /* Ajusta el tamaño del cuadrado */
+    height: 60px; /* Ajusta el tamaño del cuadrado */
+    background: rgba(0, 0, 0, 0.5); /* Color y opacidad de la superposición */
+    border-radius: 15px; /* Bordes redondeados */
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    color: #919191; /* Color del texto dentro del cuadrado */
+    font-size: 22px; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto dentro del cuadrado */
+  }
+  
+  
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .pagination a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 11.5px 17.25px; /* Aumentado en un 15% */
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 5.75px; /* Aumentado en un 15% */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.15em; /* Aumentado en un 15% */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .pagination a:hover {
+    background-color: rgb(221, 150, 84);
+    color: white;
+  }
+  
+  .pagination a.active {
+    background-color: #007bff; /* Color activo azul */
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .pagination a.inactive {
+    cursor: default;
+    color: #ddd;
+    pointer-events: none;
+  }
+  
+  .pagination a.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  
+  .neon-container {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .neon-text {
+    font-size: 36px; /* Disminuido 75% de 48px */
+    color: #00f9ff;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Ajustado proporcionalmente */
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent; /* Disminuido 75% de 2px */
+    padding: 7.5px 15px; /* Disminuido 75% de 10px 20px */
+    border-radius: 3.75px; /* Disminuido 75% de 5px */
+  }
+  
+  .neon-text::before {
+    content: '';
+    position: absolute;
+    top: -3.75px; /* Disminuido 75% de -5px */
+    left: -3.75px;
+    right: -3.75px;
+    bottom: -3.75px;
+    background: none;
+    border: 1.5px solid #ff9600; /* Disminuido 75% de 2px */
+    border-radius: 6px; /* Disminuido 75% de 8px */
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .neon-text:hover {
+    color: #00f9ff;
+    text-shadow: 0 0 11.25px #00f9ff, 0 0 22.5px #00f9ff, 0 0 33.75px #00f9ff; /* Disminuido 75% de 15px, 30px, 45px */
+    border-color: #ff9600;
+  }
+  
+  .neon-text:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 11.25px #ff9600, 0 0 22.5px #ff9600, 0 0 33.75px #ff9600; /* Disminuido 75% de 15px, 30px, 45px */
+  }
+  
+  
+  .wwz-container {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .wwz-text {
+    font-size: 36px; /* Tamaño reducido al 75% */
+    font-family: 'Impact', sans-serif; /* Estilo de fuente similar */
+    color: #ff0000; /* Color rojo característico */
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Espaciado reducido */
+    transition: all 0.3s ease;
+    padding: 7.5px 15px; /* Padding reducido al 75% */
+  }
+  
+  .wwz-text::before {
+    content: '';
+    position: absolute;
+    top: -3.75px; /* Disminuido 75% de -5px */
+    left: -3.75px;
+    right: -3.75px;
+    bottom: -3.75px;
+    background: none;
+    border: 1.5px solid #ffffff; /* Contorno blanco */
+    border-radius: 6px; /* Esquinas ligeramente redondeadas */
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .wwz-text:hover {
+    color: #ff0000;
+    text-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000; /* Efecto de resplandor rojo */
+    border-color: #ffffff; /* Cambio de color del borde */
+  }
+  
+  .wwz-text:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 11.25px #ffffff, 0 0 22.5px #ffffff, 0 0 33.75px #ffffff; /* Sombra blanca que imita un brillo */
+  }
+  
+  .rainbow-border {
+    position: fixed;
+    background: linear-gradient(
+        90deg,
+        red, orange, yellow, green, blue, indigo, violet,
+        red, orange, yellow, green, blue, indigo, violet
+    ); /* Gradiente duplicado */
+    background-size: 200% 200%; /* Ajustado para abarcar el gradiente más largo */
+    animation: rainbow-animation 10s linear infinite;
+    z-index: 9999;
+  }
+  
+  .rainbow-border.top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9.25px; /* Reducido un 25% de 15px */
+  }
+  
+  .rainbow-border.bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 11.25px; /* Reducido un 25% de 15px */
+  }
+  
+  .rainbow-border.left {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 11.25px; /* Reducido un 25% de 15px */
+    background: linear-gradient(
+        0deg,
+        red, orange, yellow, green, blue, indigo, violet,
+        red, orange, yellow, green, blue, indigo, violet
+    ); /* Gradiente duplicado para los bordes laterales */
+    background-size: 200% 200%;
+  }
+  
+  .rainbow-border.right {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 11.25px; /* Reducido un 25% de 15px */
+    background: linear-gradient(
+        0deg,
+        red, orange, yellow, green, blue, indigo, violet,
+        red, orange, yellow, green, blue, indigo, violet
+    ); /* Gradiente duplicado para los bordes laterales */
+    background-size: 200% 200%;
+  }
+  
+  /* Animación del arcoíris */
+  @keyframes rainbow-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }

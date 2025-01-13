@@ -1,0 +1,177 @@
+body {
+    font-family: 'Futura Condensed Extra Bold', sans-serif;
+
+}
+        /* Fondo de la página con imagen difuminada */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../ProyectoPeliculas/Imagenesfondos/poster_fondo_wwz.jpeg') no-repeat center center;
+            background-size: cover;
+            filter: blur(5px); /* Aplica desenfoque solo a la imagen de fondo */
+            z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+            font-family: 'Futura Condensed Extra Bold', sans-serif;
+
+        }
+
+        /* Contenedor de la imagen */
+        .image-container {
+            position: relative;
+            width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
+            height: auto; /* Ajusta la altura del contenedor según sea necesario */
+            text-align: center; /* Centra la imagen horizontalmente */
+            overflow: hidden; /* Evita que el borde salga del contenedor */
+        }
+
+        /* Imagen con borde blanco */
+        .image-container img {
+            width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
+            height: auto; /* Mantiene la proporción original de la imagen */
+            border: 5px solid rgba(255, 7, 7, 0.582); /* Borde blanco de 5px de grosor */
+            border-radius: 10px; /* Bordes redondeados */
+            image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
+            box-shadow: 0 0 10px rgba(255, 7, 7, 0.582); /* Añade un brillo al borde */
+        }
+
+
+        
+
+        /* Estilo de texto tipo TRON */
+        h1, p {
+            font-family: 'Press Start 2P', cursive; /* Fuente estilo TRON */
+            letter-spacing: 1px; /* Espaciado entre letras */
+        }
+
+        h1 {
+            font-size: 2.5em; /* Tamaño de la fuente */
+            border: 3px solid #00bcd4; /* Borde turquesa */
+            padding: 10px;
+            box-shadow: 0 0 5px #00bcd4; /* Brillo en el borde turquesa */
+        }
+
+        p {
+            font-size: 0.8em; /* Tamaño de la fuente */
+           
+            position: relative;
+            top: 14%;
+            text-align: center;
+            width: 60%;
+            left: 24%;
+            color: whitesmoke;
+        }
+
+        /* Contenedor de contenido centrado */
+        .content {
+            position: relative;
+            z-index: 1; /* Asegura que el contenido esté por encima del fondo desenfocado */
+            text-align: center;
+        }
+
+        .resum{
+            position: relative;
+            top: 15%;
+
+            
+        }
+        .actors{
+            position: relative;
+            top: 16%;
+            text-align:center;
+            width: 60%;
+            color: whitesmoke;
+            font-size: 0.8em;
+            
+        }
+
+        .imbd{
+            font-family: Arial, Helvetica, Verdana, sans-serif;
+            position: relative;
+            top: 50%;
+            text-align: left;
+            right:22% ;
+
+
+        }
+        .video-container iframe {
+           width: 640px;
+            height: 360px;
+            border: 2px solid black; /* Borde del iframe */
+        }
+        .star{
+            position:relative;
+            top: 53%;
+            right: 22%; 
+
+        }
+       .star {
+    width: 1.5%;
+    height: 100.5%;
+    display: inline-block;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 47.94 47.94'><path style='fill:%23ecd018;' d='M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z'/></svg>");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.tabs {
+    border: 5px solid #333;
+    width: 660px;
+    background-color: white;
+    position: relative;
+}
+
+.tab-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #333;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background-color: #333;
+}
+
+.tab.active {
+    background-color: #666;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Estilo para el iframe independiente */
+.standalone-video {
+    width: 560px;
+    margin: 0 auto; /* Centrando el iframe independiente */
+}
+
+.standalone-video iframe {
+    width: 560px; /* Fijando el tamaño del iframe */
+    height: 315px;
+    border: 2px solid #333; /* Borde opcional */
+}
+
+
+.image-container2{
+    width: 100%;
+    height: auto; /* Mantener la proporción de la imagen */
+    display: block;
+    position: relative; 
+}
