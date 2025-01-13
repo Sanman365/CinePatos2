@@ -592,51 +592,97 @@ alphabet-nav {
   }
   
       /* Forrest Gump */
-      .forrest-gump-container {
-          background-color: #000000;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 0;
-      }
+      .friends-container {
+        background-color: #000000; /* Fondo negro, similar al fondo de la interfaz */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .friends-text {
+        font-family: 'Arial', sans-serif; /* Fuente simple y moderna, puedes cambiarla por alguna fuente más acorde al estilo de la serie */
+        font-size: 36px;
+        color: #f5a623; /* Color amarillo, inspirado en los tonos cálidos de la serie */
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+        border: 1.5px solid transparent;
+        padding: 7.5px 15px;
+        border-radius: 5px;
+    }
+    
+    .friends-text::before {
+        content: '';
+        position: absolute;
+        top: -3.75px;
+        left: -3.75px;
+        right: -3.75px;
+        bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #f5a623;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+    
+    .friends-text:hover {
+        color: #f5a623;
+        text-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
+        border-color: #f5a623;
+    }
+    
+    .friends-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
+    }
+    .la-idea-de-ti-container {
+      background-color: #000000; /* Fondo negro */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+  }
   
-      .forrest-gump-text {
-          font-size: 36px;
-          color: #0056b3;
-          position: relative;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          transition: all 0.3s ease;
-          border: 1.5px solid transparent;
-          padding: 7.5px 15px;
-          border-radius: 3.75px;
-      }
+  .la-idea-de-ti-text {
+      font-family: 'Arial', sans-serif; /* Fuente simple y moderna */
+      font-size: 36px;
+      color: #f5a623; /* Color amarillo cálido */
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+      border: 1.5px solid transparent;
+      padding: 7.5px 15px;
+      border-radius: 5px;
+  }
   
-      .forrest-gump-text::before {
-          content: '';
-          position: absolute;
-          top: -3.75px;
-          left: -3.75px;
-          right: -3.75px;
-          bottom: -3.75px;
-          background: none;
-          border: 1.5px solid #0056b3;
-          border-radius: 6px;
-          transition: all 0.3s ease;
-          opacity: 0;
-      }
+  .la-idea-de-ti-text::before {
+      content: '';
+      position: absolute;
+      top: -3.75px;
+      left: -3.75px;
+      right: -3.75px;
+      bottom: -3.75px;
+      background: none;
+      border: 1.5px solid #f5a623;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      opacity: 0;
+  }
   
-      .forrest-gump-text:hover {
-          color: #003a6c;
-          text-shadow: 0 0 11.25px #003a6c, 0 0 22.5px #003a6c, 0 0 33.75px #003a6c;
-          border-color: #003a6c;
-      }
+  .la-idea-de-ti-text:hover {
+      color: #f5a623;
+      text-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
+      border-color: #f5a623;
+  }
   
-      .forrest-gump-text:hover::before {
-          opacity: 1;
-          box-shadow: 0 0 11.25px #003a6c, 0 0 22.5px #003a6c, 0 0 33.75px #003a6c;
-      }
-  
+  .la-idea-de-ti-text:hover::before {
+      opacity: 1;
+      box-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
+  }
+      
       /* Harry Potter y la Piedra Filosofal */
   
       @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
@@ -1407,8 +1453,7 @@ alphabet-nav {
       transform: translate(-50%, -50%);
       z-index: -1;
   }
-
-
+/* Estilo para la pantalla de bloqueo */
 
 
 
@@ -1489,7 +1534,7 @@ alphabet-nav {
     /* Estilos para el encabezado */
     header {
       text-align: center;
-      padding: 20px;
+      padding: 0px;
     }
     
     /* Estilos para el h1 */
@@ -1527,7 +1572,7 @@ alphabet-nav {
     }
     
     .navbar-item img {
-      height: 100%; /* Asegura que las imágenes abarquen toda la altura de la barra */
+      height: 50%; /* Asegura que las imágenes abarquen toda la altura de la barra */
       width: 100%; /* Asegura que las imágenes abarquen todo el ancho de su contenedor */
       object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
       transition: all 0.3s ease; /* Transición suave para el efecto de hover */
@@ -1535,12 +1580,12 @@ alphabet-nav {
     
     .navbar-item h2 {
       position: absolute;
-      top: 50%;
+      top: 25%;
       left: 50%;
       transform: translate(-50%, -50%);
       margin: 0;
       color: white;
-      font-size: 38px;
+      font-size: 30px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
       transition: all 0.3s ease; /* Transición suave para el efecto de hover */
     }
@@ -1558,13 +1603,13 @@ alphabet-nav {
     .navbar-item a {
       display: block;
       height: 100%;
-      width: 100%;
+      width: 70%;
       text-decoration: none; /* Quita el subrayado de los enlaces */
     }
     alphabet-nav {
         width: 100%;
         margin-top: 10px; /* Agrega margen superior para separación */
-        padding: 10px 0;
+        padding: 6px 0;
        
       }
       
@@ -1580,16 +1625,17 @@ alphabet-nav {
       }
       
       .alphabet-bar li {
-        margin: 15px;
+        margin: 10px;
       }
       
       .alphabet-bar a {
         text-decoration: none;
         color: white;
-        font-size: 1.4em;
+        font-size: 1.0em;
         display: block;
-        width: 38px; /* Ancho del cuadrado */
-        height: 40px; /* Altura del cuadrado */
+        width: 28px; /* Ancho del cuadrado */
+        height: 30px; /* Altura del cuadrado */
+        top: 20%;
         line-height: 40px; /* Alinea verticalmente el texto */
         text-align: center; /* Centra el texto horizontalmente */
         border-radius: 8px; /* Bordes redondeados */
@@ -1629,8 +1675,8 @@ alphabet-nav {
   display: flex;
   flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
   justify-content: space-between;
-  width: 90%;
-  margin: 20px auto;
+  width: 95%;
+  margin: 10px auto;
 }
 
 .image-item {
@@ -1641,7 +1687,7 @@ alphabet-nav {
 
 .image-item img {
   width: 100%;
-  height: 300px; /* Ajusta la altura de las imágenes */
+  height: 10%; /* Ajusta la altura de las imágenes */
   object-fit: cover;
   border-radius: 15px;
   display: block;
@@ -1662,24 +1708,24 @@ alphabet-nav {
   }
 
   .image-item img {
-    height: 270px; /* Ajuste de altura para pantallas móviles */
+    height: 175px; /* Ajuste de altura para pantallas móviles */
   }
 }
 
       
       .overlay {
         position: absolute;
-        top: 15px; /* Ajusta la distancia desde el borde superior */
-        left: 15px; /* Ajusta la distancia desde el borde izquierdo */
-        width: 45px; /* Ajusta el tamaño del cuadrado */
-        height: 45px; /* Ajusta el tamaño del cuadrado */
+        top: 10px; /* Ajusta la distancia desde el borde superior */
+        left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+        width: 35px; /* Ajusta el tamaño del cuadrado */
+        height: 35px; /* Ajusta el tamaño del cuadrado */
         background: rgba(0, 0, 0, 0.5); /* Color y opacidad de la superposición */
         border-radius: 15px; /* Bordes redondeados */
         display: flex;
         align-items: center; /* Centra el texto verticalmente */
         justify-content: center; /* Centra el texto horizontalmente */
         color: #919191; /* Color del texto dentro del cuadrado */
-        font-size: 22px; /* Tamaño de la fuente */
+        font-size: 16px; /* Tamaño de la fuente */
         text-align: center; /* Centra el texto dentro del cuadrado */
       }
       
@@ -1687,25 +1733,26 @@ alphabet-nav {
       .pagination-container {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 40px;
+        
       }
       
       .pagination {
         display: flex;
         list-style-type: none;
-        padding: 0;
+        padding: 10;
       }
       
       .pagination a {
         display: inline-block;
         margin: 0 5px;
-        padding: 11.5px 17.25px; /* Aumentado en un 15% */
+        padding: 9px 13.25px; /* Aumentado en un 15% */
         border: 1px solid #ddd;
         cursor: pointer;
         border-radius: 5.75px; /* Aumentado en un 15% */
         text-decoration: none;
         color: rgb(221, 150, 84);
-        font-size: 1.15em; /* Aumentado en un 15% */
+        font-size: 1em; /* Aumentado en un 15% */
         transition: background-color 0.3s, color 0.3s;
       }
       
@@ -1742,11 +1789,11 @@ alphabet-nav {
       }
       
       .neon-text {
-        font-size: 36px; /* Disminuido 75% de 48px */
+        font-size: 18px; /* Disminuido 75% de 48px */
         color: #00f9ff;
         position: relative;
         text-transform: uppercase;
-        letter-spacing: 1.5px; /* Ajustado proporcionalmente */
+        letter-spacing: 1.0px; /* Ajustado proporcionalmente */
         transition: all 0.3s ease;
         border: 1.5px solid transparent; /* Disminuido 75% de 2px */
         padding: 7.5px 15px; /* Disminuido 75% de 10px 20px */
@@ -1756,10 +1803,10 @@ alphabet-nav {
       .neon-text::before {
         content: '';
         position: absolute;
-        top: -3.75px; /* Disminuido 75% de -5px */
-        left: -3.75px;
-        right: -3.75px;
-        bottom: -3.75px;
+        top: -3.0px; /* Disminuido 75% de -5px */
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
         background: none;
         border: 1.5px solid #ff9600; /* Disminuido 75% de 2px */
         border-radius: 6px; /* Disminuido 75% de 8px */
@@ -1789,12 +1836,12 @@ alphabet-nav {
       }
       
       .wwz-text {
-        font-size: 36px; /* Tamaño reducido al 75% */
+        font-size: 18px; /* Tamaño reducido al 75% */
         font-family: 'Impact', sans-serif; /* Estilo de fuente similar */
         color: #ff0000; /* Color rojo característico */
         position: relative;
         text-transform: uppercase;
-        letter-spacing: 1.5px; /* Espaciado reducido */
+        letter-spacing: 1px; /* Espaciado reducido */
         transition: all 0.3s ease;
         padding: 7.5px 15px; /* Padding reducido al 75% */
       }
@@ -1892,11 +1939,11 @@ alphabet-nav {
       }
       
       .interestelar-text {
-        font-size: 36px;
+        font-size: 14px;
         color: #c1c1c1; /* Gris claro, evocando un tono metálico */
         position: relative;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.0px;
         transition: all 0.3s ease;
         border: 1.5px solid transparent;
         padding: 7.5px 15px;
@@ -1938,11 +1985,11 @@ alphabet-nav {
       }
       
       .batman-text {
-        font-size: 36px;
+        font-size: 18px;
         color: #e50914;
         position: relative;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         transition: all 0.3s ease;
         border: 1.5px solid transparent;
         padding: 7.5px 15px;
@@ -1985,11 +2032,11 @@ alphabet-nav {
       }
       
       .twenty-eight-text {
-        font-size: 36px;
+        font-size: 18px;
         color: #b30000; /* Rojo sangre */
         position: relative;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         transition: all 0.3s ease;
         border: 1.5px solid transparent;
         padding: 7.5px 15px;
@@ -2033,11 +2080,11 @@ alphabet-nav {
       }
       
       .spiderman-text {
-        font-size: 36px;
+        font-size: 18px;
         color: #e60000; /* Rojo inspirado en el traje de Spider-Man */
         position: relative;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         transition: all 0.3s ease;
         border: 1.5px solid transparent;
         padding: 7.5px 15px;
@@ -2179,11 +2226,11 @@ alphabet-nav {
           }
       
           .godfather-text {
-              font-size: 36px;
+              font-size: 18px;
               color: #ffffff;
               position: relative;
               text-transform: uppercase;
-              letter-spacing: 1.5px;
+              letter-spacing: 1px;
               transition: all 0.3s ease;
               border: 1.5px solid transparent;
               padding: 7.5px 15px;
@@ -2225,11 +2272,11 @@ alphabet-nav {
           }
       
           .dark-knight-text {
-              font-size: 36px;
+              font-size: 18px;
               color: #ffffff;
               position: relative;
               text-transform: uppercase;
-              letter-spacing: 1.5px;
+              letter-spacing: 1px;
               transition: all 0.3s ease;
               border: 1.5px solid transparent;
               padding: 7.5px 15px;
@@ -2271,11 +2318,11 @@ alphabet-nav {
           }
       
           .titanic-text {
-              font-size: 36px;
+              font-size: 18px;
               color: #ff4500;
               position: relative;
               text-transform: uppercase;
-              letter-spacing: 1.5px;
+              letter-spacing: 1px;
               transition: all 0.3s ease;
               border: 1.5px solid transparent;
               padding: 7.5px 15px;
@@ -2317,11 +2364,11 @@ alphabet-nav {
           }
       
           .fight-club-text {
-              font-size: 36px;
+              font-size: 18px;
               color: #ffffff;
               position: relative;
               text-transform: uppercase;
-              letter-spacing: 1.5px;
+              letter-spacing: 1px;
               transition: all 0.3s ease;
               border: 1.5px solid transparent;
               padding: 7.5px 15px;
@@ -2363,11 +2410,11 @@ alphabet-nav {
           }
       
           .inception-text {
-              font-size: 36px;
+              font-size: 18px;
               color: #00aaff;
               position: relative;
               text-transform: uppercase;
-              letter-spacing: 1.5px;
+              letter-spacing: 1px;
               transition: all 0.3s ease;
               border: 1.5px solid transparent;
               padding: 7.5px 15px;
@@ -2409,11 +2456,11 @@ alphabet-nav {
           }
       
           .matrix-text {
-              font-size: 36px;
+              font-size: 18px;
               color: #00ff00;
               position: relative;
               text-transform: uppercase;
-              letter-spacing: 1.5px;
+              letter-spacing: 1px;
               transition: all 0.3s ease;
               border: 1.5px solid transparent;
               padding: 7.5px 15px;
@@ -2455,11 +2502,11 @@ alphabet-nav {
           }
       
           .truman-show-text {
-              font-size: 36px;
+              font-size: 18px;
               color: #ffffff;
               position: relative;
               text-transform: uppercase;
-              letter-spacing: 1.5px;
+              letter-spacing: 1px;
               transition: all 0.3s ease;
               border: 1.5px solid transparent;
               padding: 7.5px 15px;
@@ -2501,11 +2548,11 @@ alphabet-nav {
           }
       
           .baby-driver-text {
-              font-size: 36px;
+              font-size: 18px;
               color: #e60012;
               position: relative;
               text-transform: uppercase;
-              letter-spacing: 1.5px;
+              letter-spacing: 1px;
               transition: all 0.3s ease;
               border: 1.5px solid transparent;
               padding: 7.5px 15px;
@@ -2547,11 +2594,11 @@ alphabet-nav {
           }
       
           .pulp-fiction-text {
-              font-size: 36px;
+              font-size: 18px;
               color: #f5c542;
               position: relative;
               text-transform: uppercase;
-              letter-spacing: 1.5px;
+              letter-spacing: 1px;
               transition: all 0.3s ease;
               border: 1.5px solid transparent;
               padding: 7.5px 15px;
@@ -2685,11 +2732,11 @@ alphabet-nav {
           }
       
           .spider-man-text {
-              font-size: 36px;
+              font-size: 18px;
               color: #c8102e;
               position: relative;
               text-transform: uppercase;
-              letter-spacing: 1.5px;
+              letter-spacing: 1px;
               transition: all 0.3s ease;
               border: 1.5px solid transparent;
               padding: 7.5px 15px;
@@ -2730,11 +2777,11 @@ alphabet-nav {
         }
         
         .schindler-list-text {
-            font-size: 36px;
+            font-size: 18px;
             color: #d0d0d0;
             position: relative;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             transition: all 0.3s ease;
             border: 1.5px solid transparent;
             padding: 7.5px 15px;
@@ -2775,11 +2822,11 @@ alphabet-nav {
       }
       
       .lord-of-the-rings-text {
-          font-size: 36px;
+          font-size: 18px;
           color: #b09a5b;
           position: relative;
           text-transform: uppercase;
-          letter-spacing: 1.5px;
+          letter-spacing: 1px;
           transition: all 0.3s ease;
           border: 1.5px solid transparent;
           padding: 7.5px 15px;
@@ -2821,12 +2868,12 @@ alphabet-nav {
       }
       
       .la-la-land-text {
-          font-size: 36px;
+          font-size: 18px;
            font-family: 'Playfair Display', serif; /* Aplicando la fuente */
           color: #ff6f61;
           position: relative;
           text-transform: uppercase;
-          letter-spacing: 1.5px;
+          letter-spacing: 1px;
           transition: all 0.3s ease;
           border: 1.5px solid transparent;
           padding: 7.5px 15px;
@@ -2858,7 +2905,97 @@ alphabet-nav {
           opacity: 1;
           box-shadow: 0 0 11.25px #ff6f61, 0 0 22.5px #ff6f61, 0 0 33.75px #ff6f61;
       }
+        /* Forrest Gump */
+        .friends-container {
+          background-color: #000000; /* Fondo negro, similar al fondo de la interfaz */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
       
+      .friends-text {
+          font-family: 'Arial', sans-serif; /* Fuente simple y moderna, puedes cambiarla por alguna fuente más acorde al estilo de la serie */
+          font-size: 18px;
+          color: #f5a623; /* Color amarillo, inspirado en los tonos cálidos de la serie */
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 5px;
+      }
+      
+      .friends-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #f5a623;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+      
+      .friends-text:hover {
+          color: #f5a623;
+          text-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
+          border-color: #f5a623;
+      }
+      
+      .friends-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
+      }
+      .la-idea-de-ti-container {
+        background-color: #000000; /* Fondo negro */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .la-idea-de-ti-text {
+        font-family: 'Arial', sans-serif; /* Fuente simple y moderna */
+        font-size: 18px;
+        color: #f5a623; /* Color amarillo cálido */
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        border: 1.5px solid transparent;
+        padding: 7.5px 15px;
+        border-radius: 5px;
+    }
+    
+    .la-idea-de-ti-text::before {
+        content: '';
+        position: absolute;
+        top: -3.75px;
+        left: -3.75px;
+        right: -3.75px;
+        bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #f5a623;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+    
+    .la-idea-de-ti-text:hover {
+        color: #f5a623;
+        text-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
+        border-color: #f5a623;
+    }
+    
+    .la-idea-de-ti-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
+    }
       footer {
         background-color: #1c1c1c;
         color: #ffffff;
