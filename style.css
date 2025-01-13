@@ -1,0 +1,2895 @@
+/* Archivo: style.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+
+body {
+  background-color: black;
+  color: white;
+
+
+}
+
+/* Estilos para el encabezado */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilos para el h1 */
+header h1 {
+  
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* Estilos para la barra de navegación */
+.titulo{
+  font-family: tron;
+
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px; /* Altura de la barra */
+  padding: 0; /* Sin espaciado horizontal */
+  position: relative;
+  width: 100%;
+  top: 10%;
+  left: 0;
+  z-index: 9999;
+}
+
+.navbar-item {
+  position: relative;
+  width: 33.33%; /* Cada imagen ocupa un tercio del ancho de la barra */
+  height: 100%;
+  overflow: hidden; /* Asegura que las imágenes no se desborden */
+}
+
+.navbar-item img {
+  height: 100%; /* Asegura que las imágenes abarquen toda la altura de la barra */
+  width: 100%; /* Asegura que las imágenes abarquen todo el ancho de su contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  transition: all 0.3s ease; /* Transición suave para el efecto de hover */
+}
+
+.navbar-item h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: white;
+  font-size: 38px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease; /* Transición suave para el efecto de hover */
+}
+
+/* Efecto de hover para la imagen y el texto */
+.navbar-item:hover img {
+  filter: brightness(0.5); /* Oscurece la imagen al hacer hover */
+}
+
+.navbar-item:hover h2 {
+  color: rgb(221, 150, 84); /* Cambia el color del texto al hacer hover */
+}
+
+/* Estilos para los enlaces */
+.navbar-item a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+alphabet-nav {
+    width: 100%;
+    margin-top: 10px; /* Agrega margen superior para separación */
+    padding: 10px 0;
+   
+  }
+  
+  .alphabet-bar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las letras se envuelvan en varias líneas si es necesario */
+   
+  
+  }
+  
+  .alphabet-bar li {
+    margin: 15px;
+  }
+  
+  .alphabet-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+    display: block;
+    width: 38px; /* Ancho del cuadrado */
+    height: 40px; /* Altura del cuadrado */
+    line-height: 40px; /* Alinea verticalmente el texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #555;
+  }
+  
+  /* Colores de hover diferentes para cada letra */
+  .alphabet-bar a:hover {
+    background-color: rgb(221, 150, 84);  color: #000000;
+  }
+  
+  
+  
+  button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    transform: translateY(-50%);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+  }
+  
+  .image-item {
+    width: 18%; /* Ajusta el ancho del contenedor de la imagen y el texto */
+    margin-bottom: 20px; /* Espacio debajo de cada imagen y texto */
+    position: relative; /* Necesario para posicionar la superposición */
+  }
+  
+  .image-item a {
+    display: block;
+    overflow: hidden;
+    border-radius: 15px; /* Bordes redondeados */
+    transition: transform 0.3s ease;
+  }
+  
+  .image-item img {
+    width: 100%;
+    height: 405px; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+    border-radius: 15px; /* Bordes redondeados */
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-item a:hover img {
+    transform: scale(1.05); /* Agranda la imagen ligeramente al pasar el cursor */
+  }
+  
+  .image-item p {
+    text-align: center; /* Centra el texto debajo de la imagen */
+    margin: 10px 0 0; /* Margen superior para separar el texto de la imagen */
+    color: #fff; /* Color del texto (puedes cambiarlo si es necesario) */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde el borde superior */
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+    width: 60px; /* Ajusta el tamaño del cuadrado */
+    height: 60px; /* Ajusta el tamaño del cuadrado */
+    background: rgba(0, 0, 0, 0.5); /* Color y opacidad de la superposición */
+    border-radius: 15px; /* Bordes redondeados */
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    color: #919191; /* Color del texto dentro del cuadrado */
+    font-size: 22px; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto dentro del cuadrado */
+  }
+  
+  
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .pagination a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 11.5px 17.25px; /* Aumentado en un 15% */
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 5.75px; /* Aumentado en un 15% */
+    text-decoration: none;
+    color: rgb(221, 150, 84);
+    font-size: 1.15em; /* Aumentado en un 15% */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .pagination a:hover {
+    background-color: rgb(221, 150, 84);
+    color: white;
+  }
+  
+  .pagination a.active {
+    background-color: #007bff; /* Color activo azul */
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .pagination a.inactive {
+    cursor: default;
+    color: #ddd;
+    pointer-events: none;
+  }
+  
+  .pagination a.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  
+  .neon-container {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+  }
+  
+  .neon-text {
+    font-size: 36px; /* Disminuido 75% de 48px */
+    color: #00f9ff;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Ajustado proporcionalmente */
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent; /* Disminuido 75% de 2px */
+    padding: 7.5px 15px; /* Disminuido 75% de 10px 20px */
+    border-radius: 3.75px; /* Disminuido 75% de 5px */
+  }
+  
+  .neon-text::before {
+    content: '';
+    position: absolute;
+    top: -3.75px; /* Disminuido 75% de -5px */
+    left: -3.75px;
+    right: -3.75px;
+    bottom: -3.75px;
+    background: none;
+    border: 1.5px solid #ff9600; /* Disminuido 75% de 2px */
+    border-radius: 6px; /* Disminuido 75% de 8px */
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .neon-text:hover {
+    color: #00f9ff;
+    text-shadow: 0 0 11.25px #00f9ff, 0 0 22.5px #00f9ff, 0 0 33.75px #00f9ff; /* Disminuido 75% de 15px, 30px, 45px */
+    border-color: #ff9600;
+  }
+  
+  .neon-text:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 11.25px #ff9600, 0 0 22.5px #ff9600, 0 0 33.75px #ff9600; /* Disminuido 75% de 15px, 30px, 45px */
+  }
+  
+  
+  .wwz-container {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  ;
+    margin: 0;
+  }
+  
+  .wwz-text {
+    font-size: 36px; /* Tamaño reducido al 75% */
+    font-family: 'Impact', sans-serif; /* Estilo de fuente similar */
+    color: #ff0000; /* Color rojo característico */
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Espaciado reducido */
+    transition: all 0.3s ease;
+    padding: 7.5px 15px; /* Padding reducido al 75% */
+  }
+  
+  .wwz-text::before {
+    content: '';
+    position: absolute;
+    top: -3.75px; /* Disminuido 75% de -5px */
+    left: -3.75px;
+    right: -3.75px;
+    bottom: -3.75px;
+    background: none;
+    border: 1.5px solid #ffffff; /* Contorno blanco */
+    border-radius: 6px; /* Esquinas ligeramente redondeadas */
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .wwz-text:hover {
+    color: #ff0000;
+    text-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000; /* Efecto de resplandor rojo */
+    border-color: #ffffff; /* Cambio de color del borde */
+  }
+  
+  .wwz-text:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 11.25px #ffffff, 0 0 22.5px #ffffff, 0 0 33.75px #ffffff; /* Sombra blanca que imita un brillo */
+  }
+  
+  .rainbow-border {
+    position: fixed;
+    background: linear-gradient(
+        90deg,
+        red, orange, yellow, green, blue, indigo, violet,
+        red, orange, yellow, green, blue, indigo, violet
+   ); /* Gradiente duplicado */
+    background-size: 200% 200%; /* Ajustado para abarcar el gradiente más largo */
+    animation: rainbow-animation 10s linear infinite;
+    z-index: 9999;
+  }
+  
+  .rainbow-border.top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9.25px; /* Reducido un 25% de 15px */
+  }
+  
+  .rainbow-border.bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 11.25px; /* Reducido un 25% de 15px */
+  }
+  
+  .rainbow-border.left {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 11.25px; /* Reducido un 25% de 15px */
+    background: linear-gradient(
+        0deg,
+        red, orange, yellow, green, blue, indigo, violet,
+        red, orange, yellow, green, blue, indigo, violet
+    ); /* Gradiente duplicado para los bordes laterales */
+    background-size: 200% 200%;
+  }
+  
+  .rainbow-border.right {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 11.25px; /* Reducido un 25% de 15px */
+    background: linear-gradient(
+        0deg,
+        red, orange, yellow, green, blue, indigo, violet,
+        red, orange, yellow, green, blue, indigo, violet
+    ); /* Gradiente duplicado para los bordes laterales */
+    background-size: 200% 200%;
+  }
+  
+  /* Animación del arcoíris */
+  @keyframes rainbow-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .interestelar-container {
+    background-color: #000000; /* Fondo negro profundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .interestelar-text {
+    font-size: 36px;
+    color: #c1c1c1; /* Gris claro, evocando un tono metálico */
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent;
+    padding: 7.5px 15px;
+    border-radius: 3.75px;
+    font-family: 'Roboto', sans-serif; /* Fuente moderna y minimalista */
+  }
+  
+  .interestelar-text::before {
+    content: '';
+    position: absolute;
+    top: -3.75px;
+    left: -3.75px;
+    right: -3.75px;
+    bottom: -3.75px;
+    background: none;
+    border: 1.5px solid #6a0dad; /* Morado oscuro */
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .interestelar-text:hover {
+    color: #a3a3ff; /* Azul claro que recuerda al espacio interestelar */
+    text-shadow: 0 0 11.25px #a3a3ff, 0 0 22.5px #6a0dad, 0 0 33.75px #ffffff; /* Brillo en tonos azules y púrpuras */
+    border-color: #6a0dad;
+  }
+  
+  .interestelar-text:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 11.25px #6a0dad, 0 0 22.5px #a3a3ff, 0 0 33.75px #ffffff; /* Brillo suave en colores espaciales */
+  }
+  .batman-container {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+  }
+  
+  .batman-text {
+    font-size: 36px;
+    color: #e50914;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent;
+    padding: 7.5px 15px;
+    border-radius: 3.75px;
+  }
+  
+  .batman-text::before {
+    content: '';
+    position: absolute;
+    top: -3.75px;
+    left: -3.75px;
+    right: -3.75px;
+    bottom: -3.75px;
+    background: none;
+    border: 1.5px solid #e50914;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .batman-text:hover {
+    color: #e50914;
+    text-shadow: 0 0 11.25px #e50914, 0 0 22.5px #e50914, 0 0 33.75px #e50914;
+    border-color: #e50914;
+  }
+  
+  .batman-text:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 11.25px #e50914, 0 0 22.5px #e50914, 0 0 33.75px #e50914;
+  }
+  
+  .twenty-eight-container {
+    background-color: #000000; /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .twenty-eight-text {
+    font-size: 36px;
+    color: #b30000; /* Rojo sangre */
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent;
+    padding: 7.5px 15px;
+    border-radius: 3.75px;
+    font-family: 'Impact', sans-serif; /* Fuente fuerte y condensada */
+  }
+  
+  .twenty-eight-text::before {
+    content: '';
+    position: absolute;
+    top: -3.75px;
+    left: -3.75px;
+    right: -3.75px;
+    bottom: -3.75px;
+    background: none;
+    border: 1.5px solid #b30000;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .twenty-eight-text:hover {
+    color: #ff0000; /* Rojo brillante al pasar el cursor */
+    text-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #b30000, 0 0 33.75px #800000; /* Sombra intensa */
+    border-color: #ff0000;
+  }
+  
+  .twenty-eight-text:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #b30000, 0 0 33.75px #800000;
+  }
+  
+  .spiderman-container {
+    background-color: #000000; /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .spiderman-text {
+    font-size: 36px;
+    color: #e60000; /* Rojo inspirado en el traje de Spider-Man */
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent;
+    padding: 7.5px 15px;
+    border-radius: 3.75px;
+    font-family: 'Arial Black', sans-serif; /* Fuente audaz y dinámica */
+  }
+  
+  .spiderman-text::before {
+    content: '';
+    position: absolute;
+    top: -3.75px;
+    left: -3.75px;
+    right: -3.75px;
+    bottom: -3.75px;
+    background: none;
+    border: 1.5px solid #e60000; 
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .spiderman-text:hover {
+    color: #003cff; /* Azul brillante inspirado en el traje de Spider-Man */
+    text-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #ff4500, 0 0 33.75px #e60000; /* Sombra en rojo y azul */
+    border-color: #00bfff;
+  }
+  
+  .spiderman-text:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #ff4500, 0 0 33.75px #e60000; /* Sombra en tonos azul y rojo */
+  }
+  
+      /* Forrest Gump */
+      .forrest-gump-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .forrest-gump-text {
+          font-size: 36px;
+          color: #0056b3;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .forrest-gump-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #0056b3;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .forrest-gump-text:hover {
+          color: #003a6c;
+          text-shadow: 0 0 11.25px #003a6c, 0 0 22.5px #003a6c, 0 0 33.75px #003a6c;
+          border-color: #003a6c;
+      }
+  
+      .forrest-gump-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #003a6c, 0 0 22.5px #003a6c, 0 0 33.75px #003a6c;
+      }
+  
+      /* Harry Potter y la Piedra Filosofal */
+  
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+      .harry-potter-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          font-family: 'Lora', serif; /* Aplicando una fuente similar */
+  
+      }
+  
+      .harry-potter-text {
+          font-size: 36px;
+          color: #d4af37;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+  
+          font-family: 'Lora', serif; /* Aplicando una fuente similar */
+  
+      }
+  
+      .harry-potter-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #d4af37;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .harry-potter-text:hover {
+          color: #6f00ff;
+          text-shadow: 0 0 11.25px #6f00ff, 0 0 22.5px #6f00ff, 0 0 33.75px #6f00ff;
+          border-color: #6f00ff;
+      }
+  
+      .harry-potter-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #6f00ff, 0 0 22.5px #6f00ff, 0 0 33.75px #6f00ff;
+      }
+  
+      /* The Godfather */
+      .godfather-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .godfather-text {
+          font-size: 36px;
+          color: #ffffff;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .godfather-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #ffffff;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .godfather-text:hover {
+          color: #cccccc;
+          text-shadow: 0 0 11.25px #cccccc, 0 0 22.5px #cccccc, 0 0 33.75px #cccccc;
+          border-color: #cccccc;
+      }
+  
+      .godfather-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #cccccc, 0 0 22.5px #cccccc, 0 0 33.75px #cccccc;
+      }
+  
+      /* The Dark Knight */
+      .dark-knight-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .dark-knight-text {
+          font-size: 36px;
+          color: #ffffff;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .dark-knight-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #ffffff;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .dark-knight-text:hover {
+          color: #ffffff;
+          text-shadow: 0 0 11.25px #007acc, 0 0 22.5px #007acc, 0 0 33.75px #007acc;
+          border-color: #007acc;
+      }
+  
+      .dark-knight-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #007acc, 0 0 22.5px #007acc, 0 0 33.75px #007acc;
+      }
+  
+      /* Titanic */
+      .titanic-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .titanic-text {
+          font-size: 36px;
+          color: #ff4500;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .titanic-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #ff4500;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .titanic-text:hover {
+          color: #ff4500;
+          text-shadow: 0 0 11.25px #ff4500, 0 0 22.5px #ff4500, 0 0 33.75px #ff4500;
+          border-color: #ff4500;
+      }
+  
+      .titanic-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #ff4500, 0 0 22.5px #ff4500, 0 0 33.75px #ff4500;
+      }
+  
+      /* Fight Club */
+      .fight-club-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .fight-club-text {
+          font-size: 36px;
+          color: #ffffff;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .fight-club-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #ff007f;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .fight-club-text:hover {
+          color: #ffffff;
+          text-shadow: 0 0 11.25px #ff007f, 0 0 22.5px #ff007f, 0 0 33.75px #ff007f;
+          border-color: #ff007f;
+      }
+  
+      .fight-club-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #ff007f, 0 0 22.5px #ff007f, 0 0 33.75px #ff007f;
+      }
+  
+      /* Inception */
+      .inception-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .inception-text {
+          font-size: 36px;
+          color: #00aaff;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .inception-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #00aaff;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .inception-text:hover {
+          color: #00aaff;
+          text-shadow: 0 0 11.25px #00aaff, 0 0 22.5px #00aaff, 0 0 33.75px #00aaff;
+          border-color: #00aaff;
+      }
+  
+      .inception-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #00aaff, 0 0 22.5px #00aaff, 0 0 33.75px #00aaff;
+      }
+  
+      /* The Matrix */
+      .matrix-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .matrix-text {
+          font-size: 36px;
+          color: #00ff00;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .matrix-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #00ff00;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .matrix-text:hover {
+          color: #00ff00;
+          text-shadow: 0 0 11.25px #00ff00, 0 0 22.5px #00ff00, 0 0 33.75px #00ff00;
+          border-color: #00ff00;
+      }
+  
+      .matrix-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #00ff00, 0 0 22.5px #00ff00, 0 0 33.75px #00ff00;
+      }
+  
+      /* The Truman Show */
+      .truman-show-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .truman-show-text {
+          font-size: 36px;
+          color: #ffffff;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .truman-show-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #ffffff;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .truman-show-text:hover {
+          color: #ffffff;
+          text-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #00bfff, 0 0 33.75px #00bfff;
+          border-color: #00bfff;
+      }
+  
+      .truman-show-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #00bfff, 0 0 33.75px #00bfff;
+      }
+  
+      /* Baby Driver */
+      .baby-driver-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .baby-driver-text {
+          font-size: 36px;
+          color: #e60012;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .baby-driver-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #e60012;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .baby-driver-text:hover {
+          color: #e60012;
+          text-shadow: 0 0 11.25px #e60012, 0 0 22.5px #e60012, 0 0 33.75px #e60012;
+          border-color: #e60012;
+      }
+  
+      .baby-driver-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #e60012, 0 0 22.5px #e60012, 0 0 33.75px #e60012;
+      }
+  
+      /* Pulp Fiction */
+      .pulp-fiction-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .pulp-fiction-text {
+          font-size: 36px;
+          color: #f5c542;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .pulp-fiction-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #f5c542;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .pulp-fiction-text:hover {
+          color: #f5c542;
+          text-shadow: 0 0 11.25px #f5c542, 0 0 22.5px #f5c542, 0 0 33.75px #f5c542;
+          border-color: #f5c542;
+      }
+  
+      .pulp-fiction-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #f5c542, 0 0 22.5px #f5c542, 0 0 33.75px #f5c542;
+      }
+  
+      /* Interstellar */
+      .interstellar-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .interstellar-text {
+          font-size: 36px;
+          color: #ffffff;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .interstellar-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #ffffff;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .interstellar-text:hover {
+          color: #ffffff;
+          text-shadow: 0 0 11.25px #ffffff, 0 0 22.5px #ffffff, 0 0 33.75px #ffffff;
+          border-color: #ffffff;
+      }
+  
+      .interstellar-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #ffffff, 0 0 22.5px #ffffff, 0 0 33.75px #ffffff;
+      }
+  
+      /* 28 Weeks Later */
+      .weeks-later-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .weeks-later-text {
+          font-size: 36px;
+          color: #ff0000;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .weeks-later-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #ff0000;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .weeks-later-text:hover {
+          color: #ff0000;
+          text-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000;
+          border-color: #ff0000;
+      }
+  
+      .weeks-later-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000;
+      }
+  
+      /* Spider-Man 2002 */
+      .spider-man-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+  
+      .spider-man-text {
+          font-size: 36px;
+          color: #c8102e;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+  
+      .spider-man-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #c8102e;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+  
+      .spider-man-text:hover {
+          color: #c8102e;
+          text-shadow: 0 0 11.25px #c8102e, 0 0 22.5px #c8102e, 0 0 33.75px #c8102e;
+          border-color: #c8102e;
+      }
+  
+      .spider-man-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #c8102e, 0 0 22.5px #c8102e, 0 0 33.75px #c8102e;
+      }
+  
+      .schindler-list-container {
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .schindler-list-text {
+        font-size: 36px;
+        color: #d0d0d0;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: all 0.3s ease;
+        border: 1.5px solid transparent;
+        padding: 7.5px 15px;
+        border-radius: 3.75px;
+    }
+    
+    .schindler-list-text::before {
+        content: '';
+        position: absolute;
+        top: -3.75px;
+        left: -3.75px;
+        right: -3.75px;
+        bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #d0d0d0;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+    
+    .schindler-list-text:hover {
+        color: #d0d0d0;
+        text-shadow: 0 0 11.25px #d0d0d0, 0 0 22.5px #d0d0d0, 0 0 33.75px #d0d0d0;
+        border-color: #d0d0d0;
+    }
+    
+    .schindler-list-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #d0d0d0, 0 0 22.5px #d0d0d0, 0 0 33.75px #d0d0d0;
+    }
+  
+    .lord-of-the-rings-container {
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+  }
+  
+  .lord-of-the-rings-text {
+      font-size: 36px;
+      color: #b09a5b;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: all 0.3s ease;
+      border: 1.5px solid transparent;
+      padding: 7.5px 15px;
+      border-radius: 3.75px;
+  }
+  
+  .lord-of-the-rings-text::before {
+      content: '';
+      position: absolute;
+      top: -3.75px;
+      left: -3.75px;
+      right: -3.75px;
+      bottom: -3.75px;
+      background: none;
+      border: 1.5px solid #b09a5b;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      opacity: 0;
+  }
+  
+  .lord-of-the-rings-text:hover {
+      color: #b09a5b;
+      text-shadow: 0 0 11.25px #b09a5b, 0 0 22.5px #b09a5b, 0 0 33.75px #b09a5b;
+      border-color: #b09a5b;
+  }
+  
+  .lord-of-the-rings-text:hover::before {
+      opacity: 1;
+      box-shadow: 0 0 11.25px #b09a5b, 0 0 22.5px #b09a5b, 0 0 33.75px #b09a5b;
+  }
+  
+  .la-la-land-container {
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+  
+  }
+  
+  .la-la-land-text {
+      font-size: 36px;
+       font-family: 'Playfair Display', serif; /* Aplicando la fuente */
+      color: #ff6f61;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: all 0.3s ease;
+      border: 1.5px solid transparent;
+      padding: 7.5px 15px;
+      border-radius: 3.75px;
+     
+  }
+  
+  .la-la-land-text::before {
+      content: '';
+      position: absolute;
+      top: -3.75px;
+      left: -3.75px;
+      right: -3.75px;
+      bottom: -3.75px;
+      background: none;
+      border: 1.5px solid #ff6f61;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      opacity: 0;
+  }
+  
+  .la-la-land-text:hover {
+      color: #ff6f61;
+      text-shadow: 0 0 11.25px #ff6f61, 0 0 22.5px #ff6f61, 0 0 33.75px #ff6f61;
+      border-color: #ff6f61;
+  }
+  
+  .la-la-land-text:hover::before {
+      opacity: 1;
+      box-shadow: 0 0 11.25px #ff6f61, 0 0 22.5px #ff6f61, 0 0 33.75px #ff6f61;
+  }
+  
+  footer {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #444444;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    position: relative;
+  }
+  
+  .fondo {
+    position: fixed;
+      width: 800px;
+      height: 800px;
+    background-image: url('../index/Imagenesfondos/pato.png');
+    background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*CSS TELEFONO
+  ///////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////
+  */
+
+
+  @media only screen and (max-width: 768px) {
+    body {
+      background-color: black;
+      color: white;
+    
+    
+    }
+    
+    /* Estilos para el encabezado */
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    /* Estilos para el h1 */
+    header h1 {
+      
+      font-size: 4em;
+      margin: 0;
+    }
+    
+    /* Estilos para la barra de navegación */
+    .titulo{
+      font-family: tron;
+    
+    }
+    
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 120px; /* Altura de la barra */
+      padding: 0; /* Sin espaciado horizontal */
+      position: relative;
+      width: 100%;
+      top: 10%;
+      left: 0;
+      z-index: 9999;
+    }
+    
+    .navbar-item {
+      position: relative;
+      width: 33.33%; /* Cada imagen ocupa un tercio del ancho de la barra */
+      height: 100%;
+      overflow: hidden; /* Asegura que las imágenes no se desborden */
+    }
+    
+    .navbar-item img {
+      height: 100%; /* Asegura que las imágenes abarquen toda la altura de la barra */
+      width: 100%; /* Asegura que las imágenes abarquen todo el ancho de su contenedor */
+      object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+      transition: all 0.3s ease; /* Transición suave para el efecto de hover */
+    }
+    
+    .navbar-item h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      color: white;
+      font-size: 38px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      transition: all 0.3s ease; /* Transición suave para el efecto de hover */
+    }
+    
+    /* Efecto de hover para la imagen y el texto */
+    .navbar-item:hover img {
+      filter: brightness(0.5); /* Oscurece la imagen al hacer hover */
+    }
+    
+    .navbar-item:hover h2 {
+      color: rgb(221, 150, 84); /* Cambia el color del texto al hacer hover */
+    }
+    
+    /* Estilos para los enlaces */
+    .navbar-item a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-decoration: none; /* Quita el subrayado de los enlaces */
+    }
+    alphabet-nav {
+        width: 100%;
+        margin-top: 10px; /* Agrega margen superior para separación */
+        padding: 10px 0;
+       
+      }
+      
+      .alphabet-bar {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite que las letras se envuelvan en varias líneas si es necesario */
+       
+      
+      }
+      
+      .alphabet-bar li {
+        margin: 15px;
+      }
+      
+      .alphabet-bar a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.4em;
+        display: block;
+        width: 38px; /* Ancho del cuadrado */
+        height: 40px; /* Altura del cuadrado */
+        line-height: 40px; /* Alinea verticalmente el texto */
+        text-align: center; /* Centra el texto horizontalmente */
+        border-radius: 8px; /* Bordes redondeados */
+        background-color: #555;
+      }
+      
+      /* Colores de hover diferentes para cada letra */
+      .alphabet-bar a:hover {
+        background-color: rgb(221, 150, 84);  color: #000000;
+      }
+      
+      
+      
+      button {
+        position: absolute;
+        top: 50%;
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 20px;
+        transform: translateY(-50%);
+      }
+      
+      .prev {
+        left: 10px;
+      }
+      
+      .next {
+        right: 10px;
+      }
+      
+      
+     /* Galería de imágenes */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
+  justify-content: space-between;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.image-item {
+  width: 30%; /* Ajustado para 3 imágenes por fila */
+  margin-bottom: 15px; /* Espacio debajo de cada imagen y texto */
+  position: relative;
+}
+
+.image-item img {
+  width: 100%;
+  height: 300px; /* Ajusta la altura de las imágenes */
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-item p {
+  text-align: center;
+  margin: 10px 0 0;
+  color: #fff;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .image-item {
+    width: 32%; /* Ajusta el ancho para 3 imágenes por fila */
+    margin-bottom: 10px;
+  }
+
+  .image-item img {
+    height: 270px; /* Ajuste de altura para pantallas móviles */
+  }
+}
+
+      
+      .overlay {
+        position: absolute;
+        top: 15px; /* Ajusta la distancia desde el borde superior */
+        left: 15px; /* Ajusta la distancia desde el borde izquierdo */
+        width: 45px; /* Ajusta el tamaño del cuadrado */
+        height: 45px; /* Ajusta el tamaño del cuadrado */
+        background: rgba(0, 0, 0, 0.5); /* Color y opacidad de la superposición */
+        border-radius: 15px; /* Bordes redondeados */
+        display: flex;
+        align-items: center; /* Centra el texto verticalmente */
+        justify-content: center; /* Centra el texto horizontalmente */
+        color: #919191; /* Color del texto dentro del cuadrado */
+        font-size: 22px; /* Tamaño de la fuente */
+        text-align: center; /* Centra el texto dentro del cuadrado */
+      }
+      
+      
+      .pagination-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      
+      .pagination {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      .pagination a {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 11.5px 17.25px; /* Aumentado en un 15% */
+        border: 1px solid #ddd;
+        cursor: pointer;
+        border-radius: 5.75px; /* Aumentado en un 15% */
+        text-decoration: none;
+        color: rgb(221, 150, 84);
+        font-size: 1.15em; /* Aumentado en un 15% */
+        transition: background-color 0.3s, color 0.3s;
+      }
+      
+      .pagination a:hover {
+        background-color: rgb(221, 150, 84);
+        color: white;
+      }
+      
+      .pagination a.active {
+        background-color: #007bff; /* Color activo azul */
+        color: white;
+        border-color: #007bff;
+      }
+      
+      .pagination a.inactive {
+        cursor: default;
+        color: #ddd;
+        pointer-events: none;
+      }
+      
+      .pagination a.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+      
+      
+      .neon-container {
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0;
+      }
+      
+      .neon-text {
+        font-size: 36px; /* Disminuido 75% de 48px */
+        color: #00f9ff;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1.5px; /* Ajustado proporcionalmente */
+        transition: all 0.3s ease;
+        border: 1.5px solid transparent; /* Disminuido 75% de 2px */
+        padding: 7.5px 15px; /* Disminuido 75% de 10px 20px */
+        border-radius: 3.75px; /* Disminuido 75% de 5px */
+      }
+      
+      .neon-text::before {
+        content: '';
+        position: absolute;
+        top: -3.75px; /* Disminuido 75% de -5px */
+        left: -3.75px;
+        right: -3.75px;
+        bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #ff9600; /* Disminuido 75% de 2px */
+        border-radius: 6px; /* Disminuido 75% de 8px */
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+      
+      .neon-text:hover {
+        color: #00f9ff;
+        text-shadow: 0 0 11.25px #00f9ff, 0 0 22.5px #00f9ff, 0 0 33.75px #00f9ff; /* Disminuido 75% de 15px, 30px, 45px */
+        border-color: #ff9600;
+      }
+      
+      .neon-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #ff9600, 0 0 22.5px #ff9600, 0 0 33.75px #ff9600; /* Disminuido 75% de 15px, 30px, 45px */
+      }
+      
+      
+      .wwz-container {
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      ;
+        margin: 0;
+      }
+      
+      .wwz-text {
+        font-size: 36px; /* Tamaño reducido al 75% */
+        font-family: 'Impact', sans-serif; /* Estilo de fuente similar */
+        color: #ff0000; /* Color rojo característico */
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1.5px; /* Espaciado reducido */
+        transition: all 0.3s ease;
+        padding: 7.5px 15px; /* Padding reducido al 75% */
+      }
+      
+      .wwz-text::before {
+        content: '';
+        position: absolute;
+        top: -3.75px; /* Disminuido 75% de -5px */
+        left: -3.75px;
+        right: -3.75px;
+        bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #ffffff; /* Contorno blanco */
+        border-radius: 6px; /* Esquinas ligeramente redondeadas */
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+      
+      .wwz-text:hover {
+        color: #ff0000;
+        text-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000; /* Efecto de resplandor rojo */
+        border-color: #ffffff; /* Cambio de color del borde */
+      }
+      
+      .wwz-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #ffffff, 0 0 22.5px #ffffff, 0 0 33.75px #ffffff; /* Sombra blanca que imita un brillo */
+      }
+      
+      .rainbow-border {
+        position: fixed;
+        background: linear-gradient(
+            90deg,
+            red, orange, yellow, green, blue, indigo, violet,
+            red, orange, yellow, green, blue, indigo, violet
+       ); /* Gradiente duplicado */
+        background-size: 200% 200%; /* Ajustado para abarcar el gradiente más largo */
+        animation: rainbow-animation 10s linear infinite;
+        z-index: 9999;
+      }
+      
+      .rainbow-border.top {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 9.25px; /* Reducido un 25% de 15px */
+      }
+      
+      .rainbow-border.bottom {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 11.25px; /* Reducido un 25% de 15px */
+      }
+      
+      .rainbow-border.left {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 11.25px; /* Reducido un 25% de 15px */
+        background: linear-gradient(
+            0deg,
+            red, orange, yellow, green, blue, indigo, violet,
+            red, orange, yellow, green, blue, indigo, violet
+        ); /* Gradiente duplicado para los bordes laterales */
+        background-size: 200% 200%;
+      }
+      
+      .rainbow-border.right {
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 11.25px; /* Reducido un 25% de 15px */
+        background: linear-gradient(
+            0deg,
+            red, orange, yellow, green, blue, indigo, violet,
+            red, orange, yellow, green, blue, indigo, violet
+        ); /* Gradiente duplicado para los bordes laterales */
+        background-size: 200% 200%;
+      }
+      
+      /* Animación del arcoíris */
+      @keyframes rainbow-animation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .interestelar-container {
+        background-color: #000000; /* Fondo negro profundo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        overflow: hidden;
+      }
+      
+      .interestelar-text {
+        font-size: 36px;
+        color: #c1c1c1; /* Gris claro, evocando un tono metálico */
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: all 0.3s ease;
+        border: 1.5px solid transparent;
+        padding: 7.5px 15px;
+        border-radius: 3.75px;
+        font-family: 'Roboto', sans-serif; /* Fuente moderna y minimalista */
+      }
+      
+      .interestelar-text::before {
+        content: '';
+        position: absolute;
+        top: -3.75px;
+        left: -3.75px;
+        right: -3.75px;
+        bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #6a0dad; /* Morado oscuro */
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+      
+      .interestelar-text:hover {
+        color: #a3a3ff; /* Azul claro que recuerda al espacio interestelar */
+        text-shadow: 0 0 11.25px #a3a3ff, 0 0 22.5px #6a0dad, 0 0 33.75px #ffffff; /* Brillo en tonos azules y púrpuras */
+        border-color: #6a0dad;
+      }
+      
+      .interestelar-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #6a0dad, 0 0 22.5px #a3a3ff, 0 0 33.75px #ffffff; /* Brillo suave en colores espaciales */
+      }
+      .batman-container {
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0;
+      }
+      
+      .batman-text {
+        font-size: 36px;
+        color: #e50914;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: all 0.3s ease;
+        border: 1.5px solid transparent;
+        padding: 7.5px 15px;
+        border-radius: 3.75px;
+      }
+      
+      .batman-text::before {
+        content: '';
+        position: absolute;
+        top: -3.75px;
+        left: -3.75px;
+        right: -3.75px;
+        bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #e50914;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+      
+      .batman-text:hover {
+        color: #e50914;
+        text-shadow: 0 0 11.25px #e50914, 0 0 22.5px #e50914, 0 0 33.75px #e50914;
+        border-color: #e50914;
+      }
+      
+      .batman-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #e50914, 0 0 22.5px #e50914, 0 0 33.75px #e50914;
+      }
+      
+      .twenty-eight-container {
+        background-color: #000000; /* Fondo oscuro */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0;
+        overflow: hidden;
+      }
+      
+      .twenty-eight-text {
+        font-size: 36px;
+        color: #b30000; /* Rojo sangre */
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: all 0.3s ease;
+        border: 1.5px solid transparent;
+        padding: 7.5px 15px;
+        border-radius: 3.75px;
+        font-family: 'Impact', sans-serif; /* Fuente fuerte y condensada */
+      }
+      
+      .twenty-eight-text::before {
+        content: '';
+        position: absolute;
+        top: -3.75px;
+        left: -3.75px;
+        right: -3.75px;
+        bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #b30000;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+      
+      .twenty-eight-text:hover {
+        color: #ff0000; /* Rojo brillante al pasar el cursor */
+        text-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #b30000, 0 0 33.75px #800000; /* Sombra intensa */
+        border-color: #ff0000;
+      }
+      
+      .twenty-eight-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #b30000, 0 0 33.75px #800000;
+      }
+      
+      .spiderman-container {
+        background-color: #000000; /* Fondo oscuro */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0;
+        overflow: hidden;
+      }
+      
+      .spiderman-text {
+        font-size: 36px;
+        color: #e60000; /* Rojo inspirado en el traje de Spider-Man */
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: all 0.3s ease;
+        border: 1.5px solid transparent;
+        padding: 7.5px 15px;
+        border-radius: 3.75px;
+        font-family: 'Arial Black', sans-serif; /* Fuente audaz y dinámica */
+      }
+      
+      .spiderman-text::before {
+        content: '';
+        position: absolute;
+        top: -3.75px;
+        left: -3.75px;
+        right: -3.75px;
+        bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #e60000; 
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+      
+      .spiderman-text:hover {
+        color: #003cff; /* Azul brillante inspirado en el traje de Spider-Man */
+        text-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #ff4500, 0 0 33.75px #e60000; /* Sombra en rojo y azul */
+        border-color: #00bfff;
+      }
+      
+      .spiderman-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #ff4500, 0 0 33.75px #e60000; /* Sombra en tonos azul y rojo */
+      }
+      
+          /* Forrest Gump */
+          .forrest-gump-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .forrest-gump-text {
+              font-size: 36px;
+              color: #0056b3;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .forrest-gump-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #0056b3;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .forrest-gump-text:hover {
+              color: #003a6c;
+              text-shadow: 0 0 11.25px #003a6c, 0 0 22.5px #003a6c, 0 0 33.75px #003a6c;
+              border-color: #003a6c;
+          }
+      
+          .forrest-gump-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #003a6c, 0 0 22.5px #003a6c, 0 0 33.75px #003a6c;
+          }
+      
+          /* Harry Potter y la Piedra Filosofal */
+      
+          @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+          .harry-potter-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+              font-family: 'Lora', serif; /* Aplicando una fuente similar */
+      
+          }
+      
+          .harry-potter-text {
+              font-size: 36px;
+              color: #d4af37;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+      
+              font-family: 'Lora', serif; /* Aplicando una fuente similar */
+      
+          }
+      
+          .harry-potter-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #d4af37;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .harry-potter-text:hover {
+              color: #6f00ff;
+              text-shadow: 0 0 11.25px #6f00ff, 0 0 22.5px #6f00ff, 0 0 33.75px #6f00ff;
+              border-color: #6f00ff;
+          }
+      
+          .harry-potter-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #6f00ff, 0 0 22.5px #6f00ff, 0 0 33.75px #6f00ff;
+          }
+      
+          /* The Godfather */
+          .godfather-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .godfather-text {
+              font-size: 36px;
+              color: #ffffff;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .godfather-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #ffffff;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .godfather-text:hover {
+              color: #cccccc;
+              text-shadow: 0 0 11.25px #cccccc, 0 0 22.5px #cccccc, 0 0 33.75px #cccccc;
+              border-color: #cccccc;
+          }
+      
+          .godfather-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #cccccc, 0 0 22.5px #cccccc, 0 0 33.75px #cccccc;
+          }
+      
+          /* The Dark Knight */
+          .dark-knight-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .dark-knight-text {
+              font-size: 36px;
+              color: #ffffff;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .dark-knight-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #ffffff;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .dark-knight-text:hover {
+              color: #ffffff;
+              text-shadow: 0 0 11.25px #007acc, 0 0 22.5px #007acc, 0 0 33.75px #007acc;
+              border-color: #007acc;
+          }
+      
+          .dark-knight-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #007acc, 0 0 22.5px #007acc, 0 0 33.75px #007acc;
+          }
+      
+          /* Titanic */
+          .titanic-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .titanic-text {
+              font-size: 36px;
+              color: #ff4500;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .titanic-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #ff4500;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .titanic-text:hover {
+              color: #ff4500;
+              text-shadow: 0 0 11.25px #ff4500, 0 0 22.5px #ff4500, 0 0 33.75px #ff4500;
+              border-color: #ff4500;
+          }
+      
+          .titanic-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #ff4500, 0 0 22.5px #ff4500, 0 0 33.75px #ff4500;
+          }
+      
+          /* Fight Club */
+          .fight-club-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .fight-club-text {
+              font-size: 36px;
+              color: #ffffff;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .fight-club-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #ff007f;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .fight-club-text:hover {
+              color: #ffffff;
+              text-shadow: 0 0 11.25px #ff007f, 0 0 22.5px #ff007f, 0 0 33.75px #ff007f;
+              border-color: #ff007f;
+          }
+      
+          .fight-club-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #ff007f, 0 0 22.5px #ff007f, 0 0 33.75px #ff007f;
+          }
+      
+          /* Inception */
+          .inception-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .inception-text {
+              font-size: 36px;
+              color: #00aaff;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .inception-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #00aaff;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .inception-text:hover {
+              color: #00aaff;
+              text-shadow: 0 0 11.25px #00aaff, 0 0 22.5px #00aaff, 0 0 33.75px #00aaff;
+              border-color: #00aaff;
+          }
+      
+          .inception-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #00aaff, 0 0 22.5px #00aaff, 0 0 33.75px #00aaff;
+          }
+      
+          /* The Matrix */
+          .matrix-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .matrix-text {
+              font-size: 36px;
+              color: #00ff00;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .matrix-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #00ff00;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .matrix-text:hover {
+              color: #00ff00;
+              text-shadow: 0 0 11.25px #00ff00, 0 0 22.5px #00ff00, 0 0 33.75px #00ff00;
+              border-color: #00ff00;
+          }
+      
+          .matrix-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #00ff00, 0 0 22.5px #00ff00, 0 0 33.75px #00ff00;
+          }
+      
+          /* The Truman Show */
+          .truman-show-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .truman-show-text {
+              font-size: 36px;
+              color: #ffffff;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .truman-show-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #ffffff;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .truman-show-text:hover {
+              color: #ffffff;
+              text-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #00bfff, 0 0 33.75px #00bfff;
+              border-color: #00bfff;
+          }
+      
+          .truman-show-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #00bfff, 0 0 33.75px #00bfff;
+          }
+      
+          /* Baby Driver */
+          .baby-driver-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .baby-driver-text {
+              font-size: 36px;
+              color: #e60012;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .baby-driver-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #e60012;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .baby-driver-text:hover {
+              color: #e60012;
+              text-shadow: 0 0 11.25px #e60012, 0 0 22.5px #e60012, 0 0 33.75px #e60012;
+              border-color: #e60012;
+          }
+      
+          .baby-driver-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #e60012, 0 0 22.5px #e60012, 0 0 33.75px #e60012;
+          }
+      
+          /* Pulp Fiction */
+          .pulp-fiction-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .pulp-fiction-text {
+              font-size: 36px;
+              color: #f5c542;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .pulp-fiction-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #f5c542;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .pulp-fiction-text:hover {
+              color: #f5c542;
+              text-shadow: 0 0 11.25px #f5c542, 0 0 22.5px #f5c542, 0 0 33.75px #f5c542;
+              border-color: #f5c542;
+          }
+      
+          .pulp-fiction-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #f5c542, 0 0 22.5px #f5c542, 0 0 33.75px #f5c542;
+          }
+      
+          /* Interstellar */
+          .interstellar-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .interstellar-text {
+              font-size: 36px;
+              color: #ffffff;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .interstellar-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #ffffff;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .interstellar-text:hover {
+              color: #ffffff;
+              text-shadow: 0 0 11.25px #ffffff, 0 0 22.5px #ffffff, 0 0 33.75px #ffffff;
+              border-color: #ffffff;
+          }
+      
+          .interstellar-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #ffffff, 0 0 22.5px #ffffff, 0 0 33.75px #ffffff;
+          }
+      
+          /* 28 Weeks Later */
+          .weeks-later-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .weeks-later-text {
+              font-size: 36px;
+              color: #ff0000;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .weeks-later-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #ff0000;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .weeks-later-text:hover {
+              color: #ff0000;
+              text-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000;
+              border-color: #ff0000;
+          }
+      
+          .weeks-later-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000;
+          }
+      
+          /* Spider-Man 2002 */
+          .spider-man-container {
+              background-color: #000000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+          }
+      
+          .spider-man-text {
+              font-size: 36px;
+              color: #c8102e;
+              position: relative;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              transition: all 0.3s ease;
+              border: 1.5px solid transparent;
+              padding: 7.5px 15px;
+              border-radius: 3.75px;
+          }
+      
+          .spider-man-text::before {
+              content: '';
+              position: absolute;
+              top: -3.75px;
+              left: -3.75px;
+              right: -3.75px;
+              bottom: -3.75px;
+              background: none;
+              border: 1.5px solid #c8102e;
+              border-radius: 6px;
+              transition: all 0.3s ease;
+              opacity: 0;
+          }
+      
+          .spider-man-text:hover {
+              color: #c8102e;
+              text-shadow: 0 0 11.25px #c8102e, 0 0 22.5px #c8102e, 0 0 33.75px #c8102e;
+              border-color: #c8102e;
+          }
+      
+          .spider-man-text:hover::before {
+              opacity: 1;
+              box-shadow: 0 0 11.25px #c8102e, 0 0 22.5px #c8102e, 0 0 33.75px #c8102e;
+          }
+      
+          .schindler-list-container {
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        
+        .schindler-list-text {
+            font-size: 36px;
+            color: #d0d0d0;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+            border: 1.5px solid transparent;
+            padding: 7.5px 15px;
+            border-radius: 3.75px;
+        }
+        
+        .schindler-list-text::before {
+            content: '';
+            position: absolute;
+            top: -3.75px;
+            left: -3.75px;
+            right: -3.75px;
+            bottom: -3.75px;
+            background: none;
+            border: 1.5px solid #d0d0d0;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+        
+        .schindler-list-text:hover {
+            color: #d0d0d0;
+            text-shadow: 0 0 11.25px #d0d0d0, 0 0 22.5px #d0d0d0, 0 0 33.75px #d0d0d0;
+            border-color: #d0d0d0;
+        }
+        
+        .schindler-list-text:hover::before {
+            opacity: 1;
+            box-shadow: 0 0 11.25px #d0d0d0, 0 0 22.5px #d0d0d0, 0 0 33.75px #d0d0d0;
+        }
+      
+        .lord-of-the-rings-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      }
+      
+      .lord-of-the-rings-text {
+          font-size: 36px;
+          color: #b09a5b;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+      }
+      
+      .lord-of-the-rings-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #b09a5b;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+      
+      .lord-of-the-rings-text:hover {
+          color: #b09a5b;
+          text-shadow: 0 0 11.25px #b09a5b, 0 0 22.5px #b09a5b, 0 0 33.75px #b09a5b;
+          border-color: #b09a5b;
+      }
+      
+      .lord-of-the-rings-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #b09a5b, 0 0 22.5px #b09a5b, 0 0 33.75px #b09a5b;
+      }
+      
+      .la-la-land-container {
+          background-color: #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+      
+      }
+      
+      .la-la-land-text {
+          font-size: 36px;
+           font-family: 'Playfair Display', serif; /* Aplicando la fuente */
+          color: #ff6f61;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transition: all 0.3s ease;
+          border: 1.5px solid transparent;
+          padding: 7.5px 15px;
+          border-radius: 3.75px;
+         
+      }
+      
+      .la-la-land-text::before {
+          content: '';
+          position: absolute;
+          top: -3.75px;
+          left: -3.75px;
+          right: -3.75px;
+          bottom: -3.75px;
+          background: none;
+          border: 1.5px solid #ff6f61;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          opacity: 0;
+      }
+      
+      .la-la-land-text:hover {
+          color: #ff6f61;
+          text-shadow: 0 0 11.25px #ff6f61, 0 0 22.5px #ff6f61, 0 0 33.75px #ff6f61;
+          border-color: #ff6f61;
+      }
+      
+      .la-la-land-text:hover::before {
+          opacity: 1;
+          box-shadow: 0 0 11.25px #ff6f61, 0 0 22.5px #ff6f61, 0 0 33.75px #ff6f61;
+      }
+      
+      footer {
+        background-color: #1c1c1c;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        font-family: 'Arial', sans-serif;
+        border-top: 1px solid #444444;
+        width: 100%;
+        height: 80px;
+        bottom: 0;
+        position: relative;
+      }
+      
+      .fondo {
+        position: fixed;
+          width: 800px;
+          height: 800px;
+        background-image: url('../index/Imagenesfondos/pato.png');
+        background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+      }
+
+
+
+
+
+
+
