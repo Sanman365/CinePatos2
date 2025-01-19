@@ -5,6 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let movies = []; // Aquí se guardarán los datos de las películas
 
+    // Cargar el JSON externo con los datos de las películas
+    fetch("videos.json")
+        .then(response => response.json())
+        .then(data => {
+            movies = data;
+        })
+        .catch(error => console.error("Error loading videos.json:", error));
+
     // Mostrar sugerencias mientras el usuario escribe
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.toLowerCase().trim();
@@ -13,31 +21,30 @@ document.addEventListener("DOMContentLoaded", () => {
         if (query.length === 0) {
             suggestionsContainer.style.display = "none";
             return;
+        }   
+
+        // Filtrar películas que coincidan con la consulta
+        const filteredMovies = movies
+            .filter(movie => movie.title.toLowerCase().startsWith(query))
+            .slice(0, 5); // Mostrar un máximo de 5 sugerencias
+
+        if (filteredMovies.length === 0) {
+            suggestionsContainer.innerHTML = "<p>No se encontraron resultados</p>";
+            suggestionsContainer.style.display = "block";
+            return;
         }
 
-        // Filtrar películas que coincidan con la consulta (búsqueda por API)
-        fetch(`/api/search?q=${query}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.length === 0) {
-                    suggestionsContainer.innerHTML = "<p>No se encontraron resultados</p>";
-                    suggestionsContainer.style.display = "block";
-                    return;
-                }
+        // Agregar las sugerencias como enlaces
+        filteredMovies.forEach(movie => {
+            const suggestionItem = document.createElement("a");
+            suggestionItem.href = movie.link;
+            suggestionItem.textContent = movie.title;
+            suggestionItem.classList.add("suggestion-item");
 
-                // Mostrar sugerencias como enlaces
-                data.forEach(movie => {
-                    const suggestionItem = document.createElement("a");
-                    suggestionItem.href = movie.link;
-                    suggestionItem.textContent = movie.title;
-                    suggestionItem.classList.add("suggestion-item");
+            suggestionsContainer.appendChild(suggestionItem);
+        });
 
-                    suggestionsContainer.appendChild(suggestionItem);
-                });
-
-                suggestionsContainer.style.display = "block"; // Mostrar sugerencias
-            })
-            .catch(error => console.error("Error fetching movies:", error));
+        suggestionsContainer.style.display = "block"; // Mostrar sugerencias
     });
 
     // Hacer que el botón de búsqueda funcione
@@ -45,14 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const query = searchInput.value.toLowerCase().trim();
         if (query.length === 0) return;
 
-        // Hacer la consulta a la API
-        fetch(`/api/search?q=${query}`)
-            .then(response => response.json())
-            .then(data => {
-                localStorage.setItem("searchResults", JSON.stringify(data));
-                window.location.href = "/RESULTS.html"; // Redirigir a la página de resultados
-            })
-            .catch(error => console.error("Error searching:", error));
+        const results = movies.filter(movie => movie.title.toLowerCase().includes(query));
+
+        localStorage.setItem("searchResults", JSON.stringify(results));
+        window.location.href = "../RESULTS.html"; // Redirigir a la página de resultados
     });
 
     // Ocultar sugerencias si el usuario hace clic fuera
