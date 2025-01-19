@@ -1,0 +1,23 @@
+
+[
+    {
+        "title": "The Batman",
+        "image": "POSTER-BATMAN-INDEX.JPEG",
+        "link": "../BatmanRP/BatmanRP.html"
+    },
+    {
+        "title": "Tron:legacy",
+        "image": "Imagenesfondos/POSTER_tronindex.jpg",
+        "link": "tron.html"
+    },
+    {
+        "title": "Interstellar",
+        "image": "interstellar.jpg",
+        "link": "interstellar.html"
+    },
+    {
+        "title": "Spider-Man",
+        "image": "spiderman.jpg",
+        "link": "spiderman.html"
+    }
+]

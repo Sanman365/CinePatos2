@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la página</title>
+    <!-- Vinculación de los archivos CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style_BatmanRP.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+
+    <style>
+        /* Contenedor de la imagen */
+        .image-container {
+            position: relative; /* Opcional, solo si usas posicionamiento absoluto */
+            width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
+            height: 500px; /* Ajusta la altura del contenedor según sea necesario */
+            image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
+        }
+
+        /* Imagen con borde blanco */
+        .image-container img {
+            position: absolute; /* Permite mover la imagen libremente dentro del contenedor */
+            top: 10%; /* Distancia desde la parte superior del contenedor */
+            left: 5%; /* Distancia desde el lado izquierdo del contenedor */
+            width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+            height: auto; /* Mantiene la proporción original de la imagen */
+        }
+    </style>
+</head>
+<body onclick="PlayAudio()">
+    <br>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#seccion1">Peliculas</a></li>
+            <li><a href="#seccion2">Series</a></li>
+            <li><a href="#seccion3">Recomendaciones</a></li>
+            <li><a href="#seccion4">...</a></li>
+        </ul>
+    </nav>
+    <div class="image-container">
+        <img src="POSTER-BATMAN-INDEX.jpeg" alt="Poster">
+        <div class="resum">
+            <p>
+                En su segundo año de lucha contra el crimen, Batman descubre corrupción en Gotham City que conecta con su propia familia mientras se enfrenta a un asesino en serie conocido como Riddler.                
+            </p>
+        </div>
+        <p class="actors">Robert Pattinson    Zoë Kravitz    Jeffrey Wright</p>
+        <div class="imbd">
+            <p>PUNTUACIÓN EN IMDb</p>
+           
+            <div class="image-container2">
+             <center>  </center>
+            </div>
+        </div>
+
+    </div>
+    <br><br><br>
+     <center>
+        <div class="tabs">
+            <style>iframe {
+                width: 100%;
+                height: 360px;
+                border: none;
+            }</style>
+            <ul class="tab-list">
+                <li class="tab active" data-tab="video1">Video 1</li>
+                <li class="tab" data-tab="video2">Video 2</li>
+                <li class="tab" data-tab="video3">Video 3</li>
+            </ul>
+            <div class="tab-content">
+                <div id="video1" class="tab-panel active">
+                    <iframe src="https://filemoon.sx/e/3mval13lpqqi/Batman__2022__WEB-DL_4K_HDR_HBO-MAX" frameborderr="0" allowfullscreen class="video-player"></iframe>
+                </div>
+                <div id="video2" class="tab-panel">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div id="video3" class="tab-panel">
+                    <iframe src="https://www.youtube.com/embed/8UFXXoyyHGU?si=fFLzLFD2FwuaHEpC" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+</center>
+    <br><br><br><br><br><br><br><br>
+    <center>
+        <div>
+    </div>
+
+
+    <div class="standalone-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fWQrd6cwJ0A?si=T1rOQB5RXUh1lVG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </div>
+    <!-- Vinculación del archivo JavaScript -->
+
+<br><br><br><br>
+    <audio id="Music_Background" autoplay controls loop>
+        <source src="../The Batman _ Michael Giacchino _ WaterTower.mp3" type="audio/mpeg">
+    </audio>
+    <script >
+function PlayAudio() {
+    document.getElementById("Music_Background").play();
+}
+
+</script>
+
+    <!-- Your existing content -->
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+          <center>  <p>Usted está escuchando el soundtrack de la película, si gusta seguir escuchando solo ignore este mensaje, si desea pararlo, presione parar.</p></center>
+            <button class="stop-button" onclick="StopAudio()">Parar</button>
+        </div>
+    </div>
+  
+    <script src="../Music_Background.js"></script>
+    <script>document.querySelector('.video-player').addEventListener('click', function(event) {
+        // Previene el comportamiento predeterminado (abrir una nueva ventana o pestaña)
+        event.preventDefault();
+        
+        // Aquí puedes añadir lo que desees hacer en lugar de la redirección
+        // Por ejemplo, mostrar un mensaje de advertencia, o simplemente hacer nada.
+        console.log("¡Se ha bloqueado la apertura de una nueva ventana!");
+    
+        // Si deseas redirigir a otra página, puedes hacerlo de manera controlada:
+        // window.location.href = "URL_DE_TU_ELECCION";
+    });</script>
+    <script src="../Tron/anuncio.js"
+
+</body>
+</html>

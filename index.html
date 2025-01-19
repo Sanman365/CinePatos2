@@ -5,7 +5,11 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    \<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
+
+
 
     <title>Título de la página</title>
     <!-- Vinculación del archivo CSS -->
@@ -29,7 +33,10 @@
             </div>
         </div>-->
           
+        
 
+    
+        
             
                 
       
@@ -89,6 +96,15 @@
               <li><a href="#Z">Z</a></li>
           </ul>
       </nav>
+      
+      
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar...">
+        <div id="suggestions"></div>
+        <button id="searchButton">Buscar</button>
+    </div>
+
+</div>  
       <center>
 <!--
       <div class="container-carousel">
@@ -134,7 +150,7 @@
 <!-- Cinco imágenes con texto en la primera fila -->
 <section class="image-gallery">
   <div class="image-item">
-      <a href="Tron/tron.html" target="_blank"><img src="Imagenesfondos/POSTER_tronindex.jpg" alt="Foto 1" loading="lazy"></a>
+      <a href="Tron/tron.html" target="_blank"><img src="Imagenesfondos/POSTER_tronindex.jpg" alt="tron:legacy" loading="lazy"></a>
       <div class="overlay">PG</div>
       <div class="neon-container">
         <div class="neon-text">
@@ -145,7 +161,7 @@
 
   
   <div class="image-item">
-      <a href="WWZ/wwz.html" target="_blank"><img src="Imagenesfondos/WWZ.jpeg" alt="Foto 2"loading="lazy"></a>
+      <a href="WWZ/wwz.html" target="_blank"><img src="Imagenesfondos/WWZ.jpeg" alt="Foto 2"loading="lazy" class="image-item, img"></a>
       <div class="overlay">R</div>
       <div class="wwz-container">
         <div class="wwz-text">
@@ -154,7 +170,7 @@
     </div>
   </div>
   <div class="image-item">
-      <a href="Batman-RP/Batman-RP.html" target="_blank"><img src="Imagenesfondos/POSTER-BATMAN-INDEX.jpeg" alt="Foto 3" loading="lazy"></a>
+      <a href="../CinePatos2/Videos/Batman-RP/Batman_RP.html" target="_blank"><img src="Imagenesfondos/POSTER-BATMAN-INDEX.jpeg"  alt="The Batman" loading="lazy"class="image-item, img" ></a>
       <div class="overlay">R</div>
       
       <div class="batman-container">
@@ -419,8 +435,8 @@ updatePagination();
         </footer>
     
     <!-- Vinculación del archivo JavaScript -->
-    <script src="script.js"></script>
     <script src="clave.js"></script>
+    <script src="search.js"></script>
 
     <div class="rainbow-border top"></div>
     <div class="rainbow-border bottom"></div>
