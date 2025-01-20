@@ -47,7 +47,7 @@
     ,
     {
         "title": "Rambo Last Blood",
-        "image": "../Imagenesfondos/Rambo5.jpeg",
+        "image": "../Imagenesfondos/Rambo5.jpg",
         "link": "../Rambo/Rambo5.html"
     }
     ,
@@ -91,12 +91,12 @@
     },
     {
         "title": "Rocky v",
-        "image": "../Imagenesfondos/rocky.5jpeg",
+        "image": "../Imagenesfondos/rocky.5jpg",
         "link": "../Rocky/rocky5.html"
     },
     {
         "title": "Rocky Balboa",
-        "image": "../Imagenesfondos/rocky6.jpeg",
+        "image": "../Imagenesfondos/rocky6.jpg",
         "link": "../Rocky/rocky6.html"
     }
 ]
