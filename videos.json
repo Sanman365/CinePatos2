@@ -20,4 +20,83 @@
         "image": "spiderman.jpg",
         "link": "spiderman.html"
     }
+    ,
+    {
+        "title": "Rambo",
+        "image": "../Imagenesfondos/Rambo1.jpeg",
+        "link": "../Rambo/Rambo.html"
+    }
+    ,
+    {
+        "title": "Rambo 2",
+        "image": "../Imagenesfondos/Rambo2.jpeg",
+        "link": "../Rambo/Rambo2.html"
+    }
+    ,
+    {
+        "title": "Rambo 3",
+        "image": "../Imagenesfondos/Rambo3.jpeg",
+        "link": "../Rambo/Rambo3.html"
+    }
+    ,
+    {
+        "title": "Rambo 4",
+        "image": "../Imagenesfondos/Rambo4.jpg",
+        "link": "../Rambo/Rambo4.html"
+    }
+    ,
+    {
+        "title": "Rambo Last Blood",
+        "image": "../Imagenesfondos/Rambo5.jpeg",
+        "link": "../Rambo/Rambo5.html"
+    }
+    ,
+    {
+        "title": "El Señor de los Anillo: El Retorno del Rey",
+        "image": "../Elsenordelosanillos/elretornodelrey.html",
+        "link": ".../Elsenordelosanillos/elretornodelrey.html"
+    }
+    ,
+    {
+        "title": "El Señor de los Anillo: La Comunidad del Anillo",
+        "image": "../Imagenesfondos/lacumindaddelanillo.jpeg",
+        "link": "../Elsenordelosanillos/lacomunidadelanillo.html"
+    }
+    ,
+    {
+        "title": "El Señor de los Anillo:Las Dos Torres",
+        "image": "../Imagenesfondos/lasdostorres.jpg",
+        "link": "../Elsenordelosanillos/Lasdostorres.html"
+    }
+    ,
+    {
+        "title": "Rocky ",
+        "image": "../Imagenesfondos/rocky.jpeg",
+        "link": ".../Rocky/rocky.html"
+    },
+    {
+        "title": "Rocky II",
+        "image": "../Imagenesfondos/rocky2.jpeg",
+        "link": "../Rocky/rocky2.html"
+    },
+    {
+        "title": "Rocky III",
+        "image": "../Imagenesfondos/rocky3.jpeg",
+        "link": "../Rocky/rocky3.html"
+    },
+    {
+        "title": "Rocky IV",
+        "image": "../Imagenesfondos/rocky4.jpeg",
+        "link": "../Rocky/rocky4.html"
+    },
+    {
+        "title": "Rocky v",
+        "image": "../Imagenesfondos/rocky.5jpeg",
+        "link": "../Rocky/rocky5.html"
+    },
+    {
+        "title": "Rocky Balboa",
+        "image": "../Imagenesfondos/rocky6.jpeg",
+        "link": "../Rocky/rocky6.html"
+    }
 ]
