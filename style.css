@@ -108,7 +108,8 @@ header h1 {
 
 /* Efecto hover en las sugerencias */
 .suggestion-item:hover {
-   background-color: rgba(255, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+
   color: #ff1919;
 }
 
