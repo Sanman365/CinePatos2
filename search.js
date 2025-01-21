@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const results = movies.filter(movie => movie.title.toLowerCase().includes(query));
 
         localStorage.setItem("searchResults", JSON.stringify(results));
-        window.location.href = "RESULTS.HTML"; // Redirigir a la página de resultados
+        window.location.href = "../RESULTS.html"; // Redirigir a la página de resultados
     });
 
     // Ocultar sugerencias si el usuario hace clic fuera
