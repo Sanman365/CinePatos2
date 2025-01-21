@@ -99,16 +99,17 @@ header h1 {
 .suggestion-item {
   display: block;
   padding: 10px;
-  font-size: 38.4px; /* 0.8 veces más grande que antes (48px * 0.8) */
+  font-size: 32px; /* 0.8 veces más grande que antes */
   color: red; /* Letras rojas */
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
+  background-color: #000; /* Asegura que cada item también tenga fondo negro */
 }
 
 /* Efecto hover en las sugerencias */
 .suggestion-item:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: red; /* Mantiene el color rojo */
+  background-color: #111; /* Un negro un poco más claro al pasar el mouse */
+  color: #8d1730;; /* Mantiene el color rojo */
 }
 
 .navbar {
