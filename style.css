@@ -85,14 +85,13 @@ header h1 {
 }
 .suggestions-container {
   width: 50%;
-  background-color: black;
+  background-color: #000; /* Fondo totalmente negro */
   border: 2px solid red;
-  
-  border-radius: 8px;
+  border-radius: 6px; /* Borde ligero circular */
   position: absolute;
-  top: 100%; /* Aparece justo debajo del buscador */
+  top: 100%;
   left: 0;
-  display: none; /* Inicialmente oculto */
+  display: none;
   z-index: 10;
 }
 
@@ -100,17 +99,16 @@ header h1 {
 .suggestion-item {
   display: block;
   padding: 10px;
-  font-size: 16px;
-  color: white;
+  font-size: 38.4px; /* 0.8 veces más grande que antes (48px * 0.8) */
+  color: red; /* Letras rojas */
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
 }
 
 /* Efecto hover en las sugerencias */
 .suggestion-item:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-
-  color: #ff1919;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: red; /* Mantiene el color rojo */
 }
 
 .navbar {
