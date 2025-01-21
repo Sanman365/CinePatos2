@@ -87,7 +87,7 @@ header h1 {
   width: 50%;
   background-color: black;
   border: 2px solid red;
-  box-shadow: 0 0 10px rgba(255, 51, 51, 0.8);
+  
   border-radius: 8px;
   position: absolute;
   top: 100%; /* Aparece justo debajo del buscador */
