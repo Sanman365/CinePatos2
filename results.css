@@ -1,39 +1,33 @@
 #resultsContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Centra las imágenes en la fila */
+    gap: 40px; /* Más separación entre imágenes */
     width: 90%;
     margin: 20px auto;
 }
 
 .video-card {
-    width: 18%; /* Mantiene el tamaño de las imágenes */
-    margin-bottom: 20px;
+    width: 24%; /* Tamaño más grande, pero manteniendo 4 por fila */
+    margin-bottom: 40px; /* Más espacio entre las filas */
     position: relative;
+    text-align: center; /* Centra el texto */
 }
 
 .video-card a {
     display: block;
     overflow: hidden;
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 20px; /* Bordes más redondeados */
     transition: transform 0.3s ease;
 }
 
 .video-card img {
     width: 100%;
-    height: 405px; /* Ajusta la altura de las imágenes */
+    height: 450px; /* Aumenté la altura */
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 20px;
     display: block;
     transition: transform 0.3s ease;
 }
 
-.video-card a:hover img {
-    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
-}
-
-.video-card h3 {
-    text-align: center;
-    margin: 10px 0 0;
-    color: #fff; /* Color del texto */
-}
+.video-card 
