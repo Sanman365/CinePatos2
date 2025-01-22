@@ -30,4 +30,19 @@
     transition: transform 0.3s ease;
 }
 
-.video-card 
+.video-card a:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilo del título con tamaño más grande */
+.video-card h3 {
+    font-family: 'Press Start 2P', sans-serif; /* Mantiene el estilo pixelado */
+    font-size: 20px; /* Texto más grande */
+    color: red;
+    margin-top: 12px;
+    text-transform: uppercase;
+    background: black;
+    padding: 12px;
+    border-radius: 10px;
+    display: inline-block;
+}
