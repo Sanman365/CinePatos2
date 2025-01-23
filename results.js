@@ -6,7 +6,7 @@ if (searchResults && searchResults.length > 0) {
         console.log("Cargando video:", video.title, "Link:", window.location.origin + "/" + video.link); // 🔍 Depuración
         
         const videoCard = document.createElement('div');
-        videoCard.classList.add('video-card');
+        videoCard.classList.add('image-gallery');
         videoCard.innerHTML = `
             <a href="${video.link}">
                 <img src="${video.image}" alt="${video.title}">
