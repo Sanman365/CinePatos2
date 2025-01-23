@@ -11,7 +11,7 @@ if (searchResults && searchResults.length > 0) {
             <a href="${video.link}">
                 <img src="${video.image}" alt="${video.title}">
             </a>
-            <h3>${video.title}</h3>
+            <div class="baby-driver-container><h3 class="baby-driver-text>${video.title}</h3 ></div> 
         `;
         resultsContainer.appendChild(videoCard);
     });
