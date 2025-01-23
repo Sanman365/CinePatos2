@@ -12,12 +12,12 @@
     },
     {
         "title": "Interstellar",
-        "image": "interstellar.jpg",
+        "image": "Imagenesfondos/interestelar_index (2).jpeg",
         "link": "interstellar.html"
     },
     {
         "title": "Spider-Man",
-        "image": "spiderman.jpg",
+        "image": "Imagenesfondos/SPIDER-M_S_R-INDEX.jpeg",
         "link": "spiderman.html"
     }
     ,
@@ -53,7 +53,7 @@
     ,
     {
         "title": "El Señor de los Anillo: El Retorno del Rey",
-        "image": "../Elsenordelosanillos/elretornodelrey.html",
+        "image": "Imagenesfondos/elretornodelrey.jpeg",
         "link": ".../Elsenordelosanillos/elretornodelrey.html"
     }
     ,
@@ -96,7 +96,7 @@
     },
     {
         "title": "Rocky Balboa",
-        "image": "../Imagenesfondos/rocky6.jpeg",
+        "image": "../Imagenesfondos/rocky6.jpg",
         "link": "../Rocky/rocky6.html"
     }
 ]
