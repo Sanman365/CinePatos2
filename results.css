@@ -2,14 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Centra las imágenes en la fila */
-    gap: 40px; /* Más separación entre imágenes */
+    gap: 30px; /* Más separación entre imágenes */
     width: 90%;
     margin: 20px auto;
 }
 
 .video-card {
-    width: 24%; /* Tamaño más grande, pero manteniendo 4 por fila */
-    margin-bottom: 40px; /* Más espacio entre las filas */
+    width: calc(20% - 30px); /* 5 imágenes por fila */
+    margin-bottom: 40px; /* Espacio entre filas */
     position: relative;
     text-align: center; /* Centra el texto */
 }
@@ -17,13 +17,13 @@
 .video-card a {
     display: block;
     overflow: hidden;
-    border-radius: 20px; /* Bordes más redondeados */
+    border-radius: 20px; /* Bordes redondeados */
     transition: transform 0.3s ease;
 }
 
 .video-card img {
     width: 100%;
-    height: 450px; /* Aumenté la altura */
+    height: 450px; /* Mantiene la altura */
     object-fit: cover;
     border-radius: 20px;
     display: block;
@@ -34,9 +34,9 @@
     transform: scale(1.05);
 }
 
-/* Estilo del título con tamaño más grande */
+/* Estilo del título */
 .video-card h3 {
-    font-family: 'Press Start 2P', sans-serif; /* Mantiene el estilo pixelado */
+    font-family: 'Press Start 2P', sans-serif;
     font-size: 20px; /* Texto más grande */
     color: red;
     margin-top: 12px;
