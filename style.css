@@ -67,7 +67,7 @@ h1::after {
 #searchInput {
   flex: 1; /* El campo de búsqueda ocupa todo el espacio disponible */
   padding: 12px;
-  font-size: 18px;
+  font-size: 20px;
   border: 2px solid #ff3333; /* Borde rojo neón */
   border-radius: 8px;
   outline: none;
@@ -85,7 +85,7 @@ h1::after {
 /* Botón de búsqueda */
 #searchButton {
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: 20px;
   border: 2px solid #ff3333; /* Borde rojo neón */
   border-radius: 8px;
   background-color: black;
@@ -356,7 +356,29 @@ alphabet-nav {
     opacity: 0.5;
   }
   
+  .text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 10vh;
+    background-color: #000000; /* Fondo suave y claro */
+  }
   
+  .text {
+    font-size: 38px; /* Tamaño de fuente adecuado */
+    color: #ffffff; /* Gris suave como color base */
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .text:hover {
+    color: #be0000; /* Cambia a rojo neón */
+    text-shadow: 0 0 8px #be0000, 0 0 16px #be0000; /* Efecto de resplandor sutil */
+  }
   .neon-container {
     background-color: #000000;
     display: flex;
@@ -1163,50 +1185,52 @@ alphabet-nav {
       }
   
       /* Baby Driver */
-      .baby-driver-container {
-          background-color: #000000;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 0;
-      }
-  
-      .baby-driver-text {
-          font-size: 36px;
-          color: #e60012;
-          position: relative;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          transition: all 0.3s ease;
-          border: 1.5px solid transparent;
-          padding: 7.5px 15px;
-          border-radius: 3.75px;
-      }
-  
-      .baby-driver-text::before {
-          content: '';
-          position: absolute;
-          top: -3.75px;
-          left: -3.75px;
-          right: -3.75px;
-          bottom: -3.75px;
-          background: none;
-          border: 1.5px solid #e60012;
-          border-radius: 6px;
-          transition: all 0.3s ease;
-          opacity: 0;
-      }
-  
-      .baby-driver-text:hover {
-          color: #e60012;
-          text-shadow: 0 0 11.25px #e60012, 0 0 22.5px #e60012, 0 0 33.75px #e60012;
-          border-color: #e60012;
-      }
-  
-      .baby-driver-text:hover::before {
-          opacity: 1;
-          box-shadow: 0 0 11.25px #e60012, 0 0 22.5px #e60012, 0 0 33.75px #e60012;
-      }
+    /* Baby Driver - Móvil */
+.baby-driver-container {
+  background-color: #000000; /* Fondo negro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.baby-driver-text {
+  font-size: 18px; /* Tamaño de fuente reducido */
+  color: #e60012; /* Rojo brillante */
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+  padding: 5px 10px; /* Reducido para dispositivos pequeños */
+  border-radius: 3px; /* Borde más pequeño */
+}
+
+.baby-driver-text::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: none;
+  border: 1.5px solid #e60012; /* Borde rojo brillante */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.baby-driver-text:hover {
+  color: #e60012; /* Rojo brillante */
+  text-shadow: 0 0 8px #e60012, 0 0 16px #e60012, 0 0 24px #e60012; /* Efecto de resplandor ajustado */
+  border-color: #e60012;
+}
+
+.baby-driver-text:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 8px #e60012, 0 0 16px #e60012, 0 0 24px #e60012; /* Sombra ajustada */
+}
+
   
       /* Pulp Fiction */
       .pulp-fiction-container {
@@ -1725,7 +1749,7 @@ alphabet-nav {
   */
 
 
-  @media only screen and (max-width: 720px) {
+  @media (max-width: 768px) {
     body {
       background-color: black;
       color: white;
@@ -1832,7 +1856,7 @@ alphabet-nav {
       text-decoration: none;
   }
   
-  @media (max-width: 600px) {
+  
       .navbar {
           height: 120px; /* Altura ajustada para móviles */
       }
@@ -1849,7 +1873,7 @@ alphabet-nav {
           font-size: 24px;
           top: 28%; /* Ajuste para centrar el texto */
       }
-  }
+  
   
   
     alphabet-nav {
@@ -1895,7 +1919,7 @@ alphabet-nav {
     }
     
     /* 🔹 Ajustes específicos para pantallas más pequeñas */
-    @media (max-width: 480px) {
+    
         .alphabet-bar {
             gap: 3px; /* Reduce aún más el espacio */
             margin-top: -20px;
@@ -1905,7 +1929,7 @@ alphabet-nav {
             font-size: 0.75em; /* Más pequeño en móviles */
             width: 22px;
             height: 22px;
-        }
+        
     }
     
       
@@ -2012,7 +2036,7 @@ alphabet-nav {
 }
 
 /* 🔹 Ajustes específicos para pantallas más pequeñas */
-@media (max-width: 480px) {
+
   .search-container {
       width: 80%; /* Más ancho para móviles */
       margin: 10px auto;
@@ -2036,7 +2060,7 @@ alphabet-nav {
       font-size: 20px;
       padding: 6px;
   }
-}
+
 
      /* Galería de imágenes */
      .image-gallery {
@@ -2071,7 +2095,7 @@ alphabet-nav {
   }
   
   /* 🔹 Ajustes para pantallas pequeñas */
-  @media only screen and (max-width: 768px) {
+ 
       .image-item {
           width: calc(33.333% - 5px); /* Mantiene 3 imágenes por fila en móviles */
       }
@@ -2079,9 +2103,9 @@ alphabet-nav {
       .image-item img {
           height: 160px; /* Reduce altura en pantallas más pequeñas */
       }
-  }
   
-}
+  
+
 
       
       .overlay {
@@ -2101,7 +2125,29 @@ alphabet-nav {
       }
       
       
+      .text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 10vh;
+        background-color: #000000; /* Fondo suave y claro */
+      }
       
+      .text {
+        font-size: 16px; /* Tamaño de fuente adecuado */
+        color: #ffffff; /* Gris suave como color base */
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      
+      .text:hover {
+        color: #be0000; /* Cambia a rojo neón */
+        text-shadow: 0 0 8px #be0000, 0 0 16px #be0000; /* Efecto de resplandor sutil */
+      }
       
       
       .neon-container {
@@ -2153,7 +2199,7 @@ alphabet-nav {
     }
     
     /* Ajustes adicionales para teléfonos */
-    @media (max-width: 600px) {
+    
         .neon-text {
             font-size: 14px; /* Aumentar un poco más la reducción */
             padding: 6px 12px; /* Reducir padding para ajustarse mejor a pantallas pequeñas */
@@ -2165,7 +2211,7 @@ alphabet-nav {
             right: -1px;
             bottom: -1px;
         }
-    }
+    
       
       
     .wwz-container {
@@ -2218,7 +2264,7 @@ alphabet-nav {
   }
   
   /* Ajustes específicos para pantallas móviles */
-  @media (max-width: 600px) {
+  
       .wwz-container {
           padding: 3px; /* Reduce aún más el espacio en pantallas móviles */
           width: 80%; /* Ajusta el ancho de la caja al 80% de la pantalla */
@@ -2236,7 +2282,7 @@ alphabet-nav {
           right: -1px;
           bottom: -1px;
       }
-  }
+  
   
   
       
@@ -2534,188 +2580,256 @@ alphabet-nav {
           }
       
           /* The Godfather */
-          .godfather-container {
-              background-color: #000000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-          }
-      
-          .godfather-text {
-              font-size: 18px;
-              color: #ffffff;
-              position: relative;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              transition: all 0.3s ease;
-              border: 1.5px solid transparent;
-              padding: 7.5px 15px;
-              border-radius: 3.75px;
-          }
-      
-          .godfather-text::before {
-              content: '';
-              position: absolute;
-              top: -3.75px;
-              left: -3.75px;
-              right: -3.75px;
-              bottom: -3.75px;
-              background: none;
-              border: 1.5px solid #ffffff;
-              border-radius: 6px;
-              transition: all 0.3s ease;
-              opacity: 0;
-          }
-      
-          .godfather-text:hover {
-              color: #cccccc;
-              text-shadow: 0 0 11.25px #cccccc, 0 0 22.5px #cccccc, 0 0 33.75px #cccccc;
-              border-color: #cccccc;
-          }
-      
-          .godfather-text:hover::before {
-              opacity: 1;
-              box-shadow: 0 0 11.25px #cccccc, 0 0 22.5px #cccccc, 0 0 33.75px #cccccc;
-          }
-      
-          /* The Dark Knight */
-          .dark-knight-container {
-              background-color: #000000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-          }
-      
-          .dark-knight-text {
-              font-size: 18px;
-              color: #ffffff;
-              position: relative;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              transition: all 0.3s ease;
-              border: 1.5px solid transparent;
-              padding: 7.5px 15px;
-              border-radius: 3.75px;
-          }
-      
-          .dark-knight-text::before {
-              content: '';
-              position: absolute;
-              top: -3.75px;
-              left: -3.75px;
-              right: -3.75px;
-              bottom: -3.75px;
-              background: none;
-              border: 1.5px solid #ffffff;
-              border-radius: 6px;
-              transition: all 0.3s ease;
-              opacity: 0;
-          }
-      
-          .dark-knight-text:hover {
-              color: #ffffff;
-              text-shadow: 0 0 11.25px #007acc, 0 0 22.5px #007acc, 0 0 33.75px #007acc;
-              border-color: #007acc;
-          }
-      
-          .dark-knight-text:hover::before {
-              opacity: 1;
-              box-shadow: 0 0 11.25px #007acc, 0 0 22.5px #007acc, 0 0 33.75px #007acc;
-          }
-      
+          /* The Godfather */
+.godfather-container {
+  background-color: #000000; /* Fondo negro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.godfather-text {
+  font-size: 18px;
+  color: #ffffff; /* Blanco */
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+  padding: 7.5px 15px;
+  border-radius: 3.75px;
+}
+
+.godfather-text::before {
+  content: '';
+  position: absolute;
+  top: -3.75px;
+  left: -3.75px;
+  right: -3.75px;
+  bottom: -3.75px;
+  background: none;
+  border: 1.5px solid #ffffff; /* Borde blanco */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.godfather-text:hover {
+  color: #cccccc; /* Gris claro */
+  text-shadow: 0 0 11.25px #cccccc, 0 0 22.5px #cccccc, 0 0 33.75px #cccccc; /* Efecto de resplandor gris */
+  border-color: #cccccc; /* Borde gris */
+}
+
+.godfather-text:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 11.25px #cccccc, 0 0 22.5px #cccccc, 0 0 33.75px #cccccc; /* Sombra gris */
+}
+
+/* Ajustes para dispositivos móviles */
+
+  .godfather-text {
+    font-size: 24px; /* Aumentar tamaño de texto */
+    padding: 5px 10px; /* Reducir padding */
+  }
+
+  .godfather-text::before {
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-width: 1px; /* Reducir borde */
+  }
+
+
+       /* The Dark Knight */
+.dark-knight-container {
+  background-color: #000000; /* Fondo negro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.dark-knight-text {
+  font-size: 18px;
+  color: #ffffff; /* Blanco */
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+  padding: 7.5px 15px;
+  border-radius: 3.75px;
+}
+
+.dark-knight-text::before {
+  content: '';
+  position: absolute;
+  top: -3.75px;
+  left: -3.75px;
+  right: -3.75px;
+  bottom: -3.75px;
+  background: none;
+  border: 1.5px solid #ffffff; /* Borde blanco */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.dark-knight-text:hover {
+  color: #ffffff;
+  text-shadow: 0 0 11.25px #007acc, 0 0 22.5px #007acc, 0 0 33.75px #007acc; /* Efecto de resplandor azul */
+  border-color: #007acc; /* Borde azul */
+}
+
+.dark-knight-text:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 11.25px #007acc, 0 0 22.5px #007acc, 0 0 33.75px #007acc; /* Sombra azul */
+}
+
+/* Ajustes para dispositivos móviles */
+
+  .dark-knight-text {
+    font-size: 24px; /* Aumentar tamaño de texto */
+    padding: 5px 10px; /* Reducir padding */
+  }
+
+  .dark-knight-text::before {
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-width: 1px; /* Reducir borde */
+  }
+
+
           /* Titanic */
-          .titanic-container {
-              background-color: #000000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-          }
-      
-          .titanic-text {
-              font-size: 18px;
-              color: #ff4500;
-              position: relative;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              transition: all 0.3s ease;
-              border: 1.5px solid transparent;
-              padding: 7.5px 15px;
-              border-radius: 3.75px;
-          }
-      
-          .titanic-text::before {
-              content: '';
-              position: absolute;
-              top: -3.75px;
-              left: -3.75px;
-              right: -3.75px;
-              bottom: -3.75px;
-              background: none;
-              border: 1.5px solid #ff4500;
-              border-radius: 6px;
-              transition: all 0.3s ease;
-              opacity: 0;
-          }
-      
-          .titanic-text:hover {
-              color: #ff4500;
-              text-shadow: 0 0 11.25px #ff4500, 0 0 22.5px #ff4500, 0 0 33.75px #ff4500;
-              border-color: #ff4500;
-          }
-      
-          .titanic-text:hover::before {
-              opacity: 1;
-              box-shadow: 0 0 11.25px #ff4500, 0 0 22.5px #ff4500, 0 0 33.75px #ff4500;
-          }
+.titanic-container {
+  background-color: #000000; /* Fondo negro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.titanic-text {
+  font-size: 18px;
+  color: #ff4500; /* Naranja oscuro */
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+  padding: 7.5px 15px;
+  border-radius: 3.75px;
+}
+
+.titanic-text::before {
+  content: '';
+  position: absolute;
+  top: -3.75px;
+  left: -3.75px;
+  right: -3.75px;
+  bottom: -3.75px;
+  background: none;
+  border: 1.5px solid #ff4500; /* Borde naranja */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.titanic-text:hover {
+  color: #ff4500;
+  text-shadow: 0 0 11.25px #ff4500, 0 0 22.5px #ff4500, 0 0 33.75px #ff4500; /* Efecto de resplandor naranja */
+  border-color: #ff4500; /* Borde naranja */
+}
+
+.titanic-text:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 11.25px #ff4500, 0 0 22.5px #ff4500, 0 0 33.75px #ff4500; /* Sombra naranja */
+}
+
+/* Ajustes para dispositivos móviles */
+
+  .titanic-text {
+    font-size: 24px; /* Aumentar tamaño de texto */
+    padding: 5px 10px; /* Reducir padding */
+  }
+
+  .titanic-text::before {
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-width: 1px; /* Reducir borde */
+  }
+
+
       
           /* Fight Club */
-          .fight-club-container {
-              background-color: #000000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-          }
-      
-          .fight-club-text {
-              font-size: 18px;
-              color: #ffffff;
-              position: relative;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              transition: all 0.3s ease;
-              border: 1.5px solid transparent;
-              padding: 7.5px 15px;
-              border-radius: 3.75px;
-          }
-      
-          .fight-club-text::before {
-              content: '';
-              position: absolute;
-              top: -3.75px;
-              left: -3.75px;
-              right: -3.75px;
-              bottom: -3.75px;
-              background: none;
-              border: 1.5px solid #ff007f;
-              border-radius: 6px;
-              transition: all 0.3s ease;
-              opacity: 0;
-          }
-      
-          .fight-club-text:hover {
-              color: #ffffff;
-              text-shadow: 0 0 11.25px #ff007f, 0 0 22.5px #ff007f, 0 0 33.75px #ff007f;
-              border-color: #ff007f;
-          }
-      
-          .fight-club-text:hover::before {
-              opacity: 1;
-              box-shadow: 0 0 11.25px #ff007f, 0 0 22.5px #ff007f, 0 0 33.75px #ff007f;
-          }
+         /* Fight Club */
+.fight-club-container {
+  background-color: #000000; /* Fondo negro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.fight-club-text {
+  font-size: 18px;
+  color: #ffffff; /* Blanco */
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+  padding: 7.5px 15px;
+  border-radius: 3.75px;
+}
+
+.fight-club-text::before {
+  content: '';
+  position: absolute;
+  top: -3.75px;
+  left: -3.75px;
+  right: -3.75px;
+  bottom: -3.75px;
+  background: none;
+  border: 1.5px solid #ff007f; /* Rosa fuerte */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.fight-club-text:hover {
+  color: #ffffff;
+  text-shadow: 0 0 11.25px #ff007f, 0 0 22.5px #ff007f, 0 0 33.75px #ff007f; /* Efecto de resplandor rosa */
+  border-color: #ff007f; /* Borde rosa */
+}
+
+.fight-club-text:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 11.25px #ff007f, 0 0 22.5px #ff007f, 0 0 33.75px #ff007f; /* Sombra rosa */
+}
+
+/* Ajustes para dispositivos móviles */
+
+  .fight-club-text {
+      font-size: 24px; /* Reducir tamaño de texto */
+      padding: 5px 10px; /* Reducir padding */
+  }
+
+  .fight-club-text::before {
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-width: 1px; /* Reducir borde */
+  }
+
+
       
           /* Inception */
           .inception-container {
@@ -2764,188 +2878,275 @@ alphabet-nav {
           }
       
           /* The Matrix */
-          .matrix-container {
-              background-color: #000000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-          }
+        /* Matrix */
+.matrix-container {
+  background-color: #000000; /* Fondo negro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.matrix-text {
+  font-size: 18px;
+  color: #00ff00; /* Verde neón */
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+  padding: 7.5px 15px;
+  border-radius: 3.75px;
+}
+
+.matrix-text::before {
+  content: '';
+  position: absolute;
+  top: -3.75px;
+  left: -3.75px;
+  right: -3.75px;
+  bottom: -3.75px;
+  background: none;
+  border: 1.5px solid #00ff00; /* Borde verde */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.matrix-text:hover {
+  color: #00ff00;
+  text-shadow: 0 0 11.25px #00ff00, 0 0 22.5px #00ff00, 0 0 33.75px #00ff00; /* Resplandor verde */
+  border-color: #00ff00; /* Borde verde */
+}
+
+.matrix-text:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 11.25px #00ff00, 0 0 22.5px #00ff00, 0 0 33.75px #00ff00; /* Sombra verde */
+}
+
+/* Ajustes para dispositivos móviles */
+
+  .matrix-text {
+      font-size: 24px; /* Aumentar tamaño de texto */
+      padding: 5px 10px; /* Reducir padding */
+  }
+
+  .matrix-text::before {
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-width: 1px; /* Reducir borde */
+  }
+
+
       
-          .matrix-text {
-              font-size: 18px;
-              color: #00ff00;
-              position: relative;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              transition: all 0.3s ease;
-              border: 1.5px solid transparent;
-              padding: 7.5px 15px;
-              border-radius: 3.75px;
-          }
-      
-          .matrix-text::before {
-              content: '';
-              position: absolute;
-              top: -3.75px;
-              left: -3.75px;
-              right: -3.75px;
-              bottom: -3.75px;
-              background: none;
-              border: 1.5px solid #00ff00;
-              border-radius: 6px;
-              transition: all 0.3s ease;
-              opacity: 0;
-          }
-      
-          .matrix-text:hover {
-              color: #00ff00;
-              text-shadow: 0 0 11.25px #00ff00, 0 0 22.5px #00ff00, 0 0 33.75px #00ff00;
-              border-color: #00ff00;
-          }
-      
-          .matrix-text:hover::before {
-              opacity: 1;
-              box-shadow: 0 0 11.25px #00ff00, 0 0 22.5px #00ff00, 0 0 33.75px #00ff00;
-          }
-      
-          /* The Truman Show */
-          .truman-show-container {
-              background-color: #000000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-          }
-      
-          .truman-show-text {
-              font-size: 18px;
-              color: #ffffff;
-              position: relative;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              transition: all 0.3s ease;
-              border: 1.5px solid transparent;
-              padding: 7.5px 15px;
-              border-radius: 3.75px;
-          }
-      
-          .truman-show-text::before {
-              content: '';
-              position: absolute;
-              top: -3.75px;
-              left: -3.75px;
-              right: -3.75px;
-              bottom: -3.75px;
-              background: none;
-              border: 1.5px solid #ffffff;
-              border-radius: 6px;
-              transition: all 0.3s ease;
-              opacity: 0;
-          }
-      
-          .truman-show-text:hover {
-              color: #ffffff;
-              text-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #00bfff, 0 0 33.75px #00bfff;
-              border-color: #00bfff;
-          }
-      
-          .truman-show-text:hover::before {
-              opacity: 1;
-              box-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #00bfff, 0 0 33.75px #00bfff;
-          }
+        /* The Truman Show */
+/* The Truman Show */
+.truman-show-container {
+  background-color: #000000; /* Fondo negro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.truman-show-text {
+  font-size: 18px;
+  color: #ffffff; /* Blanco */
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+  padding: 7.5px 15px;
+  border-radius: 3.75px;
+}
+
+.truman-show-text::before {
+  content: '';
+  position: absolute;
+  top: -3.75px;
+  left: -3.75px;
+  right: -3.75px;
+  bottom: -3.75px;
+  background: none;
+  border: 1.5px solid #ffffff; /* Borde blanco */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.truman-show-text:hover {
+  color: #ffffff;
+  text-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #00bfff, 0 0 33.75px #00bfff; /* Efecto de resplandor azul */
+  border-color: #00bfff; /* Borde azul */
+}
+
+.truman-show-text:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 11.25px #00bfff, 0 0 22.5px #00bfff, 0 0 33.75px #00bfff; /* Sombra azul */
+}
+
+/* Ajustes para dispositivos móviles */
+
+  .truman-show-text {
+    font-size: 24px; /* Aumentar tamaño de texto */
+    padding: 5px 10px; /* Reducir padding */
+  }
+
+  .truman-show-text::before {
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-width: 1px; /* Reducir borde */
+  }
+
+
+
+/* Ajustes para dispositivos móviles */
+
+  .truman-show-text {
+      font-size: 24px; /* Reducir tamaño de texto */
+      padding: 5px 10px; /* Reducir padding */
+  }
+
+  .truman-show-text::before {
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-width: 1px; /* Reducir borde */
+  }
+
+
       
           /* Baby Driver */
           .baby-driver-container {
-              background-color: #000000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-          }
+            background-color: #000000; /* Fondo negro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        
+        .baby-driver-text {
+            font-size: 18px;
+            color: #e60012; /* Rojo brillante */
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 1.5px solid transparent;
+            padding: 7.5px 15px;
+            border-radius: 3.75px;
+        }
+        
+        .baby-driver-text::before {
+            content: '';
+            position: absolute;
+            top: -3.75px;
+            left: -3.75px;
+            right: -3.75px;
+            bottom: -3.75px;
+            background: none;
+            border: 1.5px solid #e60012;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+        
+        .baby-driver-text:hover {
+            color: #e60012;
+            text-shadow: 0 0 11.25px #e60012, 0 0 22.5px #e60012, 0 0 33.75px #e60012;
+            border-color: #e60012;
+        }
+        
+        .baby-driver-text:hover::before {
+            opacity: 1;
+            box-shadow: 0 0 11.25px #e60012, 0 0 22.5px #e60012, 0 0 33.75px #e60012;
+        }
+        
+        /* Ajustes para dispositivos móviles */
+        
+            .baby-driver-text {
+                font-size: 24px; /* Reducir tamaño de texto */
+                padding: 5px 10px; /* Reducir padding */
+            }
+        
+            .baby-driver-text::before {
+                top: -2px;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                border-width: 1px; /* Reducir borde */
+            }
+        
+        
       
-          .baby-driver-text {
-              font-size: 18px;
-              color: #e60012;
-              position: relative;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              transition: all 0.3s ease;
-              border: 1.5px solid transparent;
-              padding: 7.5px 15px;
-              border-radius: 3.75px;
-          }
-      
-          .baby-driver-text::before {
-              content: '';
-              position: absolute;
-              top: -3.75px;
-              left: -3.75px;
-              right: -3.75px;
-              bottom: -3.75px;
-              background: none;
-              border: 1.5px solid #e60012;
-              border-radius: 6px;
-              transition: all 0.3s ease;
-              opacity: 0;
-          }
-      
-          .baby-driver-text:hover {
-              color: #e60012;
-              text-shadow: 0 0 11.25px #e60012, 0 0 22.5px #e60012, 0 0 33.75px #e60012;
-              border-color: #e60012;
-          }
-      
-          .baby-driver-text:hover::before {
-              opacity: 1;
-              box-shadow: 0 0 11.25px #e60012, 0 0 22.5px #e60012, 0 0 33.75px #e60012;
-          }
-      
-          /* Pulp Fiction */
-          .pulp-fiction-container {
-              background-color: #000000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-          }
-      
-          .pulp-fiction-text {
-              font-size: 18px;
-              color: #f5c542;
-              position: relative;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              transition: all 0.3s ease;
-              border: 1.5px solid transparent;
-              padding: 7.5px 15px;
-              border-radius: 3.75px;
-          }
-      
-          .pulp-fiction-text::before {
-              content: '';
-              position: absolute;
-              top: -3.75px;
-              left: -3.75px;
-              right: -3.75px;
-              bottom: -3.75px;
-              background: none;
-              border: 1.5px solid #f5c542;
-              border-radius: 6px;
-              transition: all 0.3s ease;
-              opacity: 0;
-          }
-      
-          .pulp-fiction-text:hover {
-              color: #f5c542;
-              text-shadow: 0 0 11.25px #f5c542, 0 0 22.5px #f5c542, 0 0 33.75px #f5c542;
-              border-color: #f5c542;
-          }
-      
-          .pulp-fiction-text:hover::before {
-              opacity: 1;
-              box-shadow: 0 0 11.25px #f5c542, 0 0 22.5px #f5c542, 0 0 33.75px #f5c542;
-          }
+         /* Pulp Fiction */
+.pulp-fiction-container {
+  background-color: #000000; /* Fondo negro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.pulp-fiction-text {
+  font-size: 18px;
+  color: #f5c542; /* Amarillo cálido */
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+  padding: 7.5px 15px;
+  border-radius: 3.75px;
+}
+
+.pulp-fiction-text::before {
+  content: '';
+  position: absolute;
+  top: -3.75px;
+  left: -3.75px;
+  right: -3.75px;
+  bottom: -3.75px;
+  background: none;
+  border: 1.5px solid #f5c542;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.pulp-fiction-text:hover {
+  color: #f5c542;
+  text-shadow: 0 0 11.25px #f5c542, 0 0 22.5px #f5c542, 0 0 33.75px #f5c542;
+  border-color: #f5c542;
+}
+
+.pulp-fiction-text:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 11.25px #f5c542, 0 0 22.5px #f5c542, 0 0 33.75px #f5c542;
+}
+
+/* Ajustes para dispositivos móviles */
+
+  .pulp-fiction-text {
+      font-size: 24px; /* Reducir tamaño de texto */
+      padding: 5px 10px; /* Reducir padding */
+  }
+
+  .pulp-fiction-text::before {
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-width: 1px; /* Reducir borde */
+  }
+
+
       
           /* Interstellar */
           .interstellar-container {
@@ -2995,98 +3196,132 @@ alphabet-nav {
       
           /* 28 Weeks Later */
           .weeks-later-container {
-              background-color: #000000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-          }
-      
-          .weeks-later-text {
-              font-size: 36px;
-              color: #ff0000;
-              position: relative;
-              text-transform: uppercase;
-              letter-spacing: 1.5px;
-              transition: all 0.3s ease;
-              border: 1.5px solid transparent;
-              padding: 7.5px 15px;
-              border-radius: 3.75px;
-          }
-      
-          .weeks-later-text::before {
-              content: '';
-              position: absolute;
-              top: -3.75px;
-              left: -3.75px;
-              right: -3.75px;
-              bottom: -3.75px;
-              background: none;
-              border: 1.5px solid #ff0000;
-              border-radius: 6px;
-              transition: all 0.3s ease;
-              opacity: 0;
-          }
-      
-          .weeks-later-text:hover {
-              color: #ff0000;
-              text-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000;
-              border-color: #ff0000;
-          }
-      
-          .weeks-later-text:hover::before {
-              opacity: 1;
-              box-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000;
-          }
+            background-color: #000000; /* Fondo negro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        
+        .weeks-later-text {
+            font-size: 36px;
+            color: #ff0000; /* Rojo brillante */
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+            border: 1.5px solid transparent;
+            padding: 7.5px 15px;
+            border-radius: 3.75px;
+        }
+        
+        .weeks-later-text::before {
+            content: '';
+            position: absolute;
+            top: -3.75px;
+            left: -3.75px;
+            right: -3.75px;
+            bottom: -3.75px;
+            background: none;
+            border: 1.5px solid #ff0000;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+        
+        .weeks-later-text:hover {
+            color: #ff0000;
+            text-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000;
+            border-color: #ff0000;
+        }
+        
+        .weeks-later-text:hover::before {
+            opacity: 1;
+            box-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000;
+        }
+        
+        /* Ajustes para dispositivos móviles */
+        
+            .weeks-later-text {
+                font-size: 24px; /* Reducir tamaño de texto */
+                padding: 5px 10px; /* Reducir padding */
+            }
+        
+            .weeks-later-text::before {
+                top: -2px;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                border-width: 1px; /* Reducir borde */
+            }
+        
+        
       
           /* Spider-Man 2002 */
           .spider-man-container {
-              background-color: #000000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-          }
-      
-          .spider-man-text {
-              font-size: 18px;
-              color: #c8102e;
-              position: relative;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              transition: all 0.3s ease;
-              border: 1.5px solid transparent;
-              padding: 7.5px 15px;
-              border-radius: 3.75px;
-          }
-      
-          .spider-man-text::before {
-              content: '';
-              position: absolute;
-              top: -3.75px;
-              left: -3.75px;
-              right: -3.75px;
-              bottom: -3.75px;
-              background: none;
-              border: 1.5px solid #c8102e;
-              border-radius: 6px;
-              transition: all 0.3s ease;
-              opacity: 0;
-          }
-      
-          .spider-man-text:hover {
-              color: #c8102e;
-              text-shadow: 0 0 11.25px #c8102e, 0 0 22.5px #c8102e, 0 0 33.75px #c8102e;
-              border-color: #c8102e;
-          }
-      
-          .spider-man-text:hover::before {
-              opacity: 1;
-              box-shadow: 0 0 11.25px #c8102e, 0 0 22.5px #c8102e, 0 0 33.75px #c8102e;
-          }
+            background-color: #000000; /* Fondo negro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        
+        .spider-man-text {
+            font-size: 18px;
+            color: #c8102e; /* Color rojo intenso */
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 1.5px solid transparent;
+            padding: 7.5px 15px;
+            border-radius: 3.75px;
+        }
+        
+        .spider-man-text::before {
+            content: '';
+            position: absolute;
+            top: -3.75px;
+            left: -3.75px;
+            right: -3.75px;
+            bottom: -3.75px;
+            background: none;
+            border: 1.5px solid #c8102e;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+        
+        .spider-man-text:hover {
+            color: #c8102e;
+            text-shadow: 0 0 11.25px #c8102e, 0 0 22.5px #c8102e, 0 0 33.75px #c8102e;
+            border-color: #c8102e;
+        }
+        
+        .spider-man-text:hover::before {
+            opacity: 1;
+            box-shadow: 0 0 11.25px #c8102e, 0 0 22.5px #c8102e, 0 0 33.75px #c8102e;
+        }
+        
+        /* Ajustes para dispositivos móviles */
+        @media (max-width: 768px) {
+            .spider-man-text {
+                font-size: 14px; /* Reducir tamaño de texto */
+                padding: 5px 10px; /* Reducir padding */
+            }
+        
+            .spider-man-text::before {
+                top: -2px;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                border-width: 1px; /* Reducir borde */
+            }
+        }
+        
       
           .schindler-list-container {
-            background-color: #000000;
+            background-color: #000000; /* Fondo negro */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -3095,7 +3330,7 @@ alphabet-nav {
         
         .schindler-list-text {
             font-size: 18px;
-            color: #d0d0d0;
+            color: #d0d0d0; /* Color gris claro */
             position: relative;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -3129,6 +3364,23 @@ alphabet-nav {
             opacity: 1;
             box-shadow: 0 0 11.25px #d0d0d0, 0 0 22.5px #d0d0d0, 0 0 33.75px #d0d0d0;
         }
+        
+        /* Ajustes para dispositivos móviles */
+        @media (max-width: 768px) {
+            .schindler-list-text {
+                font-size: 14px; /* Reducir tamaño de texto */
+                padding: 5px 10px; /* Reducir padding */
+            }
+            
+            .schindler-list-text::before {
+                top: -2px;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                border-width: 1px; /* Reducir borde */
+            }
+        }
+        
       
         .lord-of-the-rings-container {
           background-color: #000000;
@@ -3138,43 +3390,67 @@ alphabet-nav {
           margin: 0;
       }
       
-      .lord-of-the-rings-text {
-          font-size: 18px;
-          color: #b09a5b;
-          position: relative;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          transition: all 0.3s ease;
-          border: 1.5px solid transparent;
-          padding: 7.5px 15px;
-          border-radius: 3.75px;
-      }
-      
-      .lord-of-the-rings-text::before {
-          content: '';
-          position: absolute;
-          top: -3.75px;
-          left: -3.75px;
-          right: -3.75px;
-          bottom: -3.75px;
-          background: none;
-          border: 1.5px solid #b09a5b;
-          border-radius: 6px;
-          transition: all 0.3s ease;
-          opacity: 0;
-      }
-      
-      .lord-of-the-rings-text:hover {
-          color: #b09a5b;
-          text-shadow: 0 0 11.25px #b09a5b, 0 0 22.5px #b09a5b, 0 0 33.75px #b09a5b;
-          border-color: #b09a5b;
-      }
-      
-      .lord-of-the-rings-text:hover::before {
-          opacity: 1;
-          box-shadow: 0 0 11.25px #b09a5b, 0 0 22.5px #b09a5b, 0 0 33.75px #b09a5b;
-      }
-      
+      .lord-of-the-rings-container {
+        background-color: #000000; /* Fondo negro */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .lord-of-the-rings-text {
+        font-size: 18px;
+        color: #b09a5b; /* Color dorado envejecido */
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        border: 1.5px solid transparent;
+        padding: 7.5px 15px;
+        border-radius: 3.75px;
+    }
+    
+    .lord-of-the-rings-text::before {
+        content: '';
+        position: absolute;
+        top: -3.75px;
+        left: -3.75px;
+        right: -3.75px;
+        bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #b09a5b;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+    
+    .lord-of-the-rings-text:hover {
+        color: #b09a5b;
+        text-shadow: 0 0 11.25px #b09a5b, 0 0 22.5px #b09a5b, 0 0 33.75px #b09a5b;
+        border-color: #b09a5b;
+    }
+    
+    .lord-of-the-rings-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #b09a5b, 0 0 22.5px #b09a5b, 0 0 33.75px #b09a5b;
+    }
+    
+    /* Ajustes para dispositivos móviles */
+    
+        .lord-of-the-rings-text {
+            font-size: 14px; /* Reducir tamaño de texto */
+            padding: 5px 10px; /* Reducir padding */
+        }
+        
+        .lord-of-the-rings-text::before {
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-width: 1px; /* Reducir borde */
+        }
+    
+    
       .la-la-land-container {
           background-color: #000000;
           display: flex;
@@ -3222,63 +3498,18 @@ alphabet-nav {
           opacity: 1;
           box-shadow: 0 0 11.25px #ff6f61, 0 0 22.5px #ff6f61, 0 0 33.75px #ff6f61;
       }
-        /* Forrest Gump */
-        .friends-container {
-          background-color: #000000; /* Fondo negro, similar al fondo de la interfaz */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 0;
-      }
-      
-      .friends-text {
-          font-family: 'Arial', sans-serif; /* Fuente simple y moderna, puedes cambiarla por alguna fuente más acorde al estilo de la serie */
-          font-size: 18px;
-          color: #f5a623; /* Color amarillo, inspirado en los tonos cálidos de la serie */
-          position: relative;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          transition: all 0.3s ease;
-          border: 1.5px solid transparent;
-          padding: 7.5px 15px;
-          border-radius: 5px;
-      }
-      
-      .friends-text::before {
-          content: '';
-          position: absolute;
-          top: -3.75px;
-          left: -3.75px;
-          right: -3.75px;
-          bottom: -3.75px;
-          background: none;
-          border: 1.5px solid #f5a623;
-          border-radius: 6px;
-          transition: all 0.3s ease;
-          opacity: 0;
-      }
-      
-      .friends-text:hover {
-          color: #f5a623;
-          text-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
-          border-color: #f5a623;
-      }
-      
-      .friends-text:hover::before {
-          opacity: 1;
-          box-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
-      }
-      .la-idea-de-ti-container {
-        background-color: #000000; /* Fondo negro */
+        
+      .friends-container {
+        background-color: #000000; /* Fondo negro, similar al fondo de la interfaz */
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
     }
     
-    .la-idea-de-ti-text {
+    .friends-text {
         font-family: 'Arial', sans-serif; /* Fuente simple y moderna */
-        font-size: 18px;
+        font-size: 18px; /* Tamaño ajustado */
         color: #f5a623; /* Color amarillo cálido */
         position: relative;
         text-transform: uppercase;
@@ -3289,13 +3520,75 @@ alphabet-nav {
         border-radius: 5px;
     }
     
-    .la-idea-de-ti-text::before {
+    .friends-text::before {
         content: '';
         position: absolute;
         top: -3.75px;
         left: -3.75px;
         right: -3.75px;
         bottom: -3.75px;
+        background: none;
+        border: 1.5px solid #f5a623;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+    
+    .friends-text:hover {
+        color: #f5a623;
+        text-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
+        border-color: #f5a623;
+    }
+    
+    .friends-text:hover::before {
+        opacity: 1;
+        box-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
+    }
+    
+    /* Ajustes para dispositivos móviles */
+    
+        .friends-text {
+            font-size: 14px; /* Reducir tamaño de texto */
+            padding: 5px 10px; /* Reducir padding */
+        }
+        
+        .friends-text::before {
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-width: 1px; /* Reducir borde */
+        }
+    
+    
+      .la-idea-de-ti-container {
+        background-color: #000000; /* Fondo negro */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .la-idea-de-ti-text {
+        font-family: 'Arial', sans-serif; /* Fuente simple y moderna */
+        font-size: 16px; /* Tamaño ajustado */
+        color: #f5a623; /* Color amarillo cálido */
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        border: 1.5px solid transparent;
+        padding: 6px 12px; /* Ajuste del padding */
+        border-radius: 5px;
+    }
+    
+    .la-idea-de-ti-text::before {
+        content: '';
+        position: absolute;
+        top: -3px; /* Ajustado */
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
         background: none;
         border: 1.5px solid #f5a623;
         border-radius: 6px;
@@ -3313,6 +3606,15 @@ alphabet-nav {
         opacity: 1;
         box-shadow: 0 0 11.25px #f5a623, 0 0 22.5px #f5a623, 0 0 33.75px #f5a623;
     }
+    
+    /* Ajustes para pantallas pequeñas */
+    
+        .la-idea-de-ti-text {
+            font-size: 14px; /* Reducido para pantallas pequeñas */
+            padding: 5px 10px; /* Reducción del padding */
+        }
+    
+    
       footer {
         background-color: #1c1c1c;
         color: #ffffff;
@@ -3453,7 +3755,7 @@ alphabet-nav {
     }
     
     /* Ajustes específicos para pantallas móviles */
-    @media (max-width: 600px) {
+    
         .page-link {
             padding: 6px 10px; /* Reducido aún más el padding */
             font-size: 12px; /* Más pequeño para pantallas móviles */
@@ -3472,7 +3774,7 @@ alphabet-nav {
         .pagination {
             gap: 6px; /* Reduce el espacio entre los botones */
         }
-    }
+    
     
       
       
