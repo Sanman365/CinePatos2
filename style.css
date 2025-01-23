@@ -1780,57 +1780,78 @@ alphabet-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 120px; /* Altura de la barra */
-      padding: 0; /* Sin espaciado horizontal */
+      height: 150px; /* Aumentada la altura de la barra */
+      padding: 0;
       position: relative;
       width: 100%;
-      top: 10%;
+      top: -10%;
       left: 0;
       z-index: 9999;
-    }
-    
-    .navbar-item {
+  }
+  
+  .navbar-item {
       position: relative;
       width: 33.33%; /* Cada imagen ocupa un tercio del ancho de la barra */
       height: 100%;
-      overflow: hidden; /* Asegura que las imágenes no se desborden */
-    }
-    
-    .navbar-item img {
-      height: 50%; /* Asegura que las imágenes abarquen toda la altura de la barra */
-      width: 100%; /* Asegura que las imágenes abarquen todo el ancho de su contenedor */
-      object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-      transition: all 0.3s ease; /* Transición suave para el efecto de hover */
-    }
-    
-    .navbar-item h2 {
+      overflow: hidden;
+  }
+  
+  .navbar-item img {
+      height: 70%; /* Aumentada la altura de las imágenes */
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease;
+  }
+  
+  .navbar-item h2 {
       position: absolute;
-      top: 25%;
+      top: 50%; /* Centrado verticalmente */
       left: 50%;
       transform: translate(-50%, -50%);
       margin: 0;
       color: white;
-      font-size: 30px;
+      font-size: 35px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-      transition: all 0.3s ease; /* Transición suave para el efecto de hover */
-    }
-    
-    /* Efecto de hover para la imagen y el texto */
-    .navbar-item:hover img {
-      filter: brightness(0.5); /* Oscurece la imagen al hacer hover */
-    }
-    
-    .navbar-item:hover h2 {
-      color: rgb(221, 150, 84); /* Cambia el color del texto al hacer hover */
-    }
-    
-    /* Estilos para los enlaces */
-    .navbar-item a {
+      transition: all 0.3s ease;
+  }
+  
+  /* Efecto de hover para la imagen y el texto */
+  .navbar-item:hover img {
+      filter: brightness(0.5);
+  }
+  
+  .navbar-item:hover h2 {
+      color: rgb(221, 150, 84);
+  }
+  
+  /* Estilos para los enlaces */
+  .navbar-item a {
       display: block;
       height: 100%;
       width: 70%;
-      text-decoration: none; /* Quita el subrayado de los enlaces */
-    }
+      text-decoration: none;
+  }
+  
+  @media (max-width: 600px) {
+      .navbar {
+          height: 120px; /* Altura ajustada para móviles */
+      }
+  
+      .navbar-item {
+          width: 50%; /* Cada item ocupa la mitad del ancho */
+      }
+  
+      .navbar-item img {
+          height: 55%; /* Ajuste de la altura de la imagen */
+      }
+  
+      .navbar-item h2 {
+          font-size: 24px;
+          top: 28%; /* Ajuste para centrar el texto */
+      }
+  }
+  
+  
     alphabet-nav {
         width: 100%;
         margin-top: 10px; /* Agrega margen superior para separación */
