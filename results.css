@@ -1,48 +1,64 @@
 #resultsContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra las imágenes en la fila */
-    gap: 30px; /* Más separación entre imágenes */
+    flex-wrap: wrap; /* Permite múltiples filas */
+    justify-content: space-between;
     width: 90%;
     margin: 20px auto;
 }
 
 .video-card {
-    width: calc(20% - 30px); /* 5 imágenes por fila */
-    margin-bottom: 40px; /* Espacio entre filas */
+    width: 18%; /* Asegura 5 imágenes por fila */
+    margin-bottom: 20px; /* Espacio entre filas */
     position: relative;
-    text-align: center; /* Centra el texto */
 }
 
 .video-card a {
     display: block;
     overflow: hidden;
-    border-radius: 20px; /* Bordes redondeados */
+    border-radius: 15px; /* Bordes redondeados */
     transition: transform 0.3s ease;
 }
 
 .video-card img {
     width: 100%;
-    height: 450px; /* Mantiene la altura */
-    object-fit: cover;
-    border-radius: 20px;
+    height: 405px; /* Ajusta la altura */
+    object-fit: cover; /* Evita distorsión */
+    border-radius: 15px; /* Bordes redondeados */
     display: block;
     transition: transform 0.3s ease;
 }
 
 .video-card a:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Efecto al pasar el cursor */
 }
 
 /* Estilo del título */
 .video-card h3 {
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 20px; /* Texto más grande */
+    text-align: center;
+    margin: 10px 0 0;
     color: red;
-    margin-top: 12px;
+    font-size: 20px;
+    font-family: 'Press Start 2P', sans-serif;
     text-transform: uppercase;
     background: black;
-    padding: 12px;
+    padding: 10px;
     border-radius: 10px;
-    display: inline-block;
+    display: block;
+}
+
+/* Superposición opcional */
+.overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #919191;
+    font-size: 22px;
+    text-align: center;
 }
