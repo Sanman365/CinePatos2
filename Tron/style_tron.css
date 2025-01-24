@@ -27,14 +27,7 @@ body {
         }
 
         /* Imagen con borde blanco */
-        .image-container img {
-            width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
-            height: auto; /* Mantiene la proporción original de la imagen */
-            border: 5px solid #ffffff; /* Borde blanco de 5px de grosor */
-            border-radius: 10px; /* Bordes redondeados */
-            image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
-            box-shadow: 0 0 10px rgb(250, 250, 250); /* Añade un brillo al borde */
-        }
+        
         .image-container {
             position: relative; /* Opcional, solo si usas posicionamiento absoluto */
             width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
@@ -269,7 +262,33 @@ body {
         font-size: 24px;
         top: 28%; /* Ajuste para centrar el texto */
     }
-
+    footer {
+        background-color: #1c1c1c;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        font-family: 'Arial', sans-serif;
+        border-top: 1px solid #444444;
+        width: 99%;
+        height: 80px;
+        bottom: 0;
+        position: relative;
+      }
+      
+      .fondo {
+        position: fixed;
+          width: 800px;
+          height: 800px;
+        background-image: url('Imagenesfondos/pato.png');
+        background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+      }
 
 
 
@@ -309,243 +328,136 @@ body {
         filter: blur(5px); /* Aplica desenfoque solo a la imagen de fondo */
         z-index: -1; /* Asegura que la imagen esté detrás del contenido */
     }
+ /* Contenedor de la imagen */
+ 
 
-    /* Contenedor de la imagen */
-    .image-container {
-        position: relative;
-        width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
-        height: auto; /* Ajusta la altura del contenedor según sea necesario */
-        text-align: center; /* Centra la imagen horizontalmente */
-        overflow: hidden; /* Evita que el borde salga del contenedor */
-    }
+/* Imagen con borde blanco */
 
-    /* Imagen con borde blanco */
-    .image-container img {
-        width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
-        height: auto; /* Mantiene la proporción original de la imagen */
-        border: 5px solid #ffffff; /* Borde blanco de 5px de grosor */
-        border-radius: 10px; /* Bordes redondeados */
-        image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
-        box-shadow: 0 0 10px rgb(250, 250, 250); /* Añade un brillo al borde */
-    }
-    .image-container {
-        position: relative; /* Opcional, solo si usas posicionamiento absoluto */
-        width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
-        height: 500px; /* Ajusta la altura del contenedor según sea necesario */
-        image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-    }
+.image-container {
+    position: relative;
+    justify-items: center;
+}
 
-    /* Imagen con borde blanco */
-    .image-container img {
-        position: relative;
-        top: 10%; /* Distancia desde la parte superior del contenedor */
-        width: 225px; /* Ajusta el tamaño de la imagen según sea necesario */
-        height: auto; /* Mantiene la proporción original de la imagen */
-        margin-top: -10%;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-    }
-
-    /* Estilo de texto tipo TRON */
-    h1, p {
-        font-family: 'Press Start 2P', cursive;
-        letter-spacing: 1px;
-    }
-
-    h1 {
-        font-size: 1.5em; /* Reduce el tamaño */
-        border: 3px solid #00bcd4;
-        padding: 10px;
-        box-shadow: 0 0 5px #00bcd4;
-    }
-
-    p {
-        font-size: 0.6em;
-        position: relative;
-        top: 10%;
-        text-align: center;
-        width: 80%;
-        left: 10%;
-        color: whitesmoke;
-    }
-
-    /* Contenedor de contenido centrado */
-    .content {
-        position: relative;
-        z-index: 1;
-        text-align: center;
-    }
-
-    .resum {
-        position: relative;
-        top: 72%;
-    }
-
-    .actors {
-        position: relative;
-        top: 72%;
-        text-align: center;
-        width: 80%;
-        color: whitesmoke;
-        font-size: 0.65em;
-    }
-
-    .imbd {
-        font-family: Arial, Helvetica, Verdana, sans-serif;
-        position: relative;
-        top: 105%;
-        text-align: left;
-        right: 15%;
-    }
-
-    /* Ajuste del video */
-    .video-container iframe {
-        height: 30%;
-        width: 50%;
-        border: 2px solid black;
-    }
-    iframe {
-        height: 50%;
-        width: 100%;
-    }
+/* Imagen con borde blanco */
+.image-container img {
+    
+    position: relative;
+    justify-items: center;
+    left: 0%;
+    margin-top: -15%;
+    margin-bottom: 30%;
+}
    
-
-    /* Ajuste de las pestañas */
-    .tabs {
-        border: 3px solid #333;
-        width: 80%;
-        background-color: white;
-        position: relative;
-        margin: 0 auto;
-    }
-
-    .tab-list {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        background-color: #333;
-        text-align: center;
-    }
-
-    .tab {
-        padding: 5px 10px;
-        cursor: pointer;
-        color: white;
-        background-color: #333;
-    }
-
-    .tab.active {
-        background-color: #666;
-    }
-
-    .tab-content {
-        padding: 10px;
-    }
-
-    .tab-panel {
-        display: none;
-    }
-
-    .tab-panel.active {
-        display: block;
-    }
-
-    /* Estilo para el iframe independiente */
-    .standalone-video {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .standalone-video iframe {
-        width: 80%;
-        height: 200px;
-        border: 2px solid #333;
+iframe{
+position: relative;
+justify-items: center;
+    left: 0%;
+    height: 70%;
+    width: 100%;
+}
+.video-container iframe {
+    position: relative;
+    justify-items: center;
+        left: 0%;
+        height: 100%;
+        width: 100%;
         
-    }
+ }
 
-    /* Imagen 2 */
-    .image-container2 {
-        width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-    }
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 150px; /* Aumentada la altura de la barra */
-        padding: 0;
-        position: relative;
-        width: 100%;
-        top: -10%;
-        left: 0;
-        z-index: 9999;
-    }
+ .tabs {
+    border: 5px solid #333;
+    width: 80%;
+    background-color: white;
+    position: relative;
+}
+
+.tab-list {
+    position: relative;
+    left: 0%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width:100%;
+    list-style: none;
+    background-color: #333;
+}
+
+.tab {
+    padding: 5px 8px;
+    cursor: pointer;
+    color: white;
+    background-color: #333;
+}
+
+.tab.active {
+    background-color: #666;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+ /* Trailer */
+
+ .standalone-video {
+    width: 85%;
+    margin: 0 auto; /* Centrando el iframe independiente */
+}
+
+.standalone-video iframe {
+    position: relative;
+    justify-items: center;
+    left: 0%;
+    width: 80%; /* Fijando el tamaño del iframe */
+    height: 80%;
+    border: 2px solid #333; /* Borde opcional */
+}
+
+
+
+
+
+
+
+
+footer {
+    position: relative;
+     text-align: center;
+    justify-content: center;
+    left: 0%;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 10px;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #444444;
+    margin-top: 20px;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
     
-    .navbar-item {
-        position: relative;
-        width: 33.33%; /* Cada imagen ocupa un tercio del ancho de la barra */
-        height: 100%;
-        overflow: hidden;
-    }
-    
-    .navbar-item img {
-        height: 70%; /* Aumentada la altura de las imágenes */
-        width: 100%;
-        object-fit: cover;
-        transition: all 0.3s ease;
-    }
-    
-    .navbar-item h2 {
-        position: absolute;
-        top: 50%; /* Centrado verticalmente */
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        color: white;
-        font-size: 35px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        transition: all 0.3s ease;
-    }
-    
-    /* Efecto de hover para la imagen y el texto */
-    .navbar-item:hover img {
-        filter: brightness(0.5);
-    }
-    
-    .navbar-item:hover h2 {
-        color: rgb(221, 150, 84);
-    }
-    
-    /* Estilos para los enlaces */
-    .navbar-item a {
-        display: block;
-        height: 100%;
-        width: 70%;
-        text-decoration: none;
-    }
-    
-    
-        .navbar {
-            height: 120px; /* Altura ajustada para móviles */
-        }
-    
-        .navbar-item {
-            width: 50%; /* Cada item ocupa la mitad del ancho */
-        }
-    
-        .navbar-item img {
-            height: 55%; /* Ajuste de la altura de la imagen */
-        }
-    
-        .navbar-item h2 {
-            font-size: 24px;
-            top: 28%; /* Ajuste para centrar el texto */
-        }
-    
-    
+    font-size: 10px;
+  }
+  
+  .fondo {
+    position: fixed;
+      width: 400px;
+      height: 400px;
+    background-image: url('Imagenesfondos/pato.png');
+    background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+  }
 }
