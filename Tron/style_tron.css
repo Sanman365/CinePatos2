@@ -49,6 +49,7 @@ body {
             left: 5%; /* Distancia desde el lado izquierdo del contenedor */
             width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
             height: auto; /* Mantiene la proporción original de la imagen */
+            
         }
 
         
@@ -332,16 +333,19 @@ body {
         width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
         height: 500px; /* Ajusta la altura del contenedor según sea necesario */
         image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
     }
 
     /* Imagen con borde blanco */
     .image-container img {
-        position: absolute; /* Permite mover la imagen libremente dentro del contenedor */
+        position: relative;
         top: 10%; /* Distancia desde la parte superior del contenedor */
-        left: 20%; /* Distancia desde el lado izquierdo del contenedor */
         width: 225px; /* Ajusta el tamaño de la imagen según sea necesario */
         height: auto; /* Mantiene la proporción original de la imagen */
         margin-top: -10%;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
     }
 
     /* Estilo de texto tipo TRON */
