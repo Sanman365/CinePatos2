@@ -176,413 +176,332 @@ body {
     position: relative; 
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px; /* Aumentada la altura de la barra */
+  padding: 0;
+  position: relative;
+  width: 100%;
+  top: -10%;
+  left: 0;
+  z-index: 9999;
+}
 
-/* Archivo: style.css */
+.navbar-item {
+  position: relative;
+  width: 33.33%; /* Cada imagen ocupa un tercio del ancho de la barra */
+  height: 100%;
+  overflow: hidden;
+}
+
+.navbar-item img {
+  height: 70%; /* Aumentada la altura de las imágenes */
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.navbar-item h2 {
+  position: absolute;
+  top: 50%; /* Centrado verticalmente */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: white;
+  font-size: 35px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+/* Efecto de hover para la imagen y el texto */
+.navbar-item:hover img {
+  filter: brightness(0.5);
+}
+
+.navbar-item:hover h2 {
+  color: rgb(221, 150, 84);
+}
+
+/* Estilos para los enlaces */
+.navbar-item a {
+  display: block;
+  height: 100%;
+  width: 70%;
+  text-decoration: none;
+}
 
 
-/* Estilos generales */
-body {
-    background-color: black;
-    color: white;
-    font-family: 'Playfair Display', serif;
-  
-  }
-  
-  /* Estilos para el encabezado */
-  header {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* Estilos para el h1 */
-  header h1 {
-    
-    font-size: 2.5em;
-    margin: 0;
-  }
-  
-  /* Estilos para la barra de navegación */
-  .titulo{
-    font-family: 'Playfair Display', serif;
-  
-  }
-  
-  
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333; /* Color de fondo de la barra */
-    height: 120px; /* Altura de la barra */
-    padding: 0; /* Sin espaciado horizontal */
-    position: relative;
-    width: 100%;
-    top: 10%;
-    left: 0;
-    z-index: 9999;
+      height: 120px; /* Altura ajustada para móviles */
   }
-  
+
   .navbar-item {
-    position: relative;
-    width: 33.33%; /* Cada imagen ocupa un tercio del ancho de la barra */
-    height: 100%;
-    overflow: hidden; /* Asegura que las imágenes no se desborden */
+      width: 50%; /* Cada item ocupa la mitad del ancho */
   }
-  
+
   .navbar-item img {
-    height: 100%; /* Asegura que las imágenes abarquen toda la altura de la barra */
-    width: 100%; /* Asegura que las imágenes abarquen todo el ancho de su contenedor */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-    transition: all 0.3s ease; /* Transición suave para el efecto de hover */
+      height: 55%; /* Ajuste de la altura de la imagen */
   }
-  
+
   .navbar-item h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    color: white;
-    font-size: 38px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    transition: all 0.3s ease; /* Transición suave para el efecto de hover */
+      font-size: 24px;
+      top: 28%; /* Ajuste para centrar el texto */
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  body {
+      font-family: 'Press Start 2P', cursive; /* Fuente estilo TRON */
+      padding: 0; /* Eliminar espacio extra */
+      margin: 0;
+  }
+
+  /* Fondo de la página con imagen difuminada */
+  body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../WWZ/poster_fondo_wwz.jpeg') no-repeat center center;
+      background-size: cover;
+      filter: blur(5px); /* Aplica desenfoque solo a la imagen de fondo */
+      z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+  }
+  /* Contenedor de la imagen */
+  .image-container {
+    position: relative;
+    width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
+    height: auto; /* Ajusta la altura del contenedor según sea necesario */
+    text-align: center; /* Centra la imagen horizontalmente */
+    overflow: hidden; /* Evita que el borde salga del contenedor */
+}
+ /* Imagen con borde blanco */
+ .image-container img {
+  width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  border: 5px solid #ffffff; /* Borde blanco de 5px de grosor */
+  border-radius: 10px; /* Bordes redondeados */
+  image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
+  box-shadow: 0 0 10px rgb(250, 250, 250); /* Añade un brillo al borde */
+}
+.image-container {
+  position: relative; /* Opcional, solo si usas posicionamiento absoluto */
+  width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
+  height: 500px; /* Ajusta la altura del contenedor según sea necesario */
+  image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+/* Imagen con borde blanco */
+.image-container img {
+  position: relative;
+  top: 10%; /* Distancia desde la parte superior del contenedor */
+  width: 225px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  margin-top: -10%;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+/* Estilo de texto tipo TRON */
+h1, p {
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 1.5em; /* Reduce el tamaño */
+  border: 3px solid #00bcd4;
+  padding: 10px;
+  box-shadow: 0 0 5px #00bcd4;
+}
+
+p {
+  font-size: 0.6em;
+  position: relative;
+  top: 10%;
+  text-align: center;
+  width: 80%;
+  left: 10%;
+  color: whitesmoke;
+}
+
+/* Contenedor de contenido centrado */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.resum {
+  position: relative;
+  top: 72%;
+}
+
+.actors {
+  position: relative;
+  top: 72%;
+  text-align: center;
+  width: 80%;
+  color: whitesmoke;
+  font-size: 0.65em;
+}
+
+.imbd {
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  position: relative;
+  top: 105%;
+  text-align: left;
+  right: 15%;
+}
+
+/* Ajuste del video */
+.video-container iframe {
+  height: 30%;
+  width: 50%;
+  border: 2px solid black;
+}
+iframe {
+  height: 50%;
+  width: 100%;
+}
+
+
+/* Ajuste de las pestañas */
+.tabs {
+  border: 3px solid #333;
+  width: 80%;
+  background-color: white;
+  position: relative;
+  margin: 0 auto;
+}
+
+.tab-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #333;
+  text-align: center;
+}
+
+.tab {
+  padding: 5px 10px;
+  cursor: pointer;
+  color: white;
+  background-color: #333;
+}
+
+.tab.active {
+  background-color: #666;
+}
+
+.tab-content {
+  padding: 10px;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Estilo para el iframe independiente */
+.standalone-video {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.standalone-video iframe {
+  width: 80%;
+  height: 200px;
+  border: 2px solid #333;
   
+}
+
+/* Imagen 2 */
+.image-container2 {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+  .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px; /* Altura más compacta para móviles */
+      padding: 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.8); /* Opcional: fondo semitransparente */
+  }
+
+  .navbar-item {
+      flex: 1; /* Distribuye el espacio de manera uniforme */
+      text-align: center;
+      height: 100%;
+  }
+
+  .navbar-item img {
+      height: 50px; /* Ajuste de la altura de la imagen */
+      width: auto;
+      object-fit: contain;
+  }
+
+  .navbar-item h2 {
+      font-size: 18px; /* Tamaño más pequeño del texto */
+      position: absolute;
+      top: 50%; /* Centrado verticalmente */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      transition: all 0.3s ease;
+  }
+
   /* Efecto de hover para la imagen y el texto */
   .navbar-item:hover img {
-    filter: brightness(0.5); /* Oscurece la imagen al hacer hover */
+      filter: brightness(0.5);
   }
-  
+
   .navbar-item:hover h2 {
-    color: rgb(221, 150, 84); /* Cambia el color del texto al hacer hover */
+      color: rgb(221, 150, 84);
   }
-  
+
   /* Estilos para los enlaces */
   .navbar-item a {
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-decoration: none; /* Quita el subrayado de los enlaces */
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
   }
-  
-  
-  
-  .alphabet-nav {
-    background-color: #000000;
-    width: 100%;
-    margin-top: 10px; /* Agrega margen superior para separación */
-    padding: 10px 0;
-   
-  }
-  
-  .alphabet-bar {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Permite que las letras se envuelvan en varias líneas si es necesario */
-   
-  
-  }
-  
-  .alphabet-bar li {
-    margin: 15px;
-  }
-  
-  .alphabet-bar a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.4em;
-    display: block;
-    width: 38px; /* Ancho del cuadrado */
-    height: 40px; /* Altura del cuadrado */
-    line-height: 40px; /* Alinea verticalmente el texto */
-    text-align: center; /* Centra el texto horizontalmente */
-    border-radius: 8px; /* Bordes redondeados */
-    background-color: #555;
-  }
-  
-  /* Colores de hover diferentes para cada letra */
-  .alphabet-bar a:hover {
-    background-color: rgb(221, 150, 84);  color: #000000;
-  }
-  
-  
-  
-  button {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 20px;
-    transform: translateY(-50%);
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  
-  .image-gallery {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
-    justify-content: space-between;
-    width: 90%;
-    margin: 20px auto;
-  }
-  
-  .image-item {
-    width: 18%; /* Ajusta el ancho del contenedor de la imagen y el texto */
-    margin-bottom: 20px; /* Espacio debajo de cada imagen y texto */
-    position: relative; /* Necesario para posicionar la superposición */
-  }
-  
-  .image-item a {
-    display: block;
-    overflow: hidden;
-    border-radius: 15px; /* Bordes redondeados */
-    transition: transform 0.3s ease;
-  }
-  
-  .image-item img {
-    width: 100%;
-    height: 405px; /* Ajusta la altura de las imágenes */
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
-    border-radius: 15px; /* Bordes redondeados */
-    display: block;
-    transition: transform 0.3s ease;
-  }
-  
-  .image-item a:hover img {
-    transform: scale(1.05); /* Agranda la imagen ligeramente al pasar el cursor */
-  }
-  
-  .image-item p {
-    text-align: center; /* Centra el texto debajo de la imagen */
-    margin: 10px 0 0; /* Margen superior para separar el texto de la imagen */
-    color: #fff; /* Color del texto (puedes cambiarlo si es necesario) */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 10px; /* Ajusta la distancia desde el borde superior */
-    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
-    width: 60px; /* Ajusta el tamaño del cuadrado */
-    height: 60px; /* Ajusta el tamaño del cuadrado */
-    background: rgba(0, 0, 0, 0.5); /* Color y opacidad de la superposición */
-    border-radius: 15px; /* Bordes redondeados */
-    display: flex;
-    align-items: center; /* Centra el texto verticalmente */
-    justify-content: center; /* Centra el texto horizontalmente */
-    color: #919191; /* Color del texto dentro del cuadrado */
-    font-size: 22px; /* Tamaño de la fuente */
-    text-align: center; /* Centra el texto dentro del cuadrado */
-  }
-  
-  
-  .pagination-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .pagination {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .pagination a {
-    display: inline-block;
-    margin: 0 5px;
-    padding: 11.5px 17.25px; /* Aumentado en un 15% */
-    border: 1px solid #ddd;
-    cursor: pointer;
-    border-radius: 5.75px; /* Aumentado en un 15% */
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1.15em; /* Aumentado en un 15% */
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .pagination a:hover {
-    background-color: rgb(221, 150, 84);
-    color: white;
-  }
-  
-  .pagination a.active {
-    background-color: #007bff; /* Color activo azul */
-    color: white;
-    border-color: #007bff;
-  }
-  
-  .pagination a.inactive {
-    cursor: default;
-    color: #ddd;
-    pointer-events: none;
-  }
-  
-  .pagination a.disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
-  
-  
-  .neon-container {
-    background-color: #0d0d0d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .neon-text {
-    font-size: 36px; /* Disminuido 75% de 48px */
-    color: #00f9ff;
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 1.5px; /* Ajustado proporcionalmente */
-    transition: all 0.3s ease;
-    border: 1.5px solid transparent; /* Disminuido 75% de 2px */
-    padding: 7.5px 15px; /* Disminuido 75% de 10px 20px */
-    border-radius: 3.75px; /* Disminuido 75% de 5px */
-  }
-  
-  .neon-text::before {
-    content: '';
-    position: absolute;
-    top: -3.75px; /* Disminuido 75% de -5px */
-    left: -3.75px;
-    right: -3.75px;
-    bottom: -3.75px;
-    background: none;
-    border: 1.5px solid #ff9600; /* Disminuido 75% de 2px */
-    border-radius: 6px; /* Disminuido 75% de 8px */
-    transition: all 0.3s ease;
-    opacity: 0;
-  }
-  
-  .neon-text:hover {
-    color: #00f9ff;
-    text-shadow: 0 0 11.25px #00f9ff, 0 0 22.5px #00f9ff, 0 0 33.75px #00f9ff; /* Disminuido 75% de 15px, 30px, 45px */
-    border-color: #ff9600;
-  }
-  
-  .neon-text:hover::before {
-    opacity: 1;
-    box-shadow: 0 0 11.25px #ff9600, 0 0 22.5px #ff9600, 0 0 33.75px #ff9600; /* Disminuido 75% de 15px, 30px, 45px */
-  }
-  
-  
-  .wwz-container {
-    background-color: #0d0d0d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .wwz-text {
-    font-size: 36px; /* Tamaño reducido al 75% */
-    font-family: 'Impact', sans-serif; /* Estilo de fuente similar */
-    color: #ff0000; /* Color rojo característico */
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 1.5px; /* Espaciado reducido */
-    transition: all 0.3s ease;
-    padding: 7.5px 15px; /* Padding reducido al 75% */
-  }
-  
-  .wwz-text::before {
-    content: '';
-    position: absolute;
-    top: -3.75px; /* Disminuido 75% de -5px */
-    left: -3.75px;
-    right: -3.75px;
-    bottom: -3.75px;
-    background: none;
-    border: 1.5px solid #ffffff; /* Contorno blanco */
-    border-radius: 6px; /* Esquinas ligeramente redondeadas */
-    transition: all 0.3s ease;
-    opacity: 0;
-  }
-  
-  .wwz-text:hover {
-    color: #ff0000;
-    text-shadow: 0 0 11.25px #ff0000, 0 0 22.5px #ff0000, 0 0 33.75px #ff0000; /* Efecto de resplandor rojo */
-    border-color: #ffffff; /* Cambio de color del borde */
-  }
-  
-  .wwz-text:hover::before {
-    opacity: 1;
-    box-shadow: 0 0 11.25px #ffffff, 0 0 22.5px #ffffff, 0 0 33.75px #ffffff; /* Sombra blanca que imita un brillo */
-  }
-  
-  .rainbow-border {
-    position: fixed;
-    background: linear-gradient(
-        90deg,
-        red, orange, yellow, green, blue, indigo, violet,
-        red, orange, yellow, green, blue, indigo, violet
-    ); /* Gradiente duplicado */
-    background-size: 200% 200%; /* Ajustado para abarcar el gradiente más largo */
-    animation: rainbow-animation 10s linear infinite;
-    z-index: 9999;
-  }
-  
-  .rainbow-border.top {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 9.25px; /* Reducido un 25% de 15px */
-  }
-  
-  .rainbow-border.bottom {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 11.25px; /* Reducido un 25% de 15px */
-  }
-  
-  .rainbow-border.left {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 11.25px; /* Reducido un 25% de 15px */
-    background: linear-gradient(
-        0deg,
-        red, orange, yellow, green, blue, indigo, violet,
-        red, orange, yellow, green, blue, indigo, violet
-    ); /* Gradiente duplicado para los bordes laterales */
-    background-size: 200% 200%;
-  }
-  
-  .rainbow-border.right {
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 11.25px; /* Reducido un 25% de 15px */
-    background: linear-gradient(
-        0deg,
-        red, orange, yellow, green, blue, indigo, violet,
-        red, orange, yellow, green, blue, indigo, violet
-    ); /* Gradiente duplicado para los bordes laterales */
-    background-size: 200% 200%;
-  }
-  
-  /* Animación del arcoíris */
-  @keyframes rainbow-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+}
+
+
