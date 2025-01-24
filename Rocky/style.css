@@ -27,15 +27,23 @@ body {
         }
 
         /* Imagen con borde blanco */
-        .image-container img {
-            width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
-            height: auto; /* Mantiene la proporción original de la imagen */
-            border: 5px solid #ffffff; /* Borde blanco de 5px de grosor */
-            border-radius: 10px; /* Bordes redondeados */
+        
+        .image-container {
+            position: relative; /* Opcional, solo si usas posicionamiento absoluto */
+            width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
+            height: 500px; /* Ajusta la altura del contenedor según sea necesario */
             image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
-            box-shadow: 0 0 10px rgb(250, 250, 250); /* Añade un brillo al borde */
         }
 
+        /* Imagen con borde blanco */
+        .image-container img {
+            position: absolute; /* Permite mover la imagen libremente dentro del contenedor */
+            top: 10%; /* Distancia desde la parte superior del contenedor */
+            left: 5%; /* Distancia desde el lado izquierdo del contenedor */
+            width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+            height: auto; /* Mantiene la proporción original de la imagen */
+            
+        }
 
         
 
@@ -99,6 +107,11 @@ body {
            width: 640px;
             height: 360px;
             border: 2px solid black; /* Borde del iframe */
+        }
+        iframe {
+            width: 100%;
+            height: 360px;
+            border: none;
         }
         .star{
             position:relative;
@@ -177,6 +190,35 @@ body {
 
 
 
+    footer {
+        background-color: #1c1c1c;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        font-family: 'Arial', sans-serif;
+        border-top: 1px solid #444444;
+        width: 99%;
+        height: 80px;
+        bottom: 0;
+        position: relative;
+      }
+      
+      .fondo {
+        position: fixed;
+          width: 800px;
+          height: 800px;
+        background-image: url('Imagenesfondos/pato.png');
+        background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+      }
+
+
 
 
 
@@ -206,161 +248,219 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('../Tron/Fondo_tron.jpg') no-repeat center center;
+        background: url('') no-repeat center center;
         background-size: cover;
         filter: blur(5px); /* Aplica desenfoque solo a la imagen de fondo */
         z-index: -1; /* Asegura que la imagen esté detrás del contenido */
     }
+ /* Contenedor de la imagen */
+ 
 
-    /* Contenedor de la imagen */
-    .image-container {
-        position: relative;
-        width: 90%; /* Ajusta el ancho al 90% */
-        height: auto; /* Mantiene la proporción */
-        text-align: center;
-        margin: 0 auto; /* Centra la imagen */
-        overflow: hidden;
-    }
+/* Imagen con borde blanco */
 
-    /* Imagen con borde blanco */
-    .image-container img {
-        width: 80%; /* Reduce el tamaño de la imagen */
-        height: auto;
-        border: 5px solid #ffffff;
-        border-radius: 10px;
-        image-rendering: crisp-edges;
-        box-shadow: 0 0 10px rgb(250, 250, 250);
-    }
+.image-container {
+    position: relative;
+    justify-items: center;
+}
 
-    /* Estilo de texto tipo TRON */
-    h1, p {
-        font-family: 'Press Start 2P', cursive;
-        letter-spacing: 1px;
-    }
-
-    h1 {
-        font-size: 1.5em; /* Reduce el tamaño */
-        border: 3px solid #00bcd4;
-        padding: 10px;
-        box-shadow: 0 0 5px #00bcd4;
-    }
-
-    p {
-        font-size: 0.8em;
-        position: relative;
-        top: 10%;
-        text-align: center;
-        width: 80%;
-        left: 10%;
-        color: whitesmoke;
-    }
-
-    /* Contenedor de contenido centrado */
-    .content {
-        position: relative;
-        z-index: 1;
-        text-align: center;
-    }
-
-    .resum {
-        position: relative;
-        top: 10%;
-    }
-
-    .actors {
-        position: relative;
-        top: 12%;
-        text-align: center;
-        width: 80%;
-        color: whitesmoke;
-        font-size: 0.8em;
-    }
-
-    .imbd {
-        font-family: Arial, Helvetica, Verdana, sans-serif;
-        position: relative;
-        top: 45%;
-        text-align: left;
-        right: 15%;
-    }
-
-    /* Ajuste del video */
-    .video-container iframe {
+/* Imagen con borde blanco */
+.image-container img {
+    
+    position: relative;
+    justify-items: center;
+    left: 0%;
+    margin-top: -15%;
+    margin-bottom: 30%;
+}
+   
+iframe{
+position: relative;
+justify-items: center;
+    left: 0%;
+    height: 70%;
+    width: 100%;
+}
+.video-container iframe {
+    position: relative;
+    justify-items: center;
+        left: 0%;
+        height: 100%;
         width: 100%;
-        height: 200px;
-        border: 2px solid black;
+        
+ }
+
+ .tabs {
+    border: 5px solid #333;
+    width: 80%;
+    background-color: white;
+    position: relative;
+}
+
+.tab-list {
+    position: relative;
+    left: 0%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width:100%;
+    list-style: none;
+    background-color: #333;
+}
+
+.tab {
+    padding: 5px 8px;
+    cursor: pointer;
+    color: white;
+    background-color: #333;
+}
+
+.tab.active {
+    background-color: #666;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+ /* Trailer */
+
+ .standalone-video {
+    width: 85%;
+    margin: 0 auto; /* Centrando el iframe independiente */
+}
+
+.standalone-video iframe {
+    position: relative;
+    justify-items: center;
+    left: 0%;
+    width: 80%; /* Fijando el tamaño del iframe */
+    height: 80%;
+    border: 2px solid #333; /* Borde opcional */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px; /* Aumentada la altura de la barra */
+    padding: 0;
+    position: relative;
+    width: 100%;
+    top: -10%;
+    left: 0;
+    z-index: 9999;
+}
+
+.navbar-item {
+    position: relative;
+    width: 33.33%; /* Cada imagen ocupa un tercio del ancho de la barra */
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar-item img {
+    height: 70%; /* Aumentada la altura de las imágenes */
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.navbar-item h2 {
+    position: absolute;
+    top: 50%; /* Centrado verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+/* Efecto de hover para la imagen y el texto */
+.navbar-item:hover img {
+    filter: brightness(0.5);
+}
+
+.navbar-item:hover h2 {
+    color: rgb(221, 150, 84);
+}
+
+/* Estilos para los enlaces */
+.navbar-item a {
+    display: block;
+    height: 100%;
+    width: 70%;
+    text-decoration: none;
+}
+
+
+    .navbar {
+        height: 120px; /* Altura ajustada para móviles */
     }
 
-    /* Estrella */
-    .star {
-        position: relative;
-        top: 50%;
-        right: 15%;
-        width: 5%;
-        height: auto;
-        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 47.94 47.94'><path style='fill:%23ecd018;' d='M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z'/></svg>");
-        background-size: contain;
-        background-repeat: no-repeat;
+    .navbar-item {
+        width: 50%; /* Cada item ocupa la mitad del ancho */
     }
 
-    /* Ajuste de las pestañas */
-    .tabs {
-        border: 3px solid #333;
-        width: 100%;
-        background-color: white;
-        position: relative;
-        margin: 0 auto;
+    .navbar-item img {
+        height: 55%; /* Ajuste de la altura de la imagen */
     }
 
-    .tab-list {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        background-color: #333;
-        text-align: center;
+    .navbar-item h2 {
+        font-size: 15px;
+        top: 28%; /* Ajuste para centrar el texto */
     }
 
-    .tab {
-        padding: 10px 20px;
-        cursor: pointer;
-        color: white;
-        background-color: #333;
-    }
 
-    .tab.active {
-        background-color: #666;
-    }
 
-    .tab-content {
-        padding: 20px;
-    }
 
-    .tab-panel {
-        display: none;
-    }
 
-    .tab-panel.active {
-        display: block;
-    }
-
-    /* Estilo para el iframe independiente */
-    .standalone-video {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .standalone-video iframe {
-        width: 100%;
-        height: 200px;
-        border: 2px solid #333;
-    }
-
-    /* Imagen 2 */
-    .image-container2 {
-        width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-    }
+footer {
+    position: relative;
+     text-align: center;
+    justify-content: center;
+    
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 10px;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #444444;
+    margin-top: 20px;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    
+    font-size: 10px;
+  }
+  footer p{
+    position: relative;
+    text-align: center;
+   justify-content: center;
+   
+  }
+  
+  .fondo {
+    position: fixed;
+      width: 400px;
+      height: 400px;
+    background-image: url('Imagenesfondos/pato.png');
+    background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+  }
 }
