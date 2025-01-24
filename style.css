@@ -37,7 +37,7 @@ h1::after {
   left: -100%;
   width: 120%;
   height: 100%;
-  background: linear-gradient(-75deg, rgba(255, 140, 0, 0) 30%, rgba(255, 140, 0, 0.8) 50%, rgba(255, 140, 0, 0) 70%);
+  background: linear-gradient(-75deg, rgba(255, 140, 0, 0) 30%, rgba(255, 0, 0, 0.8) 50%, rgba(255, 140, 0, 0) 70%);
   animation: destello 4s infinite linear;
 }
 
@@ -1562,7 +1562,7 @@ alphabet-nav {
     font-size: 12px;
     font-family: 'Arial', sans-serif;
     border-top: 1px solid #444444;
-    width: 100%;
+    width: 99%;
     height: 80px;
     bottom: 0;
     position: relative;
@@ -3366,7 +3366,7 @@ alphabet-nav {
         }
         
         /* Ajustes para dispositivos móviles */
-        @media (max-width: 768px) {
+        
             .schindler-list-text {
                 font-size: 14px; /* Reducir tamaño de texto */
                 padding: 5px 10px; /* Reducir padding */
@@ -3379,7 +3379,7 @@ alphabet-nav {
                 bottom: -2px;
                 border-width: 1px; /* Reducir borde */
             }
-        }
+        
         
       
         .lord-of-the-rings-container {
