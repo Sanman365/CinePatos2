@@ -174,3 +174,193 @@ body {
     display: block;
     position: relative; 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    body {
+        font-family: 'Press Start 2P', cursive; /* Fuente estilo TRON */
+        padding: 0; /* Eliminar espacio extra */
+        margin: 0;
+    }
+
+    /* Fondo de la página con imagen difuminada */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../Tron/Fondo_tron.jpg') no-repeat center center;
+        background-size: cover;
+        filter: blur(5px); /* Aplica desenfoque solo a la imagen de fondo */
+        z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+    }
+
+    /* Contenedor de la imagen */
+    .image-container {
+        position: relative;
+        width: 90%; /* Ajusta el ancho al 90% */
+        height: auto; /* Mantiene la proporción */
+        text-align: center;
+        margin: 0 auto; /* Centra la imagen */
+        overflow: hidden;
+    }
+
+    /* Imagen con borde blanco */
+    .image-container img {
+        width: 80%; /* Reduce el tamaño de la imagen */
+        height: auto;
+        border: 5px solid #ffffff;
+        border-radius: 10px;
+        image-rendering: crisp-edges;
+        box-shadow: 0 0 10px rgb(250, 250, 250);
+    }
+
+    /* Estilo de texto tipo TRON */
+    h1, p {
+        font-family: 'Press Start 2P', cursive;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduce el tamaño */
+        border: 3px solid #00bcd4;
+        padding: 10px;
+        box-shadow: 0 0 5px #00bcd4;
+    }
+
+    p {
+        font-size: 0.8em;
+        position: relative;
+        top: 10%;
+        text-align: center;
+        width: 80%;
+        left: 10%;
+        color: whitesmoke;
+    }
+
+    /* Contenedor de contenido centrado */
+    .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+
+    .resum {
+        position: relative;
+        top: 10%;
+    }
+
+    .actors {
+        position: relative;
+        top: 12%;
+        text-align: center;
+        width: 80%;
+        color: whitesmoke;
+        font-size: 0.8em;
+    }
+
+    .imbd {
+        font-family: Arial, Helvetica, Verdana, sans-serif;
+        position: relative;
+        top: 45%;
+        text-align: left;
+        right: 15%;
+    }
+
+    /* Ajuste del video */
+    .video-container iframe {
+        width: 100%;
+        height: 200px;
+        border: 2px solid black;
+    }
+
+    /* Estrella */
+    .star {
+        position: relative;
+        top: 50%;
+        right: 15%;
+        width: 5%;
+        height: auto;
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 47.94 47.94'><path style='fill:%23ecd018;' d='M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z'/></svg>");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    /* Ajuste de las pestañas */
+    .tabs {
+        border: 3px solid #333;
+        width: 100%;
+        background-color: white;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .tab-list {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .tab {
+        padding: 10px 20px;
+        cursor: pointer;
+        color: white;
+        background-color: #333;
+    }
+
+    .tab.active {
+        background-color: #666;
+    }
+
+    .tab-content {
+        padding: 20px;
+    }
+
+    .tab-panel {
+        display: none;
+    }
+
+    .tab-panel.active {
+        display: block;
+    }
+
+    /* Estilo para el iframe independiente */
+    .standalone-video {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .standalone-video iframe {
+        width: 100%;
+        height: 200px;
+        border: 2px solid #333;
+    }
+
+    /* Imagen 2 */
+    .image-container2 {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+    }
+}
