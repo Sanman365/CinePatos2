@@ -10,7 +10,7 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('../Imagenesfondos/Fridensfondo.jpeg') no-repeat center center;
+            background: url('../Fridensfondo.jpeg') no-repeat center center;
             background-size: cover;
             filter: blur(5px); /* Aplica desenfoque solo a la imagen de fondo */
             z-index: -1; /* Asegura que la imagen esté detrás del contenido */
@@ -330,7 +330,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('../Imagenesfondos/Fridensfondo.jpeg') no-repeat center center;
+        background: url('../Fridensfondo.jpeg') no-repeat center center;
         background-size: cover;
         filter: blur(5px); /* Aplica desenfoque solo a la imagen de fondo */
         z-index: -1; /* Asegura que la imagen esté detrás del contenido */
