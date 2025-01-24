@@ -99,4 +99,71 @@
         "image": "../Imagenesfondos/rocky6.jpg",
         "link": "../Rocky/rocky6.html"
     }
+    ,
+    {
+        "title": "Bad Boys",
+        "image": "../Imagenesfondos/badboys.jpg",
+       
+        "link": "../BadBoys/badboys.html"
+    }
+    ,
+    {
+        "title": "Bad Boys 2",
+        "image": "../Imagenesfondos/Bad Boys 2 - 2003.jpg",
+        "link": "../BadBoys/badboys2.html"
+    }
+    ,
+    {
+        "title": "Bad Boys 2",
+        "image": "../Imagenesfondos/Bad Boys 2 - 2003.jpg",
+        "link": "../BadBoys/badboys2.html"
+    }
+    ,
+    {
+        "title": "Bad Boys 2",
+        "image": "../Imagenesfondos/Bad Boys 2 - 2003.jpg",
+        "link": "../BadBoys/badboys2.html"
+    }
+    ,
+    {
+        "title": "Monkey Man",
+        "image": "../Imagenesfondos/monkeyman.jpeg",
+        "link": "../Solitarias/Monkeyman.html"
+    }
+    ,
+    {
+        "title": "Tetris",
+        "image": "../Imagenesfondos/tetris.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Mad Max (1979)",
+        "image": "../Imagenesfondos/madmax.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Mad Max (1981)",
+        "image": "../Imagenesfondos/madmax2.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Mad Max (1985)",
+        "image": "../Imagenesfondos/madmax3.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Mad Max: Fury Road",
+        "image": "../Imagenesfondos/madmaxfury.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Mad Max: Furiosa",
+        "image": "../Imagenesfondos/madmaxfuriosa.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
 ]
