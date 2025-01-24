@@ -195,7 +195,79 @@ body {
 }
 
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px; /* Aumentada la altura de la barra */
+    padding: 0;
+    position: relative;
+    width: 100%;
+    top: -10%;
+    left: 0;
+    z-index: 9999;
+}
 
+.navbar-item {
+    position: relative;
+    width: 33.33%; /* Cada imagen ocupa un tercio del ancho de la barra */
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar-item img {
+    height: 70%; /* Aumentada la altura de las imágenes */
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.navbar-item h2 {
+    position: absolute;
+    top: 50%; /* Centrado verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+/* Efecto de hover para la imagen y el texto */
+.navbar-item:hover img {
+    filter: brightness(0.5);
+}
+
+.navbar-item:hover h2 {
+    color: rgb(221, 150, 84);
+}
+
+/* Estilos para los enlaces */
+.navbar-item a {
+    display: block;
+    height: 100%;
+    width: 70%;
+    text-decoration: none;
+}
+
+
+    .navbar {
+        height: 120px; /* Altura ajustada para móviles */
+    }
+
+    .navbar-item {
+        width: 50%; /* Cada item ocupa la mitad del ancho */
+    }
+
+    .navbar-item img {
+        height: 55%; /* Ajuste de la altura de la imagen */
+    }
+
+    .navbar-item h2 {
+        font-size: 24px;
+        top: 28%; /* Ajuste para centrar el texto */
+    }
 
 
 
