@@ -72,7 +72,7 @@
     {
         "title": "Rocky ",
         "image": "../Imagenesfondos/rocky.jpeg",
-        "link": ".../Rocky/rocky.html"
+        "link": "../Rocky/rocky.html"
     },
     {
         "title": "Rocky II",
