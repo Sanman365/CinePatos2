@@ -12,7 +12,7 @@ if (searchResults && searchResults.length > 0) {
             <a href="${video.link}">
                 <img src="${video.image}" alt="${video.title}">
             </a>
-            <h3 class="baby-driver-text">${video.title}</h3>
+            <h3 class="text-container">${video.title}</h3>
         `;
 
         resultsContainer.appendChild(videoCard);
