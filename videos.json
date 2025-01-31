@@ -166,4 +166,10 @@
         "image": "../Imagenesfondos/madmaxfuriosa.jpeg",
         "link": "../Solitarias/Tetris.html"
     }
+    ,
+    {
+        "title": "Lalaland",
+        "image": "../Imagenesfondos/lalaland.jpg",
+        "link": "../Solitarias/laland.html"
+    }
 ]
