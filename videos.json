@@ -172,4 +172,10 @@
         "image": "../Imagenesfondos/lalaland.jpg",
         "link": "../Solitarias/laland.html"
     }
+    ,
+    {
+        "title": "Hotel Mumbai",
+        "image": "../Imagenesfondos/mumbai.jpeg",
+        "link": "../Solitarias/hotelmumbai.html"
+    }
 ]
