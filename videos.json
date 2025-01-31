@@ -190,4 +190,16 @@
         "image": "../Imagenesfondos/godzilaminusone.jpeg",
         "link": "../Solitarias/godzillaminusone.html"
     }
+    ,
+    {
+        "title": "El Niño y la Garza",
+        "image": "../Imagenesfondos/garza.jpg",
+        "link": "../Solitarias/Garza.html"
+    }
+    ,
+    {
+        "title": "Her",
+        "image": "../Imagenesfondos/her.jpeg",
+        "link": "../Solitarias/her.html"
+    }
 ]
