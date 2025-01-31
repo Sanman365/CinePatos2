@@ -36,16 +36,21 @@
 .video-card h3 {
     text-align: center;
     margin: 10px 0 0;
-    color: red;
     font-size: 20px;
-    font-family: 'Press Start 2P', sans-serif;
     text-transform: uppercase;
-    background: black;
     padding: 10px;
     border-radius: 10px;
-    display: block;
+    display: block; font-size: 16px; /* Tamaño de fuente adecuado */
+    color: #ffffff; /* Gris suave como color base */
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
+.video-card h3:hover{
+    color: #be0000; /* Cambia a rojo neón */
+    text-shadow: 0 0 8px #be0000, 0 0 16px #be0000; /* Efecto de resplandor sutil */
 
+}
 /* Superposición opcional */
 .overlay {
     position: absolute;
