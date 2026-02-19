@@ -208,4 +208,10 @@
         "image": "../Imagenesfondos/romperelcirculo",
         "link": "../Solitarias/romperelcirculo.html"
     }
+    ,
+    {
+        "title": "Encuentros Cercanos del Tercer Tipo",
+        "image": "../Imagenesfondos/Close Encounters of the Third Kind (1977)_.jpg",
+        "link": "../Solitarias/EN-CER-DEL-TERTIP.html"
+    }
 ]
