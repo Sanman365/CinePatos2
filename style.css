@@ -1690,6 +1690,146 @@ alphabet-nav {
 }
 
 
+.video-container {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    max-width: 800px;
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    background: #000;
+}
+
+.ad-blocker-panel {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ad-blocker-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-indicator.active {
+    background: #28a745;
+    box-shadow: 0 0 10px #28a745;
+}
+
+.status-indicator.inactive {
+    background: #dc3545;
+}
+
+.ad-blocker-toggle {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.ad-blocker-toggle:hover {
+    background: #0056b3;
+}
+
+.ad-blocker-toggle.inactive {
+    background: #dc3545;
+}
+
+.ad-blocker-toggle.inactive:hover {
+    background: #c82333;
+}
+
+.ad-stats {
+    margin-top: 15px;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ad-stats p {
+    font-size: 16px;
+    color: #495057;
+}
+
+.ad-stats span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.demo-ads {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.demo-ads h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.demo-ads button {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.demo-ads button:hover {
+    background: #5a6268;
+}
+
+/* Estilos para anuncios bloqueados */
+.ad-blocked-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: slideIn 0.5s ease;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 
 

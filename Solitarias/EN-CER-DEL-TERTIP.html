@@ -8,8 +8,196 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../Solitarias/style_soli.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-
     
+    <style>
+        /* Estilos originales de tu página */
+        
+        /* BOTÓN DE DESCARGA - Versión MEJORADA y más visible */
+        .download-section {
+            margin: 30px auto;
+            text-align: center;
+            position: relative;
+            z-index: 999;
+            clear: both;
+            width: 100%;
+            display: block !important;
+        }
+        
+        .download-btn {
+            background: linear-gradient(45deg, #FF0000, #FF416C, #FF4B2B);
+            color: white !important;
+            border: 3px solid #FFD700;
+            padding: 20px 50px !important;
+            font-size: 24px !important;
+            border-radius: 60px !important;
+            cursor: pointer !important;
+            font-weight: bold !important;
+            letter-spacing: 2px !important;
+            box-shadow: 0 10px 30px rgba(255,0,0,0.5), 0 0 20px #FFD700 !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            overflow: hidden !important;
+            display: inline-block !important;
+            text-transform: uppercase !important;
+            font-family: 'Press Start 2P', cursive !important;
+            z-index: 9999 !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            width: auto !important;
+            height: auto !important;
+            margin: 20px auto !important;
+        }
+        
+        .download-btn:hover {
+            transform: scale(1.1) !important;
+            box-shadow: 0 15px 40px rgba(255,0,0,0.7), 0 0 30px #FFA500 !important;
+            border-color: #FFFFFF !important;
+        }
+        
+        .download-btn:active {
+            transform: scale(0.95) !important;
+        }
+        
+        .download-btn::before {
+            content: "⬇️ ⬇️ ⬇️";
+            margin-right: 15px;
+            font-size: 28px;
+            filter: drop-shadow(0 0 5px gold);
+        }
+        
+        .download-btn::after {
+            content: "⬇️ ⬇️ ⬇️";
+            margin-left: 15px;
+            font-size: 28px;
+            filter: drop-shadow(0 0 5px gold);
+        }
+        
+        /* Animación de pulsación para llamar la atención */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .download-btn {
+            animation: pulse 2s infinite !important;
+        }
+        
+        /* Modal de opciones de descarga */
+        .download-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .download-modal.active {
+            display: flex !important;
+        }
+        
+        .modal-content {
+            background: #1a1a2e;
+            padding: 40px;
+            border-radius: 30px;
+            max-width: 600px;
+            width: 90%;
+            border: 4px solid #FFD700;
+            box-shadow: 0 0 50px #FF4B2B;
+            position: relative;
+        }
+        
+        .modal-content h3 {
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-family: 'Press Start 2P', cursive;
+            line-height: 1.4;
+            text-shadow: 0 0 10px #FF4B2B;
+        }
+        
+        .quality-option {
+            background: #16213e;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid #0f3460;
+        }
+        
+        .quality-option:hover {
+            background: #0f3460;
+            transform: scale(1.02);
+            border-color: #FFD700;
+            box-shadow: 0 0 30px #FF4B2B;
+        }
+        
+        .quality-option h4 {
+            color: #FF4B2B;
+            margin: 0 0 5px 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        .quality-option p {
+            color: #fff;
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .close-modal {
+            background: #333;
+            color: white;
+            border: 2px solid #666;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 30px;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .close-modal:hover {
+            background: #444;
+            border-color: #FF4B2B;
+        }
+        
+        /* Notificaciones */
+        .download-notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #FF416C, #FF4B2B);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(255,0,0,0.5);
+            z-index: 1000001;
+            animation: slideInRight 0.3s;
+            font-size: 18px;
+            border: 2px solid #FFD700;
+        }
+        
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        /* Asegurar que el botón sea visible en tu página */
+        body .download-section {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+    </style>
 </head>
 <body>
     
@@ -18,39 +206,39 @@
     <div class="navbar">
         <!-- Primera imagen con título -->
         <div class="navbar-item">
-            <a href="../index.html"><img src="../Imagenesfondos/pixelcut-export (3).jpeg" alt="Películas"> <!-- Cambia 'image1.png' por la ruta de tu imagen --></a>
+            <a href="../index.html"><img src="../Imagenesfondos/pixelcut-export (3).jpeg" alt="Películas"></a>
             <h2>Películas</h2>
         </div>
         <!-- Segunda imagen con título -->
         <div class="navbar-item">
-            <img src="../Imagenesfondos/pixelcut-export (4).jpeg" alt="Series"> <!-- Cambia 'image2.png' por la ruta de tu imagen -->
+            <img src="../Imagenesfondos/pixelcut-export (4).jpeg" alt="Series">
             <h2>Series</h2>
         </div>
         <!-- Tercera imagen con título -->
         <div class="navbar-item">
-            <img src="../Imagenesfondos/pixelcut-export (5).jpeg" alt="Estrenos"> <!-- Cambia 'image3.png' por la ruta de tu imagen -->
+            <img src="../Imagenesfondos/pixelcut-export (5).jpeg" alt="Estrenos">
             <h2>Estrenos</h2>
         </div>
     </div>
+    
     <div class="image-container">
         <img src="../Imagenesfondos/Close Encounters of the Third Kind (1977)_.jpg" alt="Poster"> 
         <div class="resum">
             <p>
-                        
+            <!-- Aquí puedes añadir la descripción de la película si quieres -->
             </p>
         </div>
         <p class="actors"></p>
         <div class="imbd">
             <p></p>
-           
-            
         </div>
-
     </div>
+    
     <br><br><br>
-     <center>
+    
+   
+    <center>
         <div class="tabs">
-            
             <ul class="tab-list">
                 <li class="tab active" data-tab="video1">Video 1</li>
                 <li class="tab" data-tab="video2">Video 2</li>
@@ -58,7 +246,8 @@
             </ul>
             <div class="tab-content">
                 <div id="video1" class="tab-panel active">
-<iframe src="https://streamtape.com/e/27DVLlrPj1uZJBz/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>                </div>
+                    <iframe src="https://streamtape.com/e/27DVLlrPj1uZJBz/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+                </div>
                 <div id="video2" class="tab-panel">
                     <iframe src="" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -67,18 +256,33 @@
                 </div>
             </div>
         </div>
-</center>
+    </center>
+    <br><br>
+   <div style="text-align: center;">
+  <a href="https://streamtape.com/v/27DVLlrPj1uZJBz/Encuentros_Cercanos_del_Tercer_Tipo_%281977%29_Espa%C3%B1ol_Latino.mkv.mp4" target="_blank" style="display: inline-block; padding: 7.5px 15px; background-color: #ff073a; color: white; text-decoration: none; font-family: Arial, sans-serif; font-size: 17.5px; font-weight: bold; border-radius: 5px; box-shadow: 0 0 10px #ff073a; border: none; cursor: pointer;">Descargar</a>
+</div>
     <br><br><br><br><br><br><br><br>
+    
     <center>
         <div>
-    </div>
+            <!-- Este div estaba vacío -->
+        </div>
+        
+        <div class="standalone-video">
+            <iframe src="https://www.youtube.com/embed/P78pl1FUXfA?si=aMGexoF85ei4ENiC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </center>
+    
+    <footer>
+        <p>Derechos reservados © 2025</p>
+    </footer>
+    
+    <!-- Script para manejar descargas -->
 
-
-    <div class="standalone-video">
-      <iframe  src="https://www.youtube.com/embed/P78pl1FUXfA?si=aMGexoF85ei4ENiC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </div>
-      <footer> <p>Derechos reservados © 2025</p>
-        </footer>
-    <!-- Vinculación del archivo JavaScript -->
+    
+    <!-- Scripts existentes -->
+    <script src="../AdBlocker.js"></script>
     <script src="srcipt_tron.js"></script>
     <script src="../Anuncios.js"></script>
-
+</body>
+</html>
