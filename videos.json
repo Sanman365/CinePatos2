@@ -224,6 +224,6 @@
     {
         "title": "Bridgerton",
         "image": "../CinePatos2/Series/Posters/bridgerton.jpg",
-        "link": "Series/Bridgerton/series.html"
+        "link": "../Series/Bridgerton/series.html"
     }
 ]
