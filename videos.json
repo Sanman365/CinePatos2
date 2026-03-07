@@ -220,4 +220,10 @@
         "image": "../Imagenesfondos/las3estaciones.png",
         "link": "../Solitarias/las4estaciones.html"
     }
+    ,
+    {
+        "title": "Bridgerton",
+        "image": "../CinePatos2/Series/Posters/bridgerton.jpg",
+        "link": "Series/Bridgerton/series.html"
+    }
 ]

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>s
+<title>	Fuerzas de la naturaleza</title>
+<!-- Vinculación de los archivos CSS -->
+<link href="../style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<br/>
+<div class="index">
+<a href="../series.html">
+
+<button class="button-menu">
+        MENU
+    </button>
+</a>
+</div>
+<a href="/index.html">
+<h1>Cartoons</h1>
+</a>
+
+<div class="recuadro"></div>
+
+<div class="recuadro2"> 
+    <a id="next-link">
+        <button class="btn-ben10 btn-right">Avanzar</button> </a>
+<!-- Flecha para avanzar -->
+    <a id="prev-link">
+        <button class="btn-ben10 btn-left">Retroceder</button> </a>
+</div>
+
+<div class="port">
+<img alt="" id="episode-img" src=""/>
+</div>
+
+
+
+
+<section>
+
+
+
+<iframe src="https://streamtape.com/e/LDV608OAaZsRKmW/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe><button class="boton-reporte" id="reportarNoReproduce">No se reproduce</button>
+<button class="boton-reporte" id="reportarAudio">Audio desincronizado</button>
+<button class="boton-reporte" id="reportarCalidad">Calidad baja</button>
+<button class="boton-reporte" id="reportarOtro">Otro problema</button>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<!-- Incluye tu archivo JavaScript como módulo -->
+<script src="../superbase.js" type="module"></script>
+</div>
+</section>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("open");
+    }
+</script>
+<script src="../srcipt.js"></script>
+<script src="../Paginador_episodios.js"></script>
+<script src="../paginador_imagenes.js"></script>
+<!-- Botones de reporte con IDs únicos -->
+<script>
+    // Asignar eventos a los botones de reporte
+    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+</script>
+<!-- Incluye tu archivo JavaScript como módulo -->
+<!-- Fondo oscurecido -->
+<div class="fondo-oscuro" id="fondo-oscuro"></div>
+<!-- Aviso de reporte enviado correctamente -->
+<div class="aviso" id="aviso-exito">
+<span>Tu reporte se ha enviado correctamente.</span>
+</div>
+<!-- Aviso de reporte ya enviado -->
+<div class="aviso aviso-error" id="aviso-ya-enviado">
+<span>Ya has enviado un reporte para este video. Se revisará lo más pronto posible.</span>
+</div>
+
+
+
+
+</body>
+</html>

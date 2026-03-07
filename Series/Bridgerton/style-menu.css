@@ -1,0 +1,679 @@
+     /* ESTILOS ORIGINALES */
+     body {
+        cursor: url('') 16 16, auto;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #1c1c1c;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    .index {
+        position: fixed;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%);
+        width: 100%;
+        height: 10%;
+        background-color: rgba(0, 0, 0);
+        border: 2px solid #fff;
+        z-index: 5;
+    }
+
+    h1 {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 2.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        padding: 10px 20px;
+        z-index: 5;
+        margin: 0;
+        margin-top: 1%;
+    }
+
+    h1::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 120%;
+        height: 100%;
+        background: linear-gradient(-75deg, rgba(255, 140, 0, 0) 30%, rgba(255, 0, 0, 0.8) 50%, rgba(255, 140, 0, 0) 70%);
+        animation: destello 4s infinite linear;
+    }
+    .recuadro {
+position: relative; /* o usa absolute si lo necesitas dentro de un contenedor */
+left: 50%;
+transform: translateX(-50%); /* solo X para no afectar altura */
+width: 45%;
+background-color: rgba(0, 0, 0, 0.5);
+border: 2px solid #fff;
+border-radius: 10px;
+margin-top: 3%;
+padding: 20px; /* opcional para espaciar el contenido */
+}
+.recuadro2 {
+position: fixed; /* o usa absolute si lo necesitas dentro de un contenedor */
+top: 12.20%;
+left: 13%;
+transform: translateX(-50%); /* solo X para no afectar altura */
+width: 20%;
+height: 80%;
+background-color: rgba(0, 0, 0, 0.5);
+border: 2px solid #fff;
+border-radius: 10px;
+padding: 20px; /* opcional para espaciar el contenido */
+}
+.recuadro3 {
+position: fixed; /* o usa absolute si lo necesitas dentro de un contenedor */
+top: 12.20%;
+left: 87%;
+transform: translateX(-50%); /* solo X para no afectar altura */
+width: 20%;
+height: 80%;
+background-color: rgba(0, 0, 0, 0.5);
+border: 2px solid #fff;
+border-radius: 10px;
+padding: 20px; /* opcional para espaciar el contenido */
+}
+.slider-container {
+width: 100%;
+max-width: 600px;
+height: 220px;
+overflow: hidden;
+position: relative;
+margin: 20px auto;
+border-radius: 10px;
+background: rgba(30, 30, 30, 0.7);
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.episodios-slider {
+display: flex;
+height: 100%;
+transition: transform 0.5s ease-in-out;
+}
+
+.episodio {
+flex: 0 0 100%;
+padding: 15px;
+display: flex;
+align-items: center;
+box-sizing: border-box;
+}
+
+.episodio-content {
+display: flex;
+width: 100%;
+height: 100%;
+align-items: center;
+}
+
+.episodio-img {
+flex: 0 0 120px;
+height: 100%;
+margin-right: 15px;
+display: flex;
+align-items: center;
+}
+
+.episodio-img img {
+width: 100%;
+height: 120px;
+object-fit: cover;
+border-radius: 6px;
+}
+
+.episodio-info {
+flex: 1;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+overflow: hidden; /* Asegura que el texto no se desborde */
+}
+
+.episodio h3 {
+margin: 0 0 5px;
+font-size: 18px;
+color: white;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.rating {
+display: flex;
+align-items: center;
+margin-bottom: 8px;
+}
+
+.rating-star {
+color: gold;
+font-size: 16px;
+margin-right: 5px;
+}
+
+.rating-value {
+color: white;
+font-weight: bold;
+font-size: 14px;
+}
+
+.episodio-desc {
+color: #ccc;
+font-size: 13px;
+line-height: 1.4;
+display: -webkit-box;
+-webkit-line-clamp: 3; /* Limita a 3 líneas */
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+margin: 0;
+max-height: 54px; /* 3 líneas * 1.4 line-height * 13px */
+}
+
+.slider-dots {
+position: absolute;
+bottom: 10px;
+left: 0;
+right: 0;
+display: flex;
+justify-content: center;
+gap: 8px;
+}
+
+.dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.3);
+cursor: pointer;
+transition: all 0.3s;
+}
+
+.dot.active {
+background: gold;
+}
+/* Estilos del slider de personajes - La Vaca y el Pollito */
+/* SLIDER DE ACTORES DE VOZ - LA VACA Y EL POLLITO */
+.characters-slider {
+    width: 100%;
+    max-width: 600px;
+    height: 215px; /* Un poco más alto */
+    overflow: hidden;
+    position: relative;
+    margin: 30px auto;
+    border-radius: 15px;
+    background: rgba(255, 241, 246, 0.95); /* Rosa pastel */
+    box-shadow: 0 6px 20px rgba(255, 150, 197, 0.3);
+    border: 3px solid #FF9AC5; /* Rosa brillante */
+  }
+
+  .characters-container {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.1);
+  }
+
+  .character {
+    flex: 0 0 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .character-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  .character-img {
+    flex: 0 0 110px; /* Reducido de 130px */
+  height: 110px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 3px solid;
+    /* Bordes de colores únicos por personaje */
+  }
+
+  /* Colores de borde según personaje */
+  .character[data-character="steven"] .character-img { border-color: #FF9AC5; }
+  .character[data-character="garnet"] .character-img { border-color: #FF6B6B; }
+  .character[data-character="amethyst"] .character-img { border-color: #9B59B6; }
+  .character[data-character="pearl"] .character-img { border-color: #66D7EB; }
+  .character[data-character="peridot"] .character-img { border-color: #9ACD32; }
+
+  .character-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .character-info {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .character-name {
+    margin: 0 0 6px;
+    font-size: 18px; /* Reducido de 22px */
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Colores de texto según personaje */
+  }
+
+  .character[data-character="steven"] .character-name { color: #FF6B9E; }
+  .character[data-character="garnet"] .character-name { color: #FF4C4C; }
+  .character[data-character="amethyst"] .character-name { color: #8E44AD; }
+  .character[data-character="pearl"] .character-name { color: #00B4D8; }
+  .character[data-character="peridot"] .character-name { color: #78C850; }
+
+  .voice-actor {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .voice-label {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .actor-name {
+    font-size: 15px;
+    font-weight: 600;
+    /* Color oscuro para contraste */
+    color: #333;
+  }
+
+  .character-desc {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .characters-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .char-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 154, 197, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .char-dot.active {
+    transform: scale(1.3);
+    background: #FF6B9E;
+  }
+
+  .crew-slider {
+     width: 100%;
+  max-width: 600px;
+  height: 220px; /* Reducido de 250px */
+    overflow: hidden;
+    position: relative;
+    margin: 30px auto;
+    border-radius: 12px;
+    background: rgba(240, 248, 255, 0.95); /* Azul claro translúcido */
+    box-shadow: 0 6px 20px rgba(100, 181, 246, 0.3);
+    border: 3px solid #64B5F6; /* Azul SU */
+  }
+
+  .crew-container {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .crew-member {
+    flex: 0 0 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .crew-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  .crew-icon {
+    flex: 0 0 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: #FF6B6B;
+    border: 3px solid;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Colores de íconos por rol */
+  .crew-member[data-role="creador"] .crew-icon {
+    border-color: #FF6B6B;
+    color: #FF6B6B;
+  }
+  .crew-member[data-role="productor"] .crew-icon {
+    border-color: #9B59B6;
+    color: #9B59B6;
+  }
+  .crew-member[data-role="director"] .crew-icon {
+    border-color: #64B5F6;
+    color: #64B5F6;
+  }
+  .crew-member[data-role="animador"] .crew-icon {
+    border-color: #78C850;
+    color: #78C850;
+  }
+  .crew-member[data-role="musica"] .crew-icon {
+    border-color: #FFD166;
+    color: #FFD166;
+  }
+
+  .crew-info {
+    flex: 1;
+  }
+
+  .crew-role {
+    color: #555;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+
+  .crew-name {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    color: #2C3E50; /* Azul oscuro SU */
+  }
+
+  .crew-contribution {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .crew-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .crew-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(100, 181, 246, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .crew-dot.active {
+    background: #64B5F6;
+    transform: scale(1.2);
+  }
+.img-rec {
+position: relative; /* Cambiado a relative si está dentro de un flujo */
+top: 0%;
+left: 50%;
+transform: translateX(-50%);
+width: 55%;
+background-color: rgba(0, 0, 0, 0.5);
+border: 1px solid #fff;
+border-radius: 10px;
+padding: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden; /* Previene desbordes si la imagen es grande */
+}
+
+.image-rec {
+width: 100%;
+height: auto;
+object-fit: cover;
+border-radius: 8px;
+display: block;
+max-width: 100%;
+max-height: 100%;
+}
+.descripcion-serie {
+margin-top: 20px;
+font-family: 'Poppins', sans-serif; /* ya está en tu sitio */
+font-size: 16px;
+color: #f0f0f0;
+line-height: 1.6;
+text-align: justify;
+padding: 0 10px;
+}
+
+    @keyframes destello {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+
+    /* ESTILOS PARA TEMPORADAS */
+    .temporada-btn {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+        cursor: pointer;
+        font-size: 20px;
+        width: 180px;
+        transition: background-color 0.3s ease;
+    }
+
+    .temporada-btn:hover {
+        background-color: #f5a623;
+        color: #000;
+    }
+
+    .chapters-list {
+        display: none;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .chapter-btn {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #444;
+        color: #fff;
+        padding: 10px 12px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        width: 120px;
+        text-align: center;
+    }
+
+    .chapter-btn:hover {
+        background-color: #f5a623;
+        color: #000;
+    }
+
+    /* ESTILOS PARA EL NUEVO MENÚ DESPLEGABLE */
+    .menu-container {
+        position: relative;
+        margin-top: 5%;
+        z-index: 0;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 800px;
+    }
+
+    .menu {
+        display: flex;
+        margin-top: 5%;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-btn {
+background-color: rgba(51, 51, 51, 0.8);
+color: white;
+padding: 13.5px 18px; /* antes 15px 20px */
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin: 5px 0;
+margin-top: 3%;
+width: 90%; /* antes 100% */
+max-width: 270px; /* antes 300px */
+text-align: center;
+font-size: 16.2px; /* antes 18px */
+transition: all 0.3s ease;
+}
+
+    .menu-btn:hover {
+        background-color: rgba(85, 85, 85, 0.9);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .submenu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, padding 0.3s ease;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        padding: 0; /* Se expandirá dinámicamente */
+        margin-top: 5px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .submenu.open {
+        max-height: 4000px; /* suficientemente grande para cubrir su contenido */
+        padding: 10px; /* el padding real que quieres mostrar */
+    }
+    
+
+    .submenu-item {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        background-color: white;
+        padding: 10.8px; /* antes 12px */
+        margin: 5px 0;
+        border-radius: 6px;
+        width: 90%;
+        transition: all 0.3s ease;
+    }
+
+    .submenu-item:hover {
+        background-color: #f0f0f0;
+        transform: translateX(5px);
+    }
+
+    .submenu-item img {
+        width: 45px; /* antes 50px */
+        height: 45px; /* antes 50px */
+        border-radius: 8px;
+        margin-right: 12px;
+        object-fit: cover;
+        border: 2px solid #ddd;
+    }
+
+    .submenu-content {
+        flex-grow: 1;
+    }
+
+    .submenu-content h3 {
+        margin: 0;
+        font-size: 16px;
+        color: #222;
+    }
+
+    .submenu-content p {
+        margin: 5px 0 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+    /* RESPONSIVE */
+    @media only screen and (max-width: 768px) {
+        h1 {
+            font-size: 1.8em;
+        }
+        
+        .menu-btn {
+            max-width: 250px;
+            font-size: 16px;
+        }
+        
+        .submenu {
+            max-width: 300px;
+        }
+    }

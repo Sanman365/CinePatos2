@@ -1,0 +1,654 @@
+Body {
+        cursor: url('') 16 16, auto;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #1c1c1c;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        z-index: -1;
+    }
+
+.contenido {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima */
+    padding: 20px;
+    color: white; /* Ajusta el color según el fondo */
+}
+
+        /* Fondo de la página con imagen difuminada */
+        body::before {
+           
+            z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+            font-family: 'Poppins', sans-serif; /* Nueva fuente */
+        }
+        
+        .button {
+            all: unset;
+            display: flex;
+            align-items: center;
+            top: 1%;
+            position: fixed;
+            padding: 0.6em 2em;
+            border: rgb(136, 0, 0) solid 0.15em;
+            border-radius: 0.25em;
+            color: rgb(206, 0, 0);
+            font-size: 1.35em;
+            font-weight: 600;
+            cursor: pointer;
+            overflow: hidden;
+            transition: border 300ms, color 300ms;
+            user-select: none;
+            z-index: 5;
+          }
+          
+          .button p {   
+            z-index: 1;
+            left: -0%;
+          }
+          
+          .button:hover {
+            color: #212121;
+          }
+          
+          .button:active {
+            border-color: rgb(255, 27, 27);
+          }
+          
+          .button::after, .button::before {
+            content: "";
+            position: absolute;
+            width: 9em;
+            aspect-ratio: 1;
+            background: rgb(219, 0, 0);
+            opacity: 75%;
+            border-radius: 50%;
+            transition: transform 500ms, background 300ms;
+          }
+          
+          .button::before {
+            left: 0;
+            transform: translateX(-8em);
+          }
+          
+          .button::after {
+            right: 0;
+            transform: translateX(8em);
+          }
+          
+          .button:hover:before {
+            transform: translateX(-1em);
+          }
+          
+          .button:hover:after {
+            transform: translateX(1em);
+          }
+          
+          .button:active:before,
+          .button:active:after {
+            background: rgb(253, 10, 10);
+          }
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #f4f4f4;
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+       .button-menu {
+  width: 8%; /* Aproximadamente proporcional a los 120px originales */
+  height: 56%; /* Altura relativa */
+  margin: 1%;
+  background: linear-gradient(145deg, #3a0000, #1a0000);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: Consolas, Courier New, monospace;
+  border: solid #ff1e1e 1px;
+  font-size: 16px;
+  color: #ff4d4d;
+  transition: 500ms;
+  border-radius: 5px;
+  box-shadow:
+    -1px -5px 15px #ff1e1e,
+    5px 5px 15px #ff1e1e,
+    inset 5px 5px 10px #1a0000,
+    inset -5px -5px 10px #1a0000;
+}
+
+.button-menu:hover {
+  box-shadow:
+    0 0 20px #ff1e1e,
+    0 0 30px #ff1e1e,
+    0 0 40px #ff1e1e;
+  color: #ffffff;
+  transition: 500ms;
+}
+
+.button-menu:active {
+  box-shadow:
+    0 0 30px #ff1e1e,
+    0 0 60px #ff1e1e;
+  color: #ffffff;
+  transition: 100ms;
+}
+
+
+        /* Enlaces del menú */
+        .menu a {
+            display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif; /* Nueva fuente */
+    color: #000000; /* Color azul oscuro */
+    font-weight: 600; /* Hace que el texto resalte */
+    transition: 0.2s;
+        }
+
+        .menu a:hover {
+            background: rgba(255, 0, 0, 0.459);
+        }
+
+        /* Botón de abrir/cerrar con imagen */
+        .menu-toggle {
+            position: fixed;
+            top: 5px;
+            left: 15px;
+            width: 90px; /* Aumenta el tamaño del botón */
+            height: 90px; /* Aumenta el tamaño del botón */
+            background: url('Caracol.jpeg') no-repeat center;
+            background-size: contain;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+        /* Clase para abrir el menú */
+        .open {
+            width: 20%;
+            min-width: 200px;
+        }
+        .recuadro {
+            position:absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 50%; /* Puedes ajustar el tamaño */
+            height: 50%; /* Puedes ajustar el tamaño */
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+            border: 2px solid #fff; /* Borde blanco */
+            position: absolute;
+            border-radius: 10px;
+            margin-top: 3%;        }
+
+       .recuadro2 {
+    position: relative; /* Cambiado de absolute a relative para mejor flujo */
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50%; /* Puedes ajustar el tamaño */
+    /* height: 30%;  ELIMINADO - Altura fija */
+    min-height: 200px; /* Opcional: altura mínima para cuando hay poco contenido */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 10px;
+    margin-top: 3%;
+    margin-bottom: 10%;
+    padding: 20px; /* Añade padding para que el texto no toque los bordes */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    display: flex; /* Opcional: para centrar contenido verticalmente si lo deseas */
+    flex-direction: column; /* Opcional */
+    overflow: auto; /* Por si acaso el texto es muy largo, permite scroll */
+}
+
+        .index {
+            position:fixed;
+            left: 50%;
+            top: 0%;
+            transform: translate(-50%);
+            width: 100%; /* Puedes ajustar el tamaño */
+            height: 10%; /* Puedes ajustar el tamaño */
+            background-color: rgba(0, 0, 0); 
+            border: 2px solid #fff; /* Borde blanco */
+            z-index: 5;
+        }
+          .port{
+            position:absolute;
+            left: 56.5%;
+            transform: translate(-50%);
+            padding-bottom: 5%;
+            padding-top: 10%;
+          }
+          .port img {
+            width: 70%;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+        }
+        /* Contenedor de la imagen */
+        .image-container {
+            position: relative;
+            width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
+            height: auto; /* Ajusta la altura del contenedor según sea necesario */
+            text-align: center; /* Centra la imagen horizontalmente */
+            overflow: hidden; /* Evita que el borde salga del contenedor */
+        }
+
+        /* Imagen con borde blanco */
+        .image-container img {
+            width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
+            height: auto; /* Mantiene la proporción original de la imagen */
+            border: 5px solid #201f1f; /* Borde blanco de 5px de grosor */
+            border-radius: 10px; /* Bordes redondeados */
+            image-rendering: crisp-edges; /* Mejora la nitidez de la imagen */
+            box-shadow: 0 0 10px rgb(0, 0, 0); /* Añade un brillo al borde */
+        }
+
+
+        
+
+        h1 {
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            color: white;
+            padding: 10px 20px; /* Espaciado opcional */
+            overflow:hidden;
+            z-index: 5;
+            margin: 0;
+          }
+          
+          h1::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 120%;
+            height: 100%;
+            background: linear-gradient(-75deg, rgba(255, 140, 0, 0) 30%, rgba(255, 0, 0, 0.8) 50%, rgba(255, 140, 0, 0) 70%);
+            animation: destello 4s infinite linear;
+          }
+          
+          @keyframes destello {
+            0% { left: -100%; }
+            100% { left: 100%; }
+          }
+
+        p {
+            font-size: 0.8em; /* Tamaño de la fuente */
+           
+            position: relative;
+            top: 14%;
+            text-align: center;
+            width: 60%;
+            left: 24%;
+            color: whitesmoke;
+        }
+
+        /* Contenedor de contenido centrado */
+        .content {
+            position: relative;
+            z-index: 1; /* Asegura que el contenido esté por encima del fondo desenfocado */
+            text-align: center;
+        }
+
+       
+
+        
+        
+     
+
+/* Estilo para el iframe independiente */
+iframe{
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 25%;
+height: 300px;
+width: 30%;
+
+
+}
+
+  /* Estilos para las flechas */
+  /* Estilos generales para los botones */
+  .btn-ben10 {
+    position: absolute;
+    left: 60%;
+    transform: translate(-50%);
+    top: 35%;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+}
+
+/* Botón izquierdo (color azul de Ben 10) */
+.btn-left {
+    background-color: #ff1e1e; /* Azul similar al de Ben 10 */
+    color: white;
+   left: 35%;
+}
+
+.btn-left:hover {
+    background-color: #3600b3; /* Azul más oscuro al hacer hover */
+}
+
+/* Botón derecho (color naranja de Ben 10) */
+.btn-right {
+    background-color: #ff1e1e; /* Naranja similar al de Ben 10 */
+    color: white;
+    left:65%;
+}
+
+.btn-right:hover {
+    background-color: #3600b3; /* Naranja más oscuro al hacer hover */
+}
+
+
+.image-container2{
+    width: 100%;
+    height: auto; /* Mantener la proporción de la imagen */
+    display: block;
+    position: relative; 
+}
+/* Contenedor del paginador */
+.paginador-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.paginador-container {
+    width: 90%;
+    max-width: 350px;
+    margin: 20px auto;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#temporadas-container {
+    margin-top: 10%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* Botones de temporada */
+.temporada-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    width: 180px;
+    transition: background-color 0.3s ease;
+    
+}
+
+.temporada-btn:hover {
+    background-color: #19d600da;
+    color: #000;
+}
+
+/* Contenedor de capítulos */
+.chapters-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Botones de capítulo */
+.chapter-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #444;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 120px;
+    text-align: center;
+}
+
+.chapter-btn:hover {
+    background-color: #19d600da;
+    color: #000;
+}
+
+ /* Estilos para el contenedor principal */
+ .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Ajusta la altura al 100% del viewport */
+padding-bottom: 20%;
+}
+
+/* Estilos para el div que contiene la lista desplegable */
+.dropdown {
+    position:relative;
+    display: inline-block;
+    text-align: center;
+    left: -45%;
+}
+
+/* Estilo para el botón que despliega la lista */
+.dropbtn {
+    background-color: #333; /* Fondo gris */
+    color: white; /* Letras blancas */
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Estilo para el contenido desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #777; /* Fondo gris más claro */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    left: 100%; /* Despliega hacia la derecha */
+    top: 0; /* Alinea con la parte superior del botón */
+    transform: scale(1.05); /* Aumenta el tamaño en un 5% */
+    transform-origin: left top; /* Punto de origen de la transformación */
+}
+
+/* Estilo para los elementos de la lista */
+.dropdown-content a {
+    color: white; /* Letras blancas */
+    font-size: 18px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Cambia el color de fondo al pasar el ratón sobre los elementos */
+.dropdown-content a:hover {
+    background-color: #f5a623; /* Fondo naranja */
+}
+
+/* Clase para mostrar el contenido desplegable */
+.show {
+    display: block;
+}
+.boton-reporte {
+    position: relative;
+    left: 66%;
+    top: 300px; /* Ajusta este valor según sea necesario */
+    display: block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.boton-reporte:hover {
+    background-color: #ff1a1a;
+}
+/* Estilos para el fondo oscurecido */
+.fondo-oscuro {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    z-index: 999; /* Detrás del aviso */
+}
+
+/* Estilos para el aviso */
+:root {
+    --aviso-bg: linear-gradient(to top, #00a516, #00a838); /* Amarillo/naranja suave */
+    --aviso-error-bg: linear-gradient(to top, #00a516, #00a838); /* Amarillo/naranja más claro */
+    --aviso-color: #333; /* Texto oscuro */
+    --aviso-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    --aviso-border-radius: 10px; /* Bordes redondeados */
+    --aviso-padding: 20px 30px; /* Padding horizontal y vertical */
+    --aviso-transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.aviso {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9); /* Centrado y escala inicial */
+    padding: var(--aviso-padding);
+    background: var(--aviso-bg);
+    color: var(--aviso-color);
+    border-radius: var(--aviso-border-radius);
+    box-shadow: var(--aviso-shadow);
+    transition: var(--aviso-transition);
+    z-index: 1000; /* Encima del fondo oscuro */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+.aviso-error {
+    background: var(--aviso-error-bg); /* Fondo amarillo/naranja más claro para el aviso de error */
+}
+
+/* Animación para mostrar el aviso */
+.aviso.mostrar {
+    opacity: 1; /* Visible */
+    transform: translate(-50%, -50%) scale(1); /* Escala normal */
+}
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+    height: 8px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Color del fondo del área de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e60000; /* Color rojo neón */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #ff1a1a; /* Borde para el efecto neón */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff1a1a; /* Rojo más brillante al pasar el cursor */
+}
+
+::-webkit-scrollbar-button {
+    display: none; /* Oculta los botones de la barra de desplazamiento */
+}
+
+
+
+footer {
+    position: relative;
+     text-align: center;
+    justify-content: center;
+    top: 800px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #444444;
+    margin-top: 20px;
+    margin-bottom: 0%;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    left: -1%;
+    
+  }
+  footer p{
+    position: relative;
+    text-align: center;
+   justify-content: center;
+   
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS TELEFONO
+  ///////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////
+  */
+
+
+

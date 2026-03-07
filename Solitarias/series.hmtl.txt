@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Steven Universe - Neon Edition</title>
+    <link href="style.css" rel="stylesheet"/> <!-- Asegúrate que el nombre sea correcto -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <div class="index"></div>
+    <a href="/index.html" style="text-decoration: none; position: fixed; z-index: 15; left: 50%; transform: translateX(-50%);">
+        <h1>Cartoons</h1>
+    </a>
+
+    <!-- Botón con estilo neón (reemplaza al anterior si es necesario) -->
+    <button class="button" onclick="location.href='/index.html'" style="left: 50%; transform: translateX(-50%);">
+        <p>Inicio</p>
+    </button>
+
+    <!-- Botón de menú con imagen (si aún existe) -->
+    <button class="menu-toggle" onclick="toggleMenu()"></button>
+
+    <!-- CONTENIDO ORIGINAL DE TEMPORADAS (PERO CON ESTILO NEÓN) -->
+    <div style="position: relative; top: 80px; z-index: 2; text-align: center;">
+        <button class="temporada-btn" onclick="toggleChapters('temporada1')">Temporada 1</button>
+        <div class="chapters-list" id="temporada1">
+            <a class="chapter-btn" href="Temporada1/1x1.html">Capítulo 1</a>
+            <a class="chapter-btn" href="Temporada1/1x2.html">Capítulo 2</a>
+            <!-- Más capítulos... -->
+        </div>
+    </div>
+
+    <!-- RECUADRO 2 (Descripción de la serie) -->
+    <div class="recuadro2">
+        <div class="img-rec">
+            <img alt="Imagen destacada" class="image-rec" src="../Posters/STEVENU.jpg"/>
+        </div>
+        <p class="descripcion-serie">
+            Steven Universe es una serie animada distribuida por Cartoon Network que cuenta la historia de Steven, el protagonista y miembro más joven del equipo llamado las Gemas de Cristal. El Piloto fue lanzado el 21 de mayo de 2013 en el canal de Rebecca Sugar pero se ha eliminado. Fue transmitido en Cartoon Network el 4 de noviembre de 2013, en los EE.UU. En Latinoamérica no fue transmitido el Piloto, pero en su lugar fue transmitido "El Cañón Láser".
+        </p>
+    </div>
+
+    <!-- RECUADRO 3 (Sliders de Episodios, Personajes y Crew) -->
+    <div class="recuadro3">
+        <!-- Slider de Episodios Destacados -->
+        <div class="slider-container">
+            <div class="episodios-slider">
+                <div class="episodio">
+                    <div class="episodio-content">
+                        <div class="episodio-img">
+                            <a href="Temporadas/1x52.html">
+                                <img alt="Episodio 1" src="../Posters/STEVENU-JAILBREAK.PNG"/>
+                            </a>
+                        </div>
+                        <div class="episodio-info">
+                            <h3>Episodio 1x52</h3>
+                            <div class="rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-value">9.7</span>
+                            </div>
+                            <p class="episodio-desc">Escape de la Prision</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="episodio">
+                    <div class="episodio-content">
+                        <div class="episodio-img">
+                            <a href="Temporadas/5x18.html">
+                                <img alt="Episodio 2" src="../Posters/STEV
