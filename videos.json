@@ -222,8 +222,38 @@
     }
     ,
     {
-        "title": "Bridgerton",
-        "image": "Series/Posters/bridgerton.jpg",
-        "link": "../Series/Bridgerton/series.html"
+        "title": "Scream",
+        "image": "Imagenesfondos/Scream.jpg",
+        "link": "../Scream/Scream.html"
+    }
+     ,
+    {
+        "title": "Scream II",
+        "image": "Imagenesfondos/Scream2.jpg",
+        "link": "../Scream/Scream2.html"
+    }
+     ,
+    {
+        "title": "Scream III",
+        "image": "Imagenesfondos/Scream3.jpg",
+        "link": "../Scream/Scream3.html"
+    }
+     ,
+    {
+        "title": "Scream IV",
+        "image": "Imagenesfondos/Scream4.jpg",
+        "link": "../Scream/Scream4.html"
+    }
+     ,
+    {
+        "title": "Scream V",
+        "image": "Imagenesfondos/Scream5.jpg",
+        "link": "../Scream/Scream5.html"
+    }
+     ,
+    {
+        "title": "Scream VI",
+        "image": "Imagenesfondos/Scream6.jpg",
+        "link": "../Scream/Scream6.html"
     }
 ]
