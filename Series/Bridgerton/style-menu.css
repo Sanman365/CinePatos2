@@ -664,16 +664,205 @@ transition: all 0.3s ease;
 
     /* RESPONSIVE */
     @media only screen and (max-width: 768px) {
-        h1 {
-            font-size: 1.8em;
-        }
-        
-        .menu-btn {
-            max-width: 250px;
-            font-size: 16px;
-        }
-        
-        .submenu {
-            max-width: 300px;
-        }
+    body {
+        font-size: 14px;
     }
+
+    h1 {
+        font-size: 1.5em !important;
+        padding: 5px 10px !important;
+        width: 100%;
+        text-align: center;
+        margin-top: 2% !important;
+    }
+
+    .index {
+        height: 8% !important;
+    }
+
+    .recuadro {
+        width: 90% !important;
+        padding: 15px !important;
+        margin-top: 5% !important;
+    }
+
+    .recuadro2, .recuadro3 {
+        display: none !important;
+    }
+
+    .slider-container {
+        max-width: 95% !important;
+        height: 250px !important;
+        margin: 10px auto !important;
+    }
+
+    .characters-slider {
+        max-width: 95% !important;
+        height: 240px !important;
+    }
+
+    .crew-slider {
+        max-width: 95% !important;
+        height: 240px !important;
+    }
+
+    .episodio-img {
+        flex: 0 0 90px !important;
+    }
+
+    .episodio-img img {
+        height: 90px !important;
+    }
+
+    .episodio h3 {
+        font-size: 16px !important;
+    }
+
+    .episodio-desc {
+        font-size: 12px !important;
+        -webkit-line-clamp: 2 !important;
+    }
+
+    .character-img {
+        flex: 0 0 80px !important;
+        height: 80px !important;
+    }
+
+    .character-name {
+        font-size: 16px !important;
+    }
+
+    .actor-name {
+        font-size: 13px !important;
+    }
+
+    .character-desc {
+        font-size: 12px !important;
+        -webkit-line-clamp: 2 !important;
+    }
+
+    .crew-icon {
+        flex: 0 0 60px !important;
+        height: 60px !important;
+        font-size: 28px !important;
+    }
+
+    .crew-name {
+        font-size: 18px !important;
+    }
+
+    .crew-contribution {
+        font-size: 12px !important;
+        -webkit-line-clamp: 2 !important;
+    }
+
+    .img-rec {
+        width: 90% !important;
+        padding: 10px !important;
+    }
+
+    .descripcion-serie {
+        font-size: 14px !important;
+        padding: 0 15px !important;
+    }
+
+    .temporada-btn {
+        width: 160px !important;
+        padding: 12px 15px !important;
+        font-size: 18px !important;
+    }
+
+    .chapter-btn {
+        width: 100px !important;
+        font-size: 14px !important;
+        padding: 8px 10px !important;
+    }
+
+    .menu-container {
+        width: 95% !important;
+        margin: 10px auto !important;
+    }
+
+    .menu-btn {
+        width: 95% !important;
+        max-width: 280px !important;
+        padding: 12px 15px !important;
+        font-size: 15px !important;
+        margin-top: 4% !important;
+    }
+
+    .submenu {
+        max-width: 280px !important;
+    }
+
+    .submenu-item {
+        padding: 8px !important;
+    }
+
+    .submenu-item img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .submenu-content h3 {
+        font-size: 14px !important;
+    }
+
+    .submenu-content p {
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.2em !important;
+    }
+
+    .recuadro {
+        width: 95% !important;
+        padding: 10px !important;
+    }
+
+    .temporada-btn {
+        width: 140px !important;
+        font-size: 16px !important;
+        padding: 10px 12px !important;
+    }
+
+    .chapter-btn {
+        width: 90px !important;
+        font-size: 13px !important;
+        padding: 6px 8px !important;
+    }
+
+    .slider-container,
+    .characters-slider,
+    .crew-slider {
+        height: 220px !important;
+    }
+
+    .episodio-img {
+        flex: 0 0 70px !important;
+    }
+
+    .episodio-img img {
+        height: 70px !important;
+    }
+
+    .character-img {
+        flex: 0 0 60px !important;
+        height: 60px !important;
+    }
+
+    .crew-icon {
+        flex: 0 0 50px !important;
+        height: 50px !important;
+        font-size: 24px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .recuadro {
+        min-height: 150px;
+    }
+}
